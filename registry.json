@@ -1,0 +1,2621 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "name": "uitripled",
+  "version": "1.0.0",
+  "items": [
+    {
+      "name": "about-us-page",
+      "type": "registry:page",
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/page/about/about-us-page.tsx",
+          "type": "registry:page"
+        }
+      ],
+      "category": "page",
+      "subcategory": "about"
+    },
+    {
+      "name": "about-us-section",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/about-us-section.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "ai-chat-interface",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button",
+        "textarea"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/chat/ai-chat-interface.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "chat"
+    },
+    {
+      "name": "ai-glow-input",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/ai-glow-input.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "inputs"
+    },
+    {
+      "name": "ai-loading-skeleton",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/ai-loading-skeleton.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "ai-response-typing",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/ai-response-typing.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "ai-unlock-animation",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/ai-unlock-animation.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "micro",
+      "subcategory": null
+    },
+    {
+      "name": "animated-accordion",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/disclosure/animated-accordion.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "animated-badge",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "badge"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/micro/badges/animated-badge.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "micro",
+      "subcategory": "badges"
+    },
+    {
+      "name": "animated-card-stack",
+      "type": "registry:component",
+      "registryDependencies": [
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion"
+      ],
+      "files": [
+        {
+          "path": "components/components/cards/animated-card-stack.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "cards"
+    },
+    {
+      "name": "animated-checkbox",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/forms/animated-checkbox.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "forms"
+    },
+    {
+      "name": "animated-dialog",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/modals/animated-dialog.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "modal"
+    },
+    {
+      "name": "animated-list",
+      "type": "registry:component",
+      "registryDependencies": [
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/components/lists/animated-list.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "lists"
+    },
+    {
+      "name": "animated-navbar",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/navigation/animated-navbar.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "animated-pagination",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/navigation/animated-pagination.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "animated-profile-menu",
+      "type": "registry:component",
+      "registryDependencies": [
+        "avatar"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/navigation/animated-profile-menu.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "animated-progress",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/data/progress/animated-progress.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "data",
+      "subcategory": "progress"
+    },
+    {
+      "name": "animated-quote-block",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/animated-quote-block.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "decorative",
+      "subcategory": null
+    },
+    {
+      "name": "animated-radio",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/forms/animated-radio.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "forms"
+    },
+    {
+      "name": "animated-select",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/forms/animated-select.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "forms"
+    },
+    {
+      "name": "animated-sidebar",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/navigation/animated-sidebar.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "animated-tabs",
+      "type": "registry:component",
+      "registryDependencies": [
+        "tabs"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/tabs/animated-tabs.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "tabs"
+    },
+    {
+      "name": "animated-tooltip",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/tooltips/animated-tooltip.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "auto-revealing-heading",
+      "type": "registry:page",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/auto-revealing-heading.tsx",
+          "type": "registry:page"
+        }
+      ],
+      "category": "page",
+      "subcategory": null
+    },
+    {
+      "name": "avatar-group",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/avatars/avatar-group.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "bento-grid-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/bento-grid-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "blog-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/blog-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "bottom-modal",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/modals/bottom-modal.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "modal"
+    },
+    {
+      "name": "browse-folder",
+      "type": "registry:component",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "tabs"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/browse-folder.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "cash-flow-chart",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/data/charts/cash-flow-chart.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "data",
+      "subcategory": "charts"
+    },
+    {
+      "name": "chat-app",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button",
+        "card",
+        "input",
+        "scroll-area"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/chat/chat-app.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "chat"
+    },
+    {
+      "name": "command-palette",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/search/command-palette.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "contact-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "card",
+        "input",
+        "label",
+        "textarea"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/contact-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "contact-form-section",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "card",
+        "input",
+        "label",
+        "textarea"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/contact-form-section.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/navigation/context-menu.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "context-menu-bubble",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/context-menu-bubble.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "counter-up",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/data/progress/counter-up.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "data",
+      "subcategory": "progress"
+    },
+    {
+      "name": "credit-card",
+      "type": "registry:component",
+      "registryDependencies": [
+        "badge"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/cards/credit-card.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "cards"
+    },
+    {
+      "name": "cta-banner-section",
+      "type": "registry:page",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/cta-banner-section.tsx",
+          "type": "registry:page"
+        }
+      ],
+      "category": "page",
+      "subcategory": null
+    },
+    {
+      "name": "cta-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/cta-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "cta-hero-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card",
+        "input"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/cta-hero-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "currency-converter-card",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/currency-converter-card.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "dashboard",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/stocks-dashboard/dashboard.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "detail-task-card",
+      "type": "registry:component",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card",
+        "dropdown-menu",
+        "input",
+        "textarea"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/cards/detail-task.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "cards"
+    },
+    {
+      "name": "drag-to-confirm-slider",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/drag-to-confirm-slider.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "draggable-list",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/lists/draggable-list.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "lists"
+    },
+    {
+      "name": "dynamic-spotlight-cta",
+      "type": "registry:page",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/dynamic-spotlight-cta.tsx",
+          "type": "registry:page"
+        }
+      ],
+      "category": "page",
+      "subcategory": null
+    },
+    {
+      "name": "dynamic-tag-cloud",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/dynamic-tag-cloud.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "decorative",
+      "subcategory": null
+    },
+    {
+      "name": "ecommerce-highlight-card",
+      "type": "registry:component",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card",
+        "separator"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/cards/ecommerce-highlight-card.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "cards"
+    },
+    {
+      "name": "elastic-switch",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/micro/toggles/elastic-switch.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "micro",
+      "subcategory": "toggles"
+    },
+    {
+      "name": "expanding-search-dock",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/expanding-search-dock.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "fade-slide-modal",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/modal/fade-slide.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "modal"
+    },
+    {
+      "name": "faq-accordion-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/faq-accordion-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "faq-section",
+      "type": "registry:page",
+      "registryDependencies": [
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/faq-section.tsx",
+          "type": "registry:page"
+        }
+      ],
+      "category": "page",
+      "subcategory": null
+    },
+    {
+      "name": "feature-cards-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "card"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/feature-cards-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "feature-comparison-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/feature-comparison-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "feature-grid-section",
+      "type": "registry:page",
+      "registryDependencies": [
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/feature-grid-section.tsx",
+          "type": "registry:page"
+        }
+      ],
+      "category": "page",
+      "subcategory": null
+    },
+    {
+      "name": "floating-gradient",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion"
+      ],
+      "files": [
+        {
+          "path": "components/decorative/background/floating-gradient.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "decorative",
+      "subcategory": "background"
+    },
+    {
+      "name": "floating-info-panel",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/floating-info-panel.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "decorative",
+      "subcategory": null
+    },
+    {
+      "name": "floating-label-input",
+      "type": "registry:component",
+      "registryDependencies": [
+        "input"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/inputs/floating-label-input.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "inputs"
+    },
+    {
+      "name": "fluid-modal-transition",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/fluid-modal-transition.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "modal"
+    },
+    {
+      "name": "footer-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card",
+        "input"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/footer-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "gallery-grid-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/gallery-grid-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "glass-account-settings-card",
+      "type": "registry:component",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "label",
+        "switch"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/forms/glass-account-settings.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "forms"
+    },
+    {
+      "name": "glass-forgot-password-card",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/forms/glass-forgot-password.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "forms"
+    },
+    {
+      "name": "glass-profile-settings-card",
+      "type": "registry:component",
+      "registryDependencies": [
+        "avatar",
+        "badge",
+        "button",
+        "input",
+        "label",
+        "switch",
+        "textarea"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/forms/glass-profile-settings.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "forms"
+    },
+    {
+      "name": "glass-sign-in-card",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button",
+        "checkbox",
+        "input",
+        "label"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/forms/glass-sign-in.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "forms"
+    },
+    {
+      "name": "glass-sign-up-card",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button",
+        "checkbox",
+        "input",
+        "label"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/forms/glass-sign-up.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "forms"
+    },
+    {
+      "name": "glass-verification-code-card",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button",
+        "input"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/forms/glass-verification-code.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "forms"
+    },
+    {
+      "name": "glassmorphism-cta-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/glassmorphism-cta-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "glassmorphism-hero-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/glassmorphism-hero-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "glassmorphism-launch-timeline-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/glassmorphism-launch-timeline-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "glassmorphism-listen-app-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/glassmorphism-listen-app-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "glassmorphism-logo-showcase-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/glassmorphism-logo-showcase-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "glassmorphism-minimal-metrics-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/glassmorphism-minimal-metrics-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "glassmorphism-portfolio-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/glassmorphism-portfolio-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "glassmorphism-pricing-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/glassmorphism-pricing-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "glassmorphism-product-update-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/glassmorphism-product-update-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "glassmorphism-statistics-card",
+      "type": "registry:component",
+      "registryDependencies": [
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/glassmorphism-statistics-card.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "glassmorphism-testimonials-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "card"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/glassmorphism-testimonials-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "glowy-waves-hero",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/glowy-waves-hero.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "gradient-animation",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion"
+      ],
+      "files": [
+        {
+          "path": "components/decorative/backgrounds/gradient-animation.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "decorative",
+      "subcategory": "background"
+    },
+    {
+      "name": "heart-favorite",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/micro/icons/heart-favorite.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "micro",
+      "subcategory": "icons"
+    },
+    {
+      "name": "hero-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/hero-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "hero-section",
+      "type": "registry:page",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/hero-section.tsx",
+          "type": "registry:page"
+        }
+      ],
+      "category": "page",
+      "subcategory": "hero"
+    },
+    {
+      "name": "holographic-wall",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/holographic-wall.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "decorative",
+      "subcategory": null
+    },
+    {
+      "name": "hover-expand-card",
+      "type": "registry:component",
+      "registryDependencies": [
+        "badge"
+      ],
+      "dependencies": [
+        "framer-motion"
+      ],
+      "files": [
+        {
+          "path": "components/components/cards/hover-expand.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "cards"
+    },
+    {
+      "name": "image-slider-card",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/cards/image-slider-card.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "cards"
+    },
+    {
+      "name": "interactive-logs-table",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "input"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/interactive-logs-table.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "interactive-timeline",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/interactive-timeline.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "mac-searchbar",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/search/mac-searchbar.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "magnetic-avatar-group",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/magnetic-avatar-group.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "magnetic-button",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/micro/buttons/magnetic-button.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "micro",
+      "subcategory": "buttons"
+    },
+    {
+      "name": "magnetic-cursor-link",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/magnetic-cursor-link.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "micro",
+      "subcategory": null
+    },
+    {
+      "name": "messenger",
+      "type": "registry:component",
+      "registryDependencies": [
+        "avatar",
+        "badge",
+        "button",
+        "input",
+        "textarea"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/chat/messenger.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "chat"
+    },
+    {
+      "name": "mood-gradient-button",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/mood-gradient-button.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "micro",
+      "subcategory": null
+    },
+    {
+      "name": "morphing-action-button",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/morphing-action-button.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "micro",
+      "subcategory": null
+    },
+    {
+      "name": "multiple-accounts",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/account-switcher/multiple-accounts.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "n8n-workflow-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react",
+        "react-dom"
+      ],
+      "files": [
+        {
+          "path": "components/sections/n8n-workflow-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "new-hero-section",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/new-hero-section.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "newsletter-signup-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card",
+        "input"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/newsletter-signup-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "notification-bell",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/notification-bell.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "micro",
+      "subcategory": null
+    },
+    {
+      "name": "notification-center",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/notifications/notification-center.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "notifications"
+    },
+    {
+      "name": "notion-blog-page",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/notion-blog-page.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "our-services-section",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/our-services-section.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "password-input",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/inputs/password-input.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "inputs"
+    },
+    {
+      "name": "preview-details-card",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/micro/links/preview-details-card.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "micro",
+      "subcategory": "links"
+    },
+    {
+      "name": "pricing-section",
+      "type": "registry:page",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/pricing-section.tsx",
+          "type": "registry:page"
+        }
+      ],
+      "category": "page",
+      "subcategory": null
+    },
+    {
+      "name": "projects-block",
+      "type": "registry:component",
+      "registryDependencies": [
+        "badge",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/projects-block.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "reactive-background-grid",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/reactive-background-grid.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "decorative",
+      "subcategory": "background"
+    },
+    {
+      "name": "ripple-click-button",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/micro/buttons/ripple-click.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "micro",
+      "subcategory": "buttons"
+    },
+    {
+      "name": "scale-hover-button",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion"
+      ],
+      "files": [
+        {
+          "path": "components/micro/buttons/scale-hover.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "micro",
+      "subcategory": "buttons"
+    },
+    {
+      "name": "scroll-progress-tracker",
+      "type": "registry:page",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/scroll-progress-tracker.tsx",
+          "type": "registry:page"
+        }
+      ],
+      "category": "page",
+      "subcategory": null
+    },
+    {
+      "name": "scroll-reveal",
+      "type": "registry:page",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/scroll-reveal.tsx",
+          "type": "registry:page"
+        }
+      ],
+      "category": "page",
+      "subcategory": null
+    },
+    {
+      "name": "services-grid-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/services-grid-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "shimmer-button",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion"
+      ],
+      "files": [
+        {
+          "path": "components/micro/buttons/shimmer-button.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "micro",
+      "subcategory": "buttons"
+    },
+    {
+      "name": "simple-calendar",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/forms/simple-calendar.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "forms"
+    },
+    {
+      "name": "smart-hover-card",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/smart-hover-card.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "spotlight-section",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/spotlight-section.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "decorative",
+      "subcategory": null
+    },
+    {
+      "name": "stacked-card-carousel",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/motion-core/stacked-card-carousel.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    },
+    {
+      "name": "staggered-dropdown",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/dropdown/staggered-items.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": "dropdown"
+    },
+    {
+      "name": "staggered-hero",
+      "type": "registry:page",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion"
+      ],
+      "files": [
+        {
+          "path": "components/page/hero/staggered-text.tsx",
+          "type": "registry:page"
+        }
+      ],
+      "category": "page",
+      "subcategory": "hero"
+    },
+    {
+      "name": "stats-counter-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/stats-counter-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "stats-section",
+      "type": "registry:page",
+      "registryDependencies": [
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/stats-section.tsx",
+          "type": "registry:page"
+        }
+      ],
+      "category": "page",
+      "subcategory": null
+    },
+    {
+      "name": "stocks-dashboard",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "card",
+        "dialog"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/stocks-dashboard/stocks-dashboard.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "team-section-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/team-section-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "testimonial-section",
+      "type": "registry:page",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/testimonial-section.tsx",
+          "type": "registry:page"
+        }
+      ],
+      "category": "page",
+      "subcategory": null
+    },
+    {
+      "name": "testimonials-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/testimonials-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "timeline-block",
+      "type": "registry:block",
+      "registryDependencies": [
+        "badge",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/sections/timeline-block.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "category": "sections",
+      "subcategory": null
+    },
+    {
+      "name": "toast-notification",
+      "type": "registry:page",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/page/notifications/toast-notification.tsx",
+          "type": "registry:page"
+        }
+      ],
+      "category": "page",
+      "subcategory": "notifications"
+    },
+    {
+      "name": "typewriter-text",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": [
+        "framer-motion"
+      ],
+      "files": [
+        {
+          "path": "components/decorative/text/typewriter.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "category": "decorative",
+      "subcategory": "text"
+    },
+    {
+      "name": "weather-dashboard",
+      "type": "registry:component",
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react",
+        "react"
+      ],
+      "files": [
+        {
+          "path": "components/components/weather/weather-dashboard.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "category": "components",
+      "subcategory": null
+    }
+  ],
+  "homepage": "https://ui.tripled.work"
+}
