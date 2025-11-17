@@ -21,16 +21,12 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import {
-  AtSign,
   Bold,
   ChevronDown,
   Italic,
-  Link,
   List,
   ListOrdered,
-  Paperclip,
   Plus,
-  Quote,
   RotateCcw,
   Save,
   Underline,
@@ -167,17 +163,7 @@ export function DetailTaskCard() {
     }, 900);
   };
 
-  const toolbarIcons = [
-    Bold,
-    Italic,
-    Underline,
-    List,
-    ListOrdered,
-    Quote,
-    Link,
-    Paperclip,
-    AtSign,
-  ];
+  const toolbarIcons = [Bold, Italic, Underline, List, ListOrdered];
 
   return (
     <div className="">

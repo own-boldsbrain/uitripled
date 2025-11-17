@@ -54,7 +54,7 @@ export default function HomePageContent() {
             initial={{ opacity: 0, y: 4 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.25 }}
-            className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground"
+            className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground text-center"
           >
             When Framer Motion meets shadcn/ui
           </motion.p>
