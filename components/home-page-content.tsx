@@ -22,6 +22,7 @@ import { AIChatInterface } from "@/components/components/chat/ai-chat-interface"
 import GradientOverlay from "@/components/gradiant-overlay";
 import { GithubStarButton } from "@/components/github-star-button";
 import { Star } from "lucide-react";
+import { ColorThemePicker } from "@/components/color-theme-picker";
 
 function StarButtonFallback() {
   return (
@@ -75,6 +76,17 @@ export default function HomePageContent() {
             You&apos;ll see more blocks than components here because we
             prioritize copy-ready pieces over complex builds.
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.08 }}
+            className="mt-2 flex items-center justify-center gap-2"
+          >
+            <span className="text-xs text-muted-foreground">
+              Try different colors:
+            </span>
+            <ColorThemePicker />
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
