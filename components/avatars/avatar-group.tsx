@@ -53,7 +53,7 @@ export function AvatarGroup() {
               mass: 0.7,
             }),
           },
-    [shouldReduceMotion],
+    [shouldReduceMotion]
   );
 
   return (

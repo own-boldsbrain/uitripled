@@ -51,7 +51,7 @@ export function AIGlowInput({
         top: `${Math.random() * 100}%`,
         delay: Math.random() * 1.8,
       })),
-    [],
+    []
   );
 
   const springIntensity = useSpring(glowIntensityMotion, {
@@ -121,7 +121,7 @@ export function AIGlowInput({
         <motion.div
           className={cn(
             "absolute -top-24 left-1/2 h-48 w-48 -translate-x-1/2 rounded-full blur-[140px]",
-            isDarkMode ? "bg-white/15" : "bg-[#ddd]",
+            isDarkMode ? "bg-white/15" : "bg-[#ddd]"
           )}
           animate={
             shouldReduceMotion
@@ -176,7 +176,7 @@ export function AIGlowInput({
               "relative w-full rounded-[calc(theme(borderRadius.2xl)-0.25rem)] border border-border/60 px-6 py-4 text-base placeholder:text-muted-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors",
               isDarkMode
                 ? "bg-white/5 text-muted-foreground focus-visible:ring-white/40"
-                : "bg-white/90 text-foreground focus-visible:ring-[#ddd]",
+                : "bg-white/90 text-foreground focus-visible:ring-[#ddd]"
             )}
             style={{
               boxShadow: `0 0 ${shadowBlur}px rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${glowShadowAlpha})`,

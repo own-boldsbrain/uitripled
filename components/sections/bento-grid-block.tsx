@@ -319,7 +319,7 @@ export function BentoGridBlock() {
                     >
                       {tag}
                     </span>
-                  ),
+                  )
                 )}
               </div>
             </div>

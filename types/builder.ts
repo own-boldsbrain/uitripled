@@ -45,4 +45,3 @@ export type SavedProject = {
   deploymentId?: string;
   deploymentUrl?: string;
 };
-

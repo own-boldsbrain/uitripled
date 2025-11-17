@@ -45,7 +45,7 @@ export function AnimationsSidebar({
         (anim) =>
           anim.name.toLowerCase().includes(lowerQuery) ||
           anim.description.toLowerCase().includes(lowerQuery) ||
-          anim.tags.some((tag) => tag.toLowerCase().includes(lowerQuery)),
+          anim.tags.some((tag) => tag.toLowerCase().includes(lowerQuery))
       );
     }
 

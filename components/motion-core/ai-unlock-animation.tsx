@@ -289,7 +289,7 @@ export function AIUnlockAnimation({ autoPlay = true }: AIUnlockAnimationProps) {
                     animate={{ opacity: [0, 0.4, 0], scale: [0.8, 1, 1] }}
                     transition={{ duration: 0.8, delay: i * 0.05 }}
                   />
-                ),
+                )
               )}
             </>
           )}

@@ -42,7 +42,7 @@ export function ThemeToggle() {
           size="icon"
           className={cn(
             "relative h-10 w-10",
-            !isMounted && "animate-pulse bg-muted/30 text-muted-foreground",
+            !isMounted && "animate-pulse bg-muted/30 text-muted-foreground"
           )}
           aria-label="Toggle theme"
         >

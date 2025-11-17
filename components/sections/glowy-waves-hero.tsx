@@ -75,7 +75,7 @@ export function GlowyWavesHero() {
 
     const computeThemeColors = () => {
       const rootStyles = getComputedStyle(document.documentElement);
-      
+
       // Helper to convert any CSS color to a Canvas-compatible format
       const resolveColor = (variables: string[], alpha = 1) => {
         // Create a temporary element to get computed color
@@ -94,11 +94,13 @@ export function GlowyWavesHero() {
             // Try to set the background color using the CSS variable
             tempEl.style.backgroundColor = `var(${variable})`;
             const computedColor = getComputedStyle(tempEl).backgroundColor;
-            
+
             if (computedColor && computedColor !== "rgba(0, 0, 0, 0)") {
               // Convert RGB to RGBA with alpha if needed
               if (alpha < 1) {
-                const rgbMatch = computedColor.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*[\d.]+)?\)/);
+                const rgbMatch = computedColor.match(
+                  /rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*[\d.]+)?\)/
+                );
                 if (rgbMatch) {
                   color = `rgba(${rgbMatch[1]}, ${rgbMatch[2]}, ${rgbMatch[3]}, ${alpha})`;
                 } else {
@@ -172,7 +174,7 @@ export function GlowyWavesHero() {
     });
 
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
+      "(prefers-reduced-motion: reduce)"
     ).matches;
 
     const mouseInfluence = prefersReducedMotion ? 10 : 70;

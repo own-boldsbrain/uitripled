@@ -49,7 +49,7 @@ function ScrollProgressTrackerInner({
   const colorProgress = useTransform(
     scrollYProgress,
     [0, 0.5, 1],
-    ["rgb(99, 102, 241)", "rgb(139, 92, 246)", "rgb(236, 72, 153)"],
+    ["rgb(99, 102, 241)", "rgb(139, 92, 246)", "rgb(236, 72, 153)"]
   );
 
   return (

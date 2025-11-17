@@ -67,7 +67,7 @@ const noIndexRobots: RobotsConfig = {
 
 const defaultImageAbsolute = new URL(
   siteConfig.defaultImage,
-  metadataBase,
+  metadataBase
 ).toString();
 
 const defaultOpenGraph: NonNullable<Metadata["openGraph"]> = {

@@ -34,10 +34,7 @@ export default function AnimationDetailPageClient({ code }: { code: string }) {
 
   const Component = component.component;
   const requiresShadcn = component.tags.includes("shadcn");
-  const codeLineCount = React.useMemo(
-    () => code.split("\n").length,
-    [code],
-  );
+  const codeLineCount = React.useMemo(() => code.split("\n").length, [code]);
   const showLongCodeNote = codeLineCount > 400;
 
   const handleRefresh = () => {
@@ -227,7 +224,7 @@ export default function AnimationDetailPageClient({ code }: { code: string }) {
                             onClick={() =>
                               handleCopyInstall(
                                 `npx uitripled add ${component.id}`,
-                                "npx",
+                                "npx"
                               )
                             }
                             className="flex items-center gap-1.5 rounded border border-border bg-muted px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-ring hover:text-foreground"
@@ -276,7 +273,7 @@ export default function AnimationDetailPageClient({ code }: { code: string }) {
                             onClick={() =>
                               handleCopyInstall(
                                 `npm install -g uitripled && uitripled add ${component.id}`,
-                                "npm",
+                                "npm"
                               )
                             }
                             className="flex items-center gap-1.5 rounded border border-border bg-muted px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-ring hover:text-foreground"
@@ -326,7 +323,7 @@ export default function AnimationDetailPageClient({ code }: { code: string }) {
                             onClick={() =>
                               handleCopyInstall(
                                 `yarn dlx uitripled add ${component.id}`,
-                                "yarn",
+                                "yarn"
                               )
                             }
                             className="flex items-center gap-1.5 rounded border border-border bg-muted px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-ring hover:text-foreground"
@@ -375,7 +372,7 @@ export default function AnimationDetailPageClient({ code }: { code: string }) {
                             onClick={() =>
                               handleCopyInstall(
                                 `pnpm dlx uitripled add ${component.id}`,
-                                "pnpm",
+                                "pnpm"
                               )
                             }
                             className="flex items-center gap-1.5 rounded border border-border bg-muted px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-ring hover:text-foreground"
@@ -437,11 +434,10 @@ export default function AnimationDetailPageClient({ code }: { code: string }) {
                           lines)
                         </p>
                         <p>
-                          We include everything in one file for easy
-                          copy-paste (including dummy data), but keep in mind
-                          you should split your logic when integrating it
-                          (e.g., move data fetching to loaders, hooks, or API
-                          utilities).
+                          We include everything in one file for easy copy-paste
+                          (including dummy data), but keep in mind you should
+                          split your logic when integrating it (e.g., move data
+                          fetching to loaders, hooks, or API utilities).
                         </p>
                       </div>
                     </motion.div>
@@ -467,8 +463,8 @@ export default function AnimationDetailPageClient({ code }: { code: string }) {
                       </h3>
                       <p className="text-xs text-muted-foreground/80">
                         The colors and theme are customizable via Tailwind CSS
-                        classes. The default theme uses dark mode colors
-                        defined in your{" "}
+                        classes. The default theme uses dark mode colors defined
+                        in your{" "}
                         <code className="rounded border border-border px-1.5 py-0.5 text-[11px]">
                           globals.css
                         </code>{" "}

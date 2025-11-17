@@ -14,10 +14,7 @@ import {
   Loader2,
 } from "lucide-react";
 import { CodeBlock } from "./code-block";
-import type {
-  BuilderComponent,
-  BuilderProjectPage,
-} from "@/types/builder";
+import type { BuilderComponent, BuilderProjectPage } from "@/types/builder";
 import { mergeComponentImports } from "@/lib/merge-imports";
 import {
   Dialog,
@@ -43,7 +40,7 @@ const escapeForJSXText = (value: string) =>
 const replaceNextOccurrence = (
   source: string,
   search: string,
-  replacement: string,
+  replacement: string
 ) => {
   if (!search) return source;
   const index = source.indexOf(search);
@@ -53,7 +50,7 @@ const replaceNextOccurrence = (
 
 const applyTextOverrides = (
   code: string,
-  textContent?: BuilderComponent["textContent"],
+  textContent?: BuilderComponent["textContent"]
 ) => {
   if (!textContent) return code;
 
@@ -97,7 +94,7 @@ const slugifyName = (value: string) =>
 
 const buildPageCode = async (
   currentPage: BuilderProjectPage,
-  allPages: BuilderProjectPage[],
+  allPages: BuilderProjectPage[]
 ): Promise<string> => {
   const components = currentPage.components;
 
@@ -107,7 +104,7 @@ const buildPageCode = async (
 
   for (const component of components) {
     let animationCode = component.animation.code;
-    
+
     // If code is not available, fetch it from the API
     if (!animationCode && component.animation.id) {
       try {
@@ -116,26 +113,31 @@ const buildPageCode = async (
           const data = await response.json();
           animationCode = data.code;
         } else {
-          console.warn(`Failed to load code for component ${component.animation.id}: ${response.status}`);
+          console.warn(
+            `Failed to load code for component ${component.animation.id}: ${response.status}`
+          );
           continue;
         }
       } catch (error) {
-        console.error(`Error loading code for component ${component.animation.id}:`, error);
+        console.error(
+          `Error loading code for component ${component.animation.id}:`,
+          error
+        );
         continue;
       }
     }
-    
+
     if (!animationCode) {
       console.warn(`Component ${component.animation.id} has no code available`);
       continue;
     }
     const codeWithOverrides = applyTextOverrides(
       animationCode,
-      component.textContent,
+      component.textContent
     );
 
     const functionMatch = codeWithOverrides.match(
-      /export\s+(?:function|const)\s+(\w+)/,
+      /export\s+(?:function|const)\s+(\w+)/
     );
     const componentFunctionName = functionMatch
       ? functionMatch[1]
@@ -204,7 +206,7 @@ const buildPageCode = async (
 
     if (componentCode.length > 0) {
       componentDefinitions.push(
-        `// ${component.animation.name}\n${componentCode}`,
+        `// ${component.animation.name}\n${componentCode}`
       );
     }
   }
@@ -243,7 +245,7 @@ ${mainContent}
 
 const buildProjectLayout = (
   allPages: BuilderProjectPage[],
-  projectName: string,
+  projectName: string
 ): string => {
   const brandTitle = allPages[0]?.name ?? projectName;
   const brandLabel = escapeForTemplateLiteral(brandTitle);
@@ -262,7 +264,7 @@ const buildProjectLayout = (
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               ${link.label}
-            </Link>`,
+            </Link>`
           )
           .join("\n")
       : `            <Link
@@ -281,7 +283,7 @@ const buildProjectLayout = (
               className="text-xs text-muted-foreground transition-colors hover:text-foreground"
             >
               ${link.label}
-            </Link>`,
+            </Link>`
           )
           .join("\n")
       : `            <Link
@@ -350,13 +352,13 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
 
   const totalComponentCount = useMemo(
     () => pages.reduce((sum, page) => sum + page.components.length, 0),
-    [pages],
+    [pages]
   );
 
   // Load code for all pages asynchronously
   useEffect(() => {
     let cancelled = false;
-    
+
     async function loadPageCodes() {
       setLoadingCode(true);
       try {
@@ -369,7 +371,7 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
             componentCount: page.components.length,
           }))
         );
-        
+
         if (!cancelled) {
           setPageArtifacts(artifacts);
         }
@@ -384,9 +386,9 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
         }
       }
     }
-    
+
     loadPageCodes();
-    
+
     return () => {
       cancelled = true;
     };
@@ -407,7 +409,7 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
 
     if (activePageId) {
       const match = pageArtifacts.find(
-        (artifact) => artifact.id === activePageId,
+        (artifact) => artifact.id === activePageId
       );
       if (match) {
         return match;
@@ -425,9 +427,9 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
             animationId: component.animationId,
             textContent: component.textContent ?? {},
           })),
-        })),
+        }))
       ),
-    [pages],
+    [pages]
   );
 
   const handleCopy = async () => {
@@ -443,7 +445,7 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
     if (!normalizedName || totalComponentCount === 0) return;
 
     const existingProjects = JSON.parse(
-      localStorage.getItem("builderProjects") || "{}",
+      localStorage.getItem("builderProjects") || "{}"
     );
     const existingNormalizedEntry = existingProjects[normalizedName];
 
@@ -460,7 +462,7 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
         typeof crypto !== "undefined" && typeof crypto.randomUUID === "function"
           ? crypto.randomUUID().replace(/-/g, "").slice(0, 8)
           : Array.from({ length: 8 }, () =>
-              chars.charAt(Math.floor(Math.random() * chars.length)),
+              chars.charAt(Math.floor(Math.random() * chars.length))
             ).join("");
 
       finalProjectName = baseSlug
@@ -563,7 +565,7 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
 
   const findMatchingProject = useCallback(() => {
     const existingProjects = JSON.parse(
-      localStorage.getItem("builderProjects") || "{}",
+      localStorage.getItem("builderProjects") || "{}"
     );
     return Object.values(existingProjects).find((project: any) => {
       const savedPages =
@@ -581,7 +583,7 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
             animationId: component.animationId,
             textContent: component.textContent ?? {},
           })),
-        })),
+        }))
       );
 
       return signature === projectSignature;
@@ -607,7 +609,7 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
 
     if (existingProject) {
       router.push(
-        `/deploy?project=${encodeURIComponent(existingProject.name)}`,
+        `/deploy?project=${encodeURIComponent(existingProject.name)}`
       );
     } else {
       openSaveDialog("deploy");
@@ -746,7 +748,7 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
         setDisplayedCode(code);
       }
     }
-    
+
     loadDisplayedCode();
   }, [activeArtifact]);
 

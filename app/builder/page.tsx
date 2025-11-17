@@ -49,7 +49,7 @@ export default function BuilderPage() {
       activationConstraint: {
         distance: 8,
       },
-    }),
+    })
   );
 
   useEffect(() => {
@@ -127,10 +127,10 @@ export default function BuilderPage() {
               };
             }),
           };
-        }),
+        })
       );
     },
-    [activePageId],
+    [activePageId]
   );
 
   const handleUpdateTextNode = useCallback(
@@ -163,16 +163,16 @@ export default function BuilderPage() {
               };
             }),
           };
-        }),
+        })
       );
     },
-    [activePageId],
+    [activePageId]
   );
 
   const handleAddComponentToPage = useCallback(
     (animationId: string) => {
       const animation = componentsRegistry.find(
-        (item) => item.id === animationId,
+        (item) => item.id === animationId
       );
       if (!animation || animation.category !== "blocks") {
         return;
@@ -198,11 +198,11 @@ export default function BuilderPage() {
         return prev.map((page) =>
           page.id === targetPageId
             ? { ...page, components: [...page.components, newComponent] }
-            : page,
+            : page
         );
       });
     },
-    [activePageId],
+    [activePageId]
   );
 
   const handleMobileComponentSelect = useCallback(
@@ -210,7 +210,7 @@ export default function BuilderPage() {
       handleAddComponentToPage(animationId);
       setMobileSidebarOpen(false);
     },
-    [handleAddComponentToPage],
+    [handleAddComponentToPage]
   );
 
   const handleDragStart = (event: DragStartEvent) => {
@@ -240,7 +240,7 @@ export default function BuilderPage() {
 
     // Check if we're reordering components within the canvas
     const activeIndex = currentPage.components.findIndex(
-      (c) => c.id === activeId,
+      (c) => c.id === activeId
     );
     const overIndex = currentPage.components.findIndex((c) => c.id === overId);
 
@@ -253,8 +253,8 @@ export default function BuilderPage() {
                 ...page,
                 components: arrayMove(page.components, activeIndex, overIndex),
               }
-            : page,
-        ),
+            : page
+        )
       );
       setActiveId(null);
       return;
@@ -289,7 +289,7 @@ export default function BuilderPage() {
               ...page,
               components: newItems,
             };
-          }),
+          })
         );
       } else {
         // If dropped on canvas, append to end
@@ -297,8 +297,8 @@ export default function BuilderPage() {
           prev.map((page) =>
             page.id === currentPage.id
               ? { ...page, components: [...page.components, newComponent] }
-              : page,
-          ),
+              : page
+          )
         );
       }
     }
@@ -315,11 +315,11 @@ export default function BuilderPage() {
           ? {
               ...page,
               components: page.components.filter(
-                (component) => component.id !== id,
+                (component) => component.id !== id
               ),
             }
-          : page,
-      ),
+          : page
+      )
     );
   };
 
@@ -368,8 +368,8 @@ export default function BuilderPage() {
               name: normalized,
               slug: newSlug,
             }
-          : item,
-      ),
+          : item
+      )
     );
   };
 
@@ -397,13 +397,13 @@ export default function BuilderPage() {
 
   const loadSavedProjects = () => {
     const projects = JSON.parse(
-      localStorage.getItem("builderProjects") || "{}",
+      localStorage.getItem("builderProjects") || "{}"
     );
     const projectList = Object.values(projects) as SavedProject[];
     setSavedProjects(
       projectList.sort(
-        (a, b) => new Date(b.savedAt).getTime() - new Date(a.savedAt).getTime(),
-      ),
+        (a, b) => new Date(b.savedAt).getTime() - new Date(a.savedAt).getTime()
+      )
     );
     setLoadDialogOpen(true);
   };
@@ -429,7 +429,7 @@ export default function BuilderPage() {
       const builderComponents = (page.components ?? [])
         .map<BuilderComponent | null>((comp) => {
           const animation = componentsRegistry.find(
-            (a) => a.id === comp.animationId,
+            (a) => a.id === comp.animationId
           );
           if (!animation) {
             return null;
@@ -474,7 +474,7 @@ export default function BuilderPage() {
 
   const deleteProject = (projectName: string) => {
     const projects = JSON.parse(
-      localStorage.getItem("builderProjects") || "{}",
+      localStorage.getItem("builderProjects") || "{}"
     );
     delete projects[projectName];
     localStorage.setItem("builderProjects", JSON.stringify(projects));
@@ -491,10 +491,13 @@ export default function BuilderPage() {
 
     for (const page of pages) {
       const canvasComponent = page.components.find(
-        (component) => component.id === activeId,
+        (component) => component.id === activeId
       );
       if (canvasComponent) {
-        return { name: canvasComponent.animation.name, type: "canvas" as const };
+        return {
+          name: canvasComponent.animation.name,
+          type: "canvas" as const,
+        };
       }
     }
 

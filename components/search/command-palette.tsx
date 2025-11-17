@@ -54,9 +54,9 @@ export function CommandPalette() {
   const filteredCommands = useMemo(
     () =>
       commands.filter((cmd) =>
-        cmd.label.toLowerCase().includes(query.toLowerCase()),
+        cmd.label.toLowerCase().includes(query.toLowerCase())
       ),
-    [query],
+    [query]
   );
 
   const panelVariants: Variants = shouldReduceMotion

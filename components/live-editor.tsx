@@ -42,7 +42,7 @@ export function LiveEditor({ initialCode }: LiveEditorProps) {
     if (!processed.includes("export default")) {
       // If there's a named export, convert it to default
       const namedExportMatch = processed.match(
-        /export\s+(function|const)\s+(\w+)/,
+        /export\s+(function|const)\s+(\w+)/
       );
       if (namedExportMatch) {
         const componentName = namedExportMatch[2];

@@ -46,7 +46,7 @@ export function MultipleAccounts() {
     () =>
       accountOptions.find((account) => account.id === activeId) ??
       accountOptions[0],
-    [activeId],
+    [activeId]
   );
 
   const statusMessage = activeAccount

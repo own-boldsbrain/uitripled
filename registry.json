@@ -6,14 +6,8 @@
     {
       "name": "about-us-page",
       "type": "registry:page",
-      "registryDependencies": [
-        "badge",
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["badge", "button"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/page/about/about-us-page.tsx",
@@ -26,14 +20,8 @@
     {
       "name": "about-us-section",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["badge", "card"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/about-us-section.tsx",
@@ -46,15 +34,8 @@
     {
       "name": "ai-chat-interface",
       "type": "registry:component",
-      "registryDependencies": [
-        "button",
-        "textarea"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button", "textarea"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/chat/ai-chat-interface.tsx",
@@ -67,13 +48,8 @@
     {
       "name": "ai-glow-input",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/motion-core/ai-glow-input.tsx",
@@ -86,12 +62,8 @@
     {
       "name": "ai-loading-skeleton",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion"],
       "files": [
         {
           "path": "components/motion-core/ai-loading-skeleton.tsx",
@@ -104,13 +76,8 @@
     {
       "name": "ai-response-typing",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/motion-core/ai-response-typing.tsx",
@@ -124,10 +91,7 @@
       "name": "ai-unlock-animation",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/motion-core/ai-unlock-animation.tsx",
@@ -140,14 +104,8 @@
     {
       "name": "animated-accordion",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/disclosure/animated-accordion.tsx",
@@ -160,13 +118,8 @@
     {
       "name": "animated-badge",
       "type": "registry:ui",
-      "registryDependencies": [
-        "badge"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["badge"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/micro/badges/animated-badge.tsx",
@@ -179,12 +132,8 @@
     {
       "name": "animated-card-stack",
       "type": "registry:component",
-      "registryDependencies": [
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion"
-      ],
+      "registryDependencies": ["card"],
+      "dependencies": ["framer-motion"],
       "files": [
         {
           "path": "components/components/cards/animated-card-stack.tsx",
@@ -197,14 +146,8 @@
     {
       "name": "animated-checkbox",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/forms/animated-checkbox.tsx",
@@ -217,14 +160,8 @@
     {
       "name": "animated-dialog",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/modals/animated-dialog.tsx",
@@ -237,13 +174,8 @@
     {
       "name": "animated-list",
       "type": "registry:component",
-      "registryDependencies": [
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["card"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/components/lists/animated-list.tsx",
@@ -256,13 +188,8 @@
     {
       "name": "animated-navbar",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/navigation/animated-navbar.tsx",
@@ -275,14 +202,8 @@
     {
       "name": "animated-pagination",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/navigation/animated-pagination.tsx",
@@ -295,14 +216,8 @@
     {
       "name": "animated-profile-menu",
       "type": "registry:component",
-      "registryDependencies": [
-        "avatar"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["avatar"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/navigation/animated-profile-menu.tsx",
@@ -315,13 +230,8 @@
     {
       "name": "animated-progress",
       "type": "registry:ui",
-      "registryDependencies": [
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "registryDependencies": ["card"],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/data/progress/animated-progress.tsx",
@@ -335,10 +245,7 @@
       "name": "animated-quote-block",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/motion-core/animated-quote-block.tsx",
@@ -351,13 +258,8 @@
     {
       "name": "animated-radio",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/forms/animated-radio.tsx",
@@ -370,14 +272,8 @@
     {
       "name": "animated-select",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/forms/animated-select.tsx",
@@ -390,14 +286,8 @@
     {
       "name": "animated-sidebar",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/navigation/animated-sidebar.tsx",
@@ -410,13 +300,8 @@
     {
       "name": "animated-tabs",
       "type": "registry:component",
-      "registryDependencies": [
-        "tabs"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "registryDependencies": ["tabs"],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/components/tabs/animated-tabs.tsx",
@@ -429,14 +314,8 @@
     {
       "name": "animated-tooltip",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/tooltips/animated-tooltip.tsx",
@@ -450,10 +329,7 @@
       "name": "auto-revealing-heading",
       "type": "registry:page",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/motion-core/auto-revealing-heading.tsx",
@@ -466,14 +342,8 @@
     {
       "name": "avatar-group",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/avatars/avatar-group.tsx",
@@ -486,14 +356,8 @@
     {
       "name": "bento-grid-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["badge", "button"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/bento-grid-block.tsx",
@@ -506,15 +370,8 @@
     {
       "name": "blog-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["badge", "button", "card"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/blog-block.tsx",
@@ -527,14 +384,8 @@
     {
       "name": "bottom-modal",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/modals/bottom-modal.tsx",
@@ -547,16 +398,8 @@
     {
       "name": "browse-folder",
       "type": "registry:component",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "tabs"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge", "button", "tabs"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/browse-folder.tsx",
@@ -570,10 +413,7 @@
       "name": "cash-flow-chart",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/data/charts/cash-flow-chart.tsx",
@@ -586,17 +426,8 @@
     {
       "name": "chat-app",
       "type": "registry:component",
-      "registryDependencies": [
-        "button",
-        "card",
-        "input",
-        "scroll-area"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button", "card", "input", "scroll-area"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/chat/chat-app.tsx",
@@ -609,14 +440,8 @@
     {
       "name": "command-palette",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/search/command-palette.tsx",
@@ -629,17 +454,8 @@
     {
       "name": "contact-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "button",
-        "card",
-        "input",
-        "label",
-        "textarea"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["button", "card", "input", "label", "textarea"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/contact-block.tsx",
@@ -652,18 +468,8 @@
     {
       "name": "contact-form-section",
       "type": "registry:block",
-      "registryDependencies": [
-        "button",
-        "card",
-        "input",
-        "label",
-        "textarea"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button", "card", "input", "label", "textarea"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/contact-form-section.tsx",
@@ -676,14 +482,8 @@
     {
       "name": "context-menu",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/navigation/context-menu.tsx",
@@ -696,14 +496,8 @@
     {
       "name": "context-menu-bubble",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/motion-core/context-menu-bubble.tsx",
@@ -717,10 +511,7 @@
       "name": "counter-up",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/data/progress/counter-up.tsx",
@@ -733,14 +524,8 @@
     {
       "name": "credit-card",
       "type": "registry:component",
-      "registryDependencies": [
-        "badge"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/cards/credit-card.tsx",
@@ -753,15 +538,8 @@
     {
       "name": "cta-banner-section",
       "type": "registry:page",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button", "card"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/cta-banner-section.tsx",
@@ -774,14 +552,8 @@
     {
       "name": "cta-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["button", "card"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/cta-block.tsx",
@@ -794,17 +566,8 @@
     {
       "name": "cta-hero-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card",
-        "input"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge", "button", "card", "input"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/cta-hero-block.tsx",
@@ -817,15 +580,8 @@
     {
       "name": "currency-converter-card",
       "type": "registry:block",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button", "card"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/currency-converter-card.tsx",
@@ -838,15 +594,8 @@
     {
       "name": "dashboard",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge", "button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/stocks-dashboard/dashboard.tsx",
@@ -867,11 +616,7 @@
         "input",
         "textarea"
       ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/cards/detail-task.tsx",
@@ -884,14 +629,8 @@
     {
       "name": "drag-to-confirm-slider",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/motion-core/drag-to-confirm-slider.tsx",
@@ -904,14 +643,8 @@
     {
       "name": "draggable-list",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/lists/draggable-list.tsx",
@@ -925,10 +658,7 @@
       "name": "dynamic-spotlight-cta",
       "type": "registry:page",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/motion-core/dynamic-spotlight-cta.tsx",
@@ -942,10 +672,7 @@
       "name": "dynamic-tag-cloud",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/motion-core/dynamic-tag-cloud.tsx",
@@ -958,17 +685,8 @@
     {
       "name": "ecommerce-highlight-card",
       "type": "registry:component",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card",
-        "separator"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge", "button", "card", "separator"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/cards/ecommerce-highlight-card.tsx",
@@ -982,10 +700,7 @@
       "name": "elastic-switch",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/micro/toggles/elastic-switch.tsx",
@@ -998,14 +713,8 @@
     {
       "name": "expanding-search-dock",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/motion-core/expanding-search-dock.tsx",
@@ -1018,14 +727,8 @@
     {
       "name": "fade-slide-modal",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/modal/fade-slide.tsx",
@@ -1038,16 +741,8 @@
     {
       "name": "faq-accordion-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge", "button", "card"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/faq-accordion-block.tsx",
@@ -1060,14 +755,8 @@
     {
       "name": "faq-section",
       "type": "registry:page",
-      "registryDependencies": [
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["card"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/faq-section.tsx",
@@ -1080,12 +769,8 @@
     {
       "name": "feature-cards-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "card"
-      ],
-      "dependencies": [
-        "lucide-react"
-      ],
+      "registryDependencies": ["card"],
+      "dependencies": ["lucide-react"],
       "files": [
         {
           "path": "components/sections/feature-cards-block.tsx",
@@ -1098,16 +783,8 @@
     {
       "name": "feature-comparison-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge", "button", "card"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/feature-comparison-block.tsx",
@@ -1120,14 +797,8 @@
     {
       "name": "feature-grid-section",
       "type": "registry:page",
-      "registryDependencies": [
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["card"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/feature-grid-section.tsx",
@@ -1141,9 +812,7 @@
       "name": "floating-gradient",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion"
-      ],
+      "dependencies": ["framer-motion"],
       "files": [
         {
           "path": "components/decorative/background/floating-gradient.tsx",
@@ -1157,10 +826,7 @@
       "name": "floating-info-panel",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/motion-core/floating-info-panel.tsx",
@@ -1173,13 +839,8 @@
     {
       "name": "floating-label-input",
       "type": "registry:component",
-      "registryDependencies": [
-        "input"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "registryDependencies": ["input"],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/components/inputs/floating-label-input.tsx",
@@ -1192,14 +853,8 @@
     {
       "name": "fluid-modal-transition",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/motion-core/fluid-modal-transition.tsx",
@@ -1212,16 +867,8 @@
     {
       "name": "footer-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card",
-        "input"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["badge", "button", "card", "input"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/footer-block.tsx",
@@ -1234,16 +881,8 @@
     {
       "name": "gallery-grid-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge", "button", "card"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/gallery-grid-block.tsx",
@@ -1256,17 +895,8 @@
     {
       "name": "glass-account-settings-card",
       "type": "registry:component",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "label",
-        "switch"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge", "button", "label", "switch"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/forms/glass-account-settings.tsx",
@@ -1279,15 +909,8 @@
     {
       "name": "glass-forgot-password-card",
       "type": "registry:component",
-      "registryDependencies": [
-        "button",
-        "input",
-        "label"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "registryDependencies": ["button", "input", "label"],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/components/forms/glass-forgot-password.tsx",
@@ -1309,11 +932,7 @@
         "switch",
         "textarea"
       ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/forms/glass-profile-settings.tsx",
@@ -1326,17 +945,8 @@
     {
       "name": "glass-sign-in-card",
       "type": "registry:component",
-      "registryDependencies": [
-        "button",
-        "checkbox",
-        "input",
-        "label"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button", "checkbox", "input", "label"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/forms/glass-sign-in.tsx",
@@ -1349,17 +959,8 @@
     {
       "name": "glass-sign-up-card",
       "type": "registry:component",
-      "registryDependencies": [
-        "button",
-        "checkbox",
-        "input",
-        "label"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button", "checkbox", "input", "label"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/forms/glass-sign-up.tsx",
@@ -1372,14 +973,8 @@
     {
       "name": "glass-verification-code-card",
       "type": "registry:component",
-      "registryDependencies": [
-        "button",
-        "input"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "registryDependencies": ["button", "input"],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/components/forms/glass-verification-code.tsx",
@@ -1392,14 +987,8 @@
     {
       "name": "glassmorphism-cta-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "registryDependencies": ["button", "card"],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/sections/glassmorphism-cta-block.tsx",
@@ -1412,12 +1001,8 @@
     {
       "name": "glassmorphism-hero-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "lucide-react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["lucide-react"],
       "files": [
         {
           "path": "components/sections/glassmorphism-hero-block.tsx",
@@ -1430,14 +1015,8 @@
     {
       "name": "glassmorphism-launch-timeline-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["badge", "button"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/glassmorphism-launch-timeline-block.tsx",
@@ -1450,15 +1029,8 @@
     {
       "name": "glassmorphism-listen-app-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge", "button", "card"],
+      "dependencies": ["lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/glassmorphism-listen-app-block.tsx",
@@ -1471,14 +1043,8 @@
     {
       "name": "glassmorphism-logo-showcase-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["badge", "button"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/glassmorphism-logo-showcase-block.tsx",
@@ -1491,15 +1057,8 @@
     {
       "name": "glassmorphism-minimal-metrics-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["badge", "button", "card"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/glassmorphism-minimal-metrics-block.tsx",
@@ -1512,14 +1071,8 @@
     {
       "name": "glassmorphism-portfolio-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["badge", "button"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/glassmorphism-portfolio-block.tsx",
@@ -1532,13 +1085,8 @@
     {
       "name": "glassmorphism-pricing-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "lucide-react"
-      ],
+      "registryDependencies": ["button", "card"],
+      "dependencies": ["lucide-react"],
       "files": [
         {
           "path": "components/sections/glassmorphism-pricing-block.tsx",
@@ -1551,15 +1099,8 @@
     {
       "name": "glassmorphism-product-update-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["badge", "button", "card"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/glassmorphism-product-update-block.tsx",
@@ -1572,14 +1113,8 @@
     {
       "name": "glassmorphism-statistics-card",
       "type": "registry:component",
-      "registryDependencies": [
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["card"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/glassmorphism-statistics-card.tsx",
@@ -1592,12 +1127,8 @@
     {
       "name": "glassmorphism-testimonials-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "card"
-      ],
-      "dependencies": [
-        "lucide-react"
-      ],
+      "registryDependencies": ["card"],
+      "dependencies": ["lucide-react"],
       "files": [
         {
           "path": "components/sections/glassmorphism-testimonials-block.tsx",
@@ -1610,14 +1141,8 @@
     {
       "name": "glowy-waves-hero",
       "type": "registry:block",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/glowy-waves-hero.tsx",
@@ -1631,9 +1156,7 @@
       "name": "gradient-animation",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion"
-      ],
+      "dependencies": ["framer-motion"],
       "files": [
         {
           "path": "components/decorative/backgrounds/gradient-animation.tsx",
@@ -1647,11 +1170,7 @@
       "name": "heart-favorite",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/micro/icons/heart-favorite.tsx",
@@ -1664,13 +1183,8 @@
     {
       "name": "hero-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/hero-block.tsx",
@@ -1683,13 +1197,8 @@
     {
       "name": "hero-section",
       "type": "registry:page",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/hero-section.tsx",
@@ -1703,10 +1212,7 @@
       "name": "holographic-wall",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/motion-core/holographic-wall.tsx",
@@ -1719,12 +1225,8 @@
     {
       "name": "hover-expand-card",
       "type": "registry:component",
-      "registryDependencies": [
-        "badge"
-      ],
-      "dependencies": [
-        "framer-motion"
-      ],
+      "registryDependencies": ["badge"],
+      "dependencies": ["framer-motion"],
       "files": [
         {
           "path": "components/components/cards/hover-expand.tsx",
@@ -1737,15 +1239,8 @@
     {
       "name": "image-slider-card",
       "type": "registry:component",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button", "card"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/cards/image-slider-card.tsx",
@@ -1758,16 +1253,8 @@
     {
       "name": "interactive-logs-table",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "input"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge", "button", "input"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/interactive-logs-table.tsx",
@@ -1780,13 +1267,8 @@
     {
       "name": "interactive-timeline",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/motion-core/interactive-timeline.tsx",
@@ -1799,14 +1281,8 @@
     {
       "name": "mac-searchbar",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/search/mac-searchbar.tsx",
@@ -1819,13 +1295,8 @@
     {
       "name": "magnetic-avatar-group",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/motion-core/magnetic-avatar-group.tsx",
@@ -1838,13 +1309,8 @@
     {
       "name": "magnetic-button",
       "type": "registry:ui",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/micro/buttons/magnetic-button.tsx",
@@ -1858,10 +1324,7 @@
       "name": "magnetic-cursor-link",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/motion-core/magnetic-cursor-link.tsx",
@@ -1881,11 +1344,7 @@
         "input",
         "textarea"
       ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/chat/messenger.tsx",
@@ -1899,10 +1358,7 @@
       "name": "mood-gradient-button",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/motion-core/mood-gradient-button.tsx",
@@ -1916,11 +1372,7 @@
       "name": "morphing-action-button",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/motion-core/morphing-action-button.tsx",
@@ -1933,14 +1385,8 @@
     {
       "name": "multiple-accounts",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/account-switcher/multiple-accounts.tsx",
@@ -1953,17 +1399,8 @@
     {
       "name": "n8n-workflow-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react",
-        "react-dom"
-      ],
+      "registryDependencies": ["badge", "button", "card"],
+      "dependencies": ["framer-motion", "lucide-react", "react", "react-dom"],
       "files": [
         {
           "path": "components/sections/n8n-workflow-block.tsx",
@@ -1976,13 +1413,8 @@
     {
       "name": "new-hero-section",
       "type": "registry:block",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/new-hero-section.tsx",
@@ -1995,17 +1427,8 @@
     {
       "name": "newsletter-signup-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card",
-        "input"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge", "button", "card", "input"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/newsletter-signup-block.tsx",
@@ -2019,11 +1442,7 @@
       "name": "notification-bell",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/motion-core/notification-bell.tsx",
@@ -2036,15 +1455,8 @@
     {
       "name": "notification-center",
       "type": "registry:component",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button", "card"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/notifications/notification-center.tsx",
@@ -2057,14 +1469,8 @@
     {
       "name": "notion-blog-page",
       "type": "registry:block",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/notion-blog-page.tsx",
@@ -2077,15 +1483,8 @@
     {
       "name": "our-services-section",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["badge", "button", "card"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/our-services-section.tsx",
@@ -2098,14 +1497,8 @@
     {
       "name": "password-input",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/inputs/password-input.tsx",
@@ -2119,11 +1512,7 @@
       "name": "preview-details-card",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/micro/links/preview-details-card.tsx",
@@ -2136,16 +1525,8 @@
     {
       "name": "pricing-section",
       "type": "registry:page",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge", "button", "card"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/pricing-section.tsx",
@@ -2158,14 +1539,8 @@
     {
       "name": "projects-block",
       "type": "registry:component",
-      "registryDependencies": [
-        "badge",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["badge", "card"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/projects-block.tsx",
@@ -2179,10 +1554,7 @@
       "name": "reactive-background-grid",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/motion-core/reactive-background-grid.tsx",
@@ -2196,10 +1568,7 @@
       "name": "ripple-click-button",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/micro/buttons/ripple-click.tsx",
@@ -2213,9 +1582,7 @@
       "name": "scale-hover-button",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion"
-      ],
+      "dependencies": ["framer-motion"],
       "files": [
         {
           "path": "components/micro/buttons/scale-hover.tsx",
@@ -2229,10 +1596,7 @@
       "name": "scroll-progress-tracker",
       "type": "registry:page",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/motion-core/scroll-progress-tracker.tsx",
@@ -2246,11 +1610,7 @@
       "name": "scroll-reveal",
       "type": "registry:page",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/scroll-reveal.tsx",
@@ -2263,15 +1623,8 @@
     {
       "name": "services-grid-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["badge", "button", "card"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/services-grid-block.tsx",
@@ -2284,12 +1637,8 @@
     {
       "name": "shimmer-button",
       "type": "registry:ui",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion"],
       "files": [
         {
           "path": "components/micro/buttons/shimmer-button.tsx",
@@ -2302,14 +1651,8 @@
     {
       "name": "simple-calendar",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/forms/simple-calendar.tsx",
@@ -2322,14 +1665,8 @@
     {
       "name": "smart-hover-card",
       "type": "registry:component",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "registryDependencies": ["button", "card"],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/motion-core/smart-hover-card.tsx",
@@ -2343,10 +1680,7 @@
       "name": "spotlight-section",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/motion-core/spotlight-section.tsx",
@@ -2359,14 +1693,8 @@
     {
       "name": "stacked-card-carousel",
       "type": "registry:component",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "react"
-      ],
+      "registryDependencies": ["button", "card"],
+      "dependencies": ["framer-motion", "react"],
       "files": [
         {
           "path": "components/motion-core/stacked-card-carousel.tsx",
@@ -2379,14 +1707,8 @@
     {
       "name": "staggered-dropdown",
       "type": "registry:component",
-      "registryDependencies": [
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/dropdown/staggered-items.tsx",
@@ -2400,9 +1722,7 @@
       "name": "staggered-hero",
       "type": "registry:page",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion"
-      ],
+      "dependencies": ["framer-motion"],
       "files": [
         {
           "path": "components/page/hero/staggered-text.tsx",
@@ -2415,15 +1735,8 @@
     {
       "name": "stats-counter-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge", "card"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/stats-counter-block.tsx",
@@ -2436,14 +1749,8 @@
     {
       "name": "stats-section",
       "type": "registry:page",
-      "registryDependencies": [
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["card"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/stats-section.tsx",
@@ -2456,16 +1763,8 @@
     {
       "name": "stocks-dashboard",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "card",
-        "dialog"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge", "card", "dialog"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/stocks-dashboard/stocks-dashboard.tsx",
@@ -2478,16 +1777,8 @@
     {
       "name": "team-section-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge", "button", "card"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/team-section-block.tsx",
@@ -2500,15 +1791,8 @@
     {
       "name": "testimonial-section",
       "type": "registry:page",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button", "card"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/testimonial-section.tsx",
@@ -2521,13 +1805,8 @@
     {
       "name": "testimonials-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
+      "registryDependencies": ["card"],
+      "dependencies": ["framer-motion", "lucide-react"],
       "files": [
         {
           "path": "components/sections/testimonials-block.tsx",
@@ -2540,15 +1819,8 @@
     {
       "name": "timeline-block",
       "type": "registry:block",
-      "registryDependencies": [
-        "badge",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge", "card"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/sections/timeline-block.tsx",
@@ -2561,15 +1833,8 @@
     {
       "name": "toast-notification",
       "type": "registry:page",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["button", "card"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/page/notifications/toast-notification.tsx",
@@ -2583,9 +1848,7 @@
       "name": "typewriter-text",
       "type": "registry:ui",
       "registryDependencies": [],
-      "dependencies": [
-        "framer-motion"
-      ],
+      "dependencies": ["framer-motion"],
       "files": [
         {
           "path": "components/decorative/text/typewriter.tsx",
@@ -2598,15 +1861,8 @@
     {
       "name": "weather-dashboard",
       "type": "registry:component",
-      "registryDependencies": [
-        "badge",
-        "button"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react",
-        "react"
-      ],
+      "registryDependencies": ["badge", "button"],
+      "dependencies": ["framer-motion", "lucide-react", "react"],
       "files": [
         {
           "path": "components/components/weather/weather-dashboard.tsx",

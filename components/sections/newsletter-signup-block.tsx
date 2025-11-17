@@ -94,7 +94,7 @@ export function NewsletterSignupBlock() {
                         {feature}
                       </Badge>
                     </motion.div>
-                  ),
+                  )
                 )}
               </div>
             </motion.div>

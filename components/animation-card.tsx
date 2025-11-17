@@ -23,9 +23,7 @@ export function AnimationCard({ animation }: AnimationCardProps) {
         whileHover={{ y: -2 }}
         className="group relative h-full overflow-hidden rounded-lg border border-border bg-card transition-shadow hover:border-ring"
       >
-        <Link
-          href={`/components/${animation.id}`}
-        >
+        <Link href={`/components/${animation.id}`}>
           {/* Preview Area */}
           <div className="relative h-48 overflow-hidden bg-card">
             <div className="absolute inset-0 flex items-center justify-center">

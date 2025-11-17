@@ -39,7 +39,7 @@ function DraggableComponent({ component }: { component: ComponentItem }) {
       whileTap={{ scale: 0.98 }}
       className={cn(
         "cursor-grab rounded-lg border border-border bg-card p-3 transition-colors hover:border-primary hover:bg-accent/5 active:cursor-grabbing",
-        isDragging && "opacity-50",
+        isDragging && "opacity-50"
       )}
     >
       <div className="text-sm font-medium">{component.name}</div>
@@ -106,7 +106,7 @@ export function BuilderSidebar({
     return componentsRegistry
       .filter(
         (component) =>
-          component.display !== false && component.category === "blocks",
+          component.display !== false && component.category === "blocks"
       )
       .filter((component) => {
         if (!query) return true;
@@ -166,7 +166,7 @@ export function BuilderSidebar({
                   component={component}
                   onSelect={onSelectComponent}
                 />
-              ),
+              )
             )}
           </div>
         )}

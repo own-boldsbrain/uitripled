@@ -16,7 +16,7 @@ export function ReactiveBackgroundGrid({
     Array<{ id: number; x: number; y: number }>
   >([]);
   const [hoveredDot, setHoveredDot] = useState<{ x: number; y: number } | null>(
-    null,
+    null
   );
 
   const handleClick = (e: MouseEvent<HTMLDivElement>) => {
@@ -81,7 +81,7 @@ export function ReactiveBackgroundGrid({
           const distance = hoveredDot
             ? Math.sqrt(
                 Math.pow(x - (hoveredDot.x / containerSize.width) * 100, 2) +
-                  Math.pow(y - (hoveredDot.y / containerSize.height) * 100, 2),
+                  Math.pow(y - (hoveredDot.y / containerSize.height) * 100, 2)
               )
             : Infinity;
 

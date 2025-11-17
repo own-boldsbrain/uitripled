@@ -1,6 +1,10 @@
 import AnimationDetailPageClient from "./AnimationDetailPage.client";
 import { createMetadata } from "@/lib/seo";
-import { getComponentById, componentsRegistry, loadComponentCode } from "@/lib/components-registry";
+import {
+  getComponentById,
+  componentsRegistry,
+  loadComponentCode,
+} from "@/lib/components-registry";
 import { notFound } from "next/navigation";
 
 type PageParams = {

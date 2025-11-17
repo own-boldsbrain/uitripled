@@ -51,7 +51,7 @@ export function LoadProjectDialog({
                 const pagesForProject = extractSavedPages(project);
                 const totalComponents = pagesForProject.reduce(
                   (total, page) => total + (page.components?.length ?? 0),
-                  0,
+                  0
                 );
                 const savedDate = new Date(project.savedAt);
 
@@ -86,9 +86,7 @@ export function LoadProjectDialog({
                           variant="ghost"
                           size="sm"
                           onClick={() => {
-                            if (
-                              confirm(`Delete project "${project.name}"?`)
-                            ) {
+                            if (confirm(`Delete project "${project.name}"?`)) {
                               onDeleteProject(project.name);
                             }
                           }}
@@ -119,4 +117,3 @@ export function LoadProjectDialog({
     </Dialog>
   );
 }
-

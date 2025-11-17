@@ -16,7 +16,7 @@ export function GlassProfileSettingsCard() {
   const [notifications, setNotifications] = useState(true);
   const [newsletter, setNewsletter] = useState(false);
   const [bio, setBio] = useState(
-    "Designing expressive interfaces that feel alive.",
+    "Designing expressive interfaces that feel alive."
   );
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {

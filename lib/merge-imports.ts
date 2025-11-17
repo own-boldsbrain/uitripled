@@ -46,7 +46,7 @@ export function mergeComponentImports(code: string): string {
       // Check if this line completes the import (has closing brace and from)
       if (trimmedLine.includes("}") && trimmedLine.includes("from")) {
         const match = currentMultilineImport.match(
-          /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]/,
+          /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]/
         );
         if (match) {
           const [, namedImports, source] = match;

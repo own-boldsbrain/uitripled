@@ -93,14 +93,14 @@ export function NotificationCenter() {
 
     window.setTimeout(() => {
       setNotifications((prev) =>
-        prev.filter((notification) => notification.id !== id),
+        prev.filter((notification) => notification.id !== id)
       );
     }, 8000);
   }, []);
 
   const removeNotification = useCallback((id: string) => {
     setNotifications((prev) =>
-      prev.filter((notification) => notification.id !== id),
+      prev.filter((notification) => notification.id !== id)
     );
   }, []);
 
@@ -195,7 +195,7 @@ function NotificationBar({
           aria-hidden="true"
           className={cn(
             "flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-muted/80",
-            toneClassName,
+            toneClassName
           )}
         >
           <Icon className="h-5 w-5" />

@@ -13,7 +13,7 @@ export const sanitizeSlug = (value: string) =>
 
 export function generateUniqueSlug(
   baseName: string,
-  existingSlugs: string[],
+  existingSlugs: string[]
 ): string {
   const baseSlug = sanitizeSlug(baseName) || "page";
   if (!existingSlugs.includes(baseSlug)) {
@@ -32,7 +32,7 @@ export function generateUniqueSlug(
 
 export function createPage(
   name: string,
-  existingSlugs: string[],
+  existingSlugs: string[]
 ): BuilderProjectPage {
   const id =
     typeof crypto !== "undefined" && typeof crypto.randomUUID === "function"
@@ -70,7 +70,6 @@ export function extractSavedPages(project: SavedProject): SavedProjectPage[] {
 export function countSavedProjectComponents(project: SavedProject): number {
   return extractSavedPages(project).reduce(
     (total, page) => total + (page.components?.length ?? 0),
-    0,
+    0
   );
 }
-

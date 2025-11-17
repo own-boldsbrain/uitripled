@@ -75,7 +75,7 @@ function NotFoundOGImage(componentId: string, faviconUrl: string) {
 function ComponentOGImage(
   name: string,
   description: string,
-  faviconUrl: string,
+  faviconUrl: string
 ) {
   return (
     <div
@@ -163,7 +163,7 @@ export async function GET(request: Request) {
     const jsx = ComponentOGImage(
       metadata.name,
       metadata.description || "A component from UI TripleD",
-      faviconUrl,
+      faviconUrl
     );
     return new ImageResponse(jsx, {
       width: 1200,
@@ -179,7 +179,7 @@ export async function GET(request: Request) {
         : "Unknown error";
     return Response.json(
       { error: `Failed to generate the image: ${message}` },
-      { status: 500 },
+      { status: 500 }
     );
   }
 }

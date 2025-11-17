@@ -135,7 +135,7 @@ function normalizeProject(project: SavedProject): NormalizedProject | null {
     const componentInstances = (page.components ?? [])
       .map<ComponentInstance | null>((comp, componentIndex) => {
         const animation = componentsRegistry.find(
-          (a) => a.id === comp.animationId,
+          (a) => a.id === comp.animationId
         );
         if (!animation) {
           return null;
@@ -196,7 +196,7 @@ export default function PreviewProjectPageClient() {
   useEffect(() => {
     // Load project from localStorage
     const projects = JSON.parse(
-      localStorage.getItem("builderProjects") || "{}",
+      localStorage.getItem("builderProjects") || "{}"
     );
     const foundProject = projects[projectName];
 
@@ -205,7 +205,7 @@ export default function PreviewProjectPageClient() {
       if (normalized) {
         setProject(normalized);
         setActivePageId(
-          normalized.entryPageId || normalized.pages[0]?.id || null,
+          normalized.entryPageId || normalized.pages[0]?.id || null
         );
       }
     }
@@ -283,7 +283,7 @@ export default function PreviewProjectPageClient() {
       if (!container || !instance.textContent) return;
 
       const allElements = Array.from(
-        container.querySelectorAll<HTMLElement>(selector),
+        container.querySelectorAll<HTMLElement>(selector)
       );
 
       const editableElements = allElements.filter((el) => {
@@ -291,7 +291,7 @@ export default function PreviewProjectPageClient() {
         if (!text) return false;
 
         const hasChildWithText = Array.from(
-          el.querySelectorAll<HTMLElement>(selector),
+          el.querySelectorAll<HTMLElement>(selector)
         ).some((child) => {
           if (child === el) return false;
           const childText = child.textContent?.trim();

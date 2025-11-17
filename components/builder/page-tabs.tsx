@@ -66,7 +66,12 @@ export function PageTabs({
             )}
           </div>
         ))}
-        <Button variant="outline" size="sm" className="gap-1" onClick={onAddPage}>
+        <Button
+          variant="outline"
+          size="sm"
+          className="gap-1"
+          onClick={onAddPage}
+        >
           <Plus className="h-4 w-4" />
           Add page
         </Button>
@@ -80,4 +85,3 @@ export function PageTabs({
     </div>
   );
 }
-

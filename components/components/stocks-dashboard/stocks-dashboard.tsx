@@ -110,11 +110,11 @@ function formatNumber(num: number): string {
 function StatusSection() {
   const totalValue = mockStocks.reduce(
     (sum, stock) => sum + stock.price * 100,
-    0,
+    0
   );
   const totalChange = mockStocks.reduce(
     (sum, stock) => sum + stock.change * 100,
-    0,
+    0
   );
   const totalChangePercent = (totalChange / (totalValue - totalChange)) * 100;
 

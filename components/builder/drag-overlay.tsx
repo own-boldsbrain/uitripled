@@ -22,4 +22,3 @@ export function DragOverlay({ activeComponentInfo }: DragOverlayProps) {
     </DndDragOverlay>
   );
 }
-

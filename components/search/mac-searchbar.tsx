@@ -44,7 +44,7 @@ export function MacSearchbar() {
   ];
 
   const filteredItems = items.filter((item) =>
-    item.title.toLowerCase().includes(searchQuery.toLowerCase()),
+    item.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (

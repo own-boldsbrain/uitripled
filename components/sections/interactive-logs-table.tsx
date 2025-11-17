@@ -280,7 +280,7 @@ function FilterPanel({
   };
 
   const hasActiveFilters = Object.values(filters).some(
-    (group) => group.length > 0,
+    (group) => group.length > 0
   );
 
   return (
@@ -506,7 +506,7 @@ export function InteractiveLogsTable() {
                         expanded={expandedId === log.id}
                         onToggle={() =>
                           setExpandedId((current) =>
-                            current === log.id ? null : log.id,
+                            current === log.id ? null : log.id
                           )
                         }
                       />

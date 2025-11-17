@@ -1903,9 +1903,11 @@ export function getComponentById(id: string): Component | undefined {
 }
 
 export function getAnimationsByCategory(
-  category: ComponentCategory,
+  category: ComponentCategory
 ): Component[] {
-  return componentsRegistry.filter((component) => component.category === category);
+  return componentsRegistry.filter(
+    (component) => component.category === category
+  );
 }
 
 export function searchComponents(query: string): Component[] {
@@ -1914,7 +1916,7 @@ export function searchComponents(query: string): Component[] {
     (component) =>
       component.name.toLowerCase().includes(lowerQuery) ||
       component.description.toLowerCase().includes(lowerQuery) ||
-      component.tags.some((tag) => tag.toLowerCase().includes(lowerQuery)),
+      component.tags.some((tag) => tag.toLowerCase().includes(lowerQuery))
   );
 }
 

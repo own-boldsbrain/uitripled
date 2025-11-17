@@ -1,105 +1,116 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-const COMPONENTS_REGISTRY_PATH = path.join(__dirname, '../lib/components-registry.tsx');
-const REGISTRY_JSON_PATH = path.join(__dirname, '../registry.json');
+const COMPONENTS_REGISTRY_PATH = path.join(
+  __dirname,
+  "../lib/components-registry.tsx"
+);
+const REGISTRY_JSON_PATH = path.join(__dirname, "../registry.json");
 
 // Category to registry type mapping
 const CATEGORY_TO_TYPE = {
-  microinteractions: 'registry:ui',
-  components: 'registry:component',
-  page: 'registry:page',
-  data: 'registry:ui',
-  decorative: 'registry:ui',
-  blocks: 'registry:block',
-  'motion-core': 'registry:lib',
+  microinteractions: "registry:ui",
+  components: "registry:component",
+  page: "registry:page",
+  data: "registry:ui",
+  decorative: "registry:ui",
+  blocks: "registry:block",
+  "motion-core": "registry:lib",
 };
 
 // Category to registry category mapping
 const CATEGORY_MAPPING = {
-  microinteractions: 'micro',
-  components: 'components',
-  page: 'page',
-  data: 'data',
-  decorative: 'decorative',
-  blocks: 'sections',
-  'motion-core': 'motion-core',
+  microinteractions: "micro",
+  components: "components",
+  page: "page",
+  data: "data",
+  decorative: "decorative",
+  blocks: "sections",
+  "motion-core": "motion-core",
 };
 
 // Common dependencies based on imports
 const DEFAULT_DEPENDENCIES = {
-  framer: ['framer-motion'],
-  lucide: ['lucide-react'],
-  react: ['react'],
+  framer: ["framer-motion"],
+  lucide: ["lucide-react"],
+  react: ["react"],
 };
 
 /**
  * Extract component imports and registry entries from components-registry.tsx
  */
 function parseComponentsRegistry() {
-  const content = fs.readFileSync(COMPONENTS_REGISTRY_PATH, 'utf-8');
-  
+  const content = fs.readFileSync(COMPONENTS_REGISTRY_PATH, "utf-8");
+
   // Extract component imports - handle both single and multiple imports
   const componentImports = {};
-  const importRegex = /import\s+{\s*([^}]+)\s*}\s+from\s+["']@\/components\/([^"']+)["']/g;
+  const importRegex =
+    /import\s+{\s*([^}]+)\s*}\s+from\s+["']@\/components\/([^"']+)["']/g;
   let match;
-  
+
   while ((match = importRegex.exec(content)) !== null) {
-    const imports = match[1].split(',').map(i => i.trim());
+    const imports = match[1].split(",").map((i) => i.trim());
     const importPath = match[2];
-    
-    imports.forEach(imp => {
+
+    imports.forEach((imp) => {
       // Extract component name (remove type annotations if any)
-      const componentName = imp.split(':')[0].trim();
+      const componentName = imp.split(":")[0].trim();
       componentImports[componentName] = importPath;
     });
   }
-  
+
   // Extract componentsRegistry entries
-  const registryStart = content.indexOf('export const componentsRegistry: Component[] = [');
-  const registryEnd = content.lastIndexOf('];', content.length);
-  
+  const registryStart = content.indexOf(
+    "export const componentsRegistry: Component[] = ["
+  );
+  const registryEnd = content.lastIndexOf("];", content.length);
+
   if (registryStart === -1 || registryEnd === -1) {
-    throw new Error('Could not find componentsRegistry in components-registry.tsx');
+    throw new Error(
+      "Could not find componentsRegistry in components-registry.tsx"
+    );
   }
-  
+
   const registryContent = content.substring(registryStart, registryEnd);
-  
+
   // Parse entries - split by entry boundaries
   const entries = [];
   const entryPattern = /\{\s*id:\s*"([^"]+)"/g;
   let lastIndex = 0;
   const entryIndices = [];
-  
+
   while ((match = entryPattern.exec(registryContent)) !== null) {
     entryIndices.push(match.index);
   }
-  
+
   // Parse each entry
   for (let i = 0; i < entryIndices.length; i++) {
     const start = entryIndices[i];
-    const end = i < entryIndices.length - 1 ? entryIndices[i + 1] : registryContent.length;
+    const end =
+      i < entryIndices.length - 1
+        ? entryIndices[i + 1]
+        : registryContent.length;
     const entryText = registryContent.substring(start, end);
-    
+
     // Extract id
     const idMatch = entryText.match(/id:\s*"([^"]+)"/);
     if (!idMatch) continue;
-    
+
     const id = idMatch[1];
-    
+
     // Extract category
     const categoryMatch = entryText.match(/category:\s*"([^"]+)"/);
     if (!categoryMatch) continue;
-    
+
     const category = categoryMatch[1];
-    
+
     // Extract component name
     const componentMatch = entryText.match(/component:\s*(\w+)/);
     if (!componentMatch) continue;
-    
+
     const componentName = componentMatch[1];
     const componentPath = componentImports[componentName];
-    
+
     if (componentPath) {
       entries.push({
         id,
@@ -108,10 +119,12 @@ function parseComponentsRegistry() {
         componentPath,
       });
     } else {
-      console.warn(`⚠️  Could not find import path for component: ${componentName}`);
+      console.warn(
+        `⚠️  Could not find import path for component: ${componentName}`
+      );
     }
   }
-  
+
   return entries;
 }
 
@@ -131,26 +144,39 @@ function convertToRegistryPath(componentPath) {
  */
 function getRegistryDependencies(componentPath, category) {
   const deps = [];
-  
+
   // Common shadcn components that might be used
   const shadcnComponents = [
-    'button', 'card', 'badge', 'input', 'textarea', 'label',
-    'checkbox', 'radio', 'select', 'tabs', 'dialog', 'dropdown-menu',
-    'avatar', 'scroll-area', 'separator', 'switch',
+    "button",
+    "card",
+    "badge",
+    "input",
+    "textarea",
+    "label",
+    "checkbox",
+    "radio",
+    "select",
+    "tabs",
+    "dialog",
+    "dropdown-menu",
+    "avatar",
+    "scroll-area",
+    "separator",
+    "switch",
   ];
-  
+
   // Check if path suggests use of shadcn components
   // This is a heuristic - you might need to adjust based on actual usage
-  if (category === 'components' || category === 'blocks') {
+  if (category === "components" || category === "blocks") {
     // Most components use button and card
-    if (!componentPath.includes('micro/buttons')) {
-      deps.push('button');
+    if (!componentPath.includes("micro/buttons")) {
+      deps.push("button");
     }
-    if (componentPath.includes('cards') || componentPath.includes('card')) {
-      deps.push('card');
+    if (componentPath.includes("cards") || componentPath.includes("card")) {
+      deps.push("card");
     }
   }
-  
+
   return deps;
 }
 
@@ -158,18 +184,20 @@ function getRegistryDependencies(componentPath, category) {
  * Determine dependencies based on imports in the file
  */
 function getDependencies(componentPath) {
-  const deps = ['framer-motion']; // Almost all components use framer-motion
-  
+  const deps = ["framer-motion"]; // Almost all components use framer-motion
+
   // Check if likely to use lucide-react
-  if (componentPath.includes('icons') || 
-      componentPath.includes('navigation') ||
-      componentPath.includes('tooltips')) {
-    deps.push('lucide-react');
+  if (
+    componentPath.includes("icons") ||
+    componentPath.includes("navigation") ||
+    componentPath.includes("tooltips")
+  ) {
+    deps.push("lucide-react");
   }
-  
+
   // React is always needed
-  deps.push('react');
-  
+  deps.push("react");
+
   return [...new Set(deps)]; // Remove duplicates
 }
 
@@ -177,42 +205,46 @@ function getDependencies(componentPath) {
  * Determine subcategory based on component path
  */
 function getSubcategory(componentPath, category) {
-  if (category === 'micro') {
-    if (componentPath.includes('buttons')) return 'buttons';
-    if (componentPath.includes('toggles')) return 'toggles';
-    if (componentPath.includes('icons')) return 'icons';
-    if (componentPath.includes('badges')) return 'badges';
-    if (componentPath.includes('links')) return 'links';
+  if (category === "micro") {
+    if (componentPath.includes("buttons")) return "buttons";
+    if (componentPath.includes("toggles")) return "toggles";
+    if (componentPath.includes("icons")) return "icons";
+    if (componentPath.includes("badges")) return "badges";
+    if (componentPath.includes("links")) return "links";
   }
-  
-  if (category === 'components') {
-    if (componentPath.includes('cards')) return 'cards';
-    if (componentPath.includes('modal') || componentPath.includes('dialog')) return 'modal';
-    if (componentPath.includes('dropdown')) return 'dropdown';
-    if (componentPath.includes('inputs') || componentPath.includes('input')) return 'inputs';
-    if (componentPath.includes('tabs')) return 'tabs';
-    if (componentPath.includes('lists') || componentPath.includes('list')) return 'lists';
-    if (componentPath.includes('chat')) return 'chat';
-    if (componentPath.includes('notifications')) return 'notifications';
-    if (componentPath.includes('forms')) return 'forms';
+
+  if (category === "components") {
+    if (componentPath.includes("cards")) return "cards";
+    if (componentPath.includes("modal") || componentPath.includes("dialog"))
+      return "modal";
+    if (componentPath.includes("dropdown")) return "dropdown";
+    if (componentPath.includes("inputs") || componentPath.includes("input"))
+      return "inputs";
+    if (componentPath.includes("tabs")) return "tabs";
+    if (componentPath.includes("lists") || componentPath.includes("list"))
+      return "lists";
+    if (componentPath.includes("chat")) return "chat";
+    if (componentPath.includes("notifications")) return "notifications";
+    if (componentPath.includes("forms")) return "forms";
   }
-  
-  if (category === 'page') {
-    if (componentPath.includes('hero')) return 'hero';
-    if (componentPath.includes('about')) return 'about';
-    if (componentPath.includes('notifications')) return 'notifications';
+
+  if (category === "page") {
+    if (componentPath.includes("hero")) return "hero";
+    if (componentPath.includes("about")) return "about";
+    if (componentPath.includes("notifications")) return "notifications";
   }
-  
-  if (category === 'data') {
-    if (componentPath.includes('progress')) return 'progress';
-    if (componentPath.includes('charts') || componentPath.includes('chart')) return 'charts';
+
+  if (category === "data") {
+    if (componentPath.includes("progress")) return "progress";
+    if (componentPath.includes("charts") || componentPath.includes("chart"))
+      return "charts";
   }
-  
-  if (category === 'decorative') {
-    if (componentPath.includes('text')) return 'text';
-    if (componentPath.includes('background')) return 'background';
+
+  if (category === "decorative") {
+    if (componentPath.includes("text")) return "text";
+    if (componentPath.includes("background")) return "background";
   }
-  
+
   return null;
 }
 
@@ -222,8 +254,8 @@ function getSubcategory(componentPath, category) {
 function createRegistryEntry(componentData) {
   const { id, name, category, componentPath } = componentData;
   const registryCategory = CATEGORY_MAPPING[category] || category;
-  const registryType = CATEGORY_TO_TYPE[category] || 'registry:component';
-  
+  const registryType = CATEGORY_TO_TYPE[category] || "registry:component";
+
   return {
     name: id,
     type: registryType,
@@ -245,25 +277,27 @@ function createRegistryEntry(componentData) {
  */
 function syncRegistry() {
   try {
-    console.log('🔄 Syncing registry.json with components-registry.tsx...');
-    
+    console.log("🔄 Syncing registry.json with components-registry.tsx...");
+
     // Parse components registry
     const components = parseComponentsRegistry();
     console.log(`📦 Found ${components.length} components in registry`);
-    
+
     // Read existing registry.json
-    const registry = JSON.parse(fs.readFileSync(REGISTRY_JSON_PATH, 'utf-8'));
+    const registry = JSON.parse(fs.readFileSync(REGISTRY_JSON_PATH, "utf-8"));
     const existingItems = registry.items || [];
-    const existingItemsMap = new Map(existingItems.map(item => [item.name, item]));
-    
+    const existingItemsMap = new Map(
+      existingItems.map((item) => [item.name, item])
+    );
+
     // Create/update entries
     let added = 0;
     let updated = 0;
-    
+
     for (const component of components) {
       const registryEntry = createRegistryEntry(component);
       const existing = existingItemsMap.get(component.id);
-      
+
       if (existing) {
         // Update existing entry - always update path, preserve dependencies if they exist
         const updatedEntry = {
@@ -273,14 +307,16 @@ function syncRegistry() {
           category: registryEntry.category,
           subcategory: registryEntry.subcategory,
           // Preserve existing dependencies if they exist, otherwise use defaults
-          dependencies: existing.dependencies?.length > 0 
-            ? existing.dependencies 
-            : registryEntry.dependencies,
-          registryDependencies: existing.registryDependencies?.length > 0
-            ? existing.registryDependencies
-            : registryEntry.registryDependencies,
+          dependencies:
+            existing.dependencies?.length > 0
+              ? existing.dependencies
+              : registryEntry.dependencies,
+          registryDependencies:
+            existing.registryDependencies?.length > 0
+              ? existing.registryDependencies
+              : registryEntry.registryDependencies,
         };
-        
+
         existingItemsMap.set(component.id, updatedEntry);
         updated++;
       } else {
@@ -289,25 +325,24 @@ function syncRegistry() {
         added++;
       }
     }
-    
+
     // Update registry
     registry.items = Array.from(existingItemsMap.values());
-    
+
     // Sort items by name for consistency
     registry.items.sort((a, b) => a.name.localeCompare(b.name));
-    
+
     // Write back to file
     fs.writeFileSync(
       REGISTRY_JSON_PATH,
-      JSON.stringify(registry, null, 2) + '\n',
-      'utf-8'
+      JSON.stringify(registry, null, 2) + "\n",
+      "utf-8"
     );
-    
+
     console.log(`✅ Registry synced! Added: ${added}, Updated: ${updated}`);
     console.log(`📊 Total items in registry: ${registry.items.length}`);
-    
   } catch (error) {
-    console.error('❌ Error syncing registry:', error);
+    console.error("❌ Error syncing registry:", error);
     process.exit(1);
   }
 }
@@ -318,4 +353,3 @@ if (require.main === module) {
 }
 
 module.exports = { syncRegistry };
-

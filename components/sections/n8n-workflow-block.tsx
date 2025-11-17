@@ -165,10 +165,10 @@ export function N8nWorkflowBlock() {
   const [draggingNodeId, setDraggingNodeId] = useState<string | null>(null);
   const [contentSize, setContentSize] = useState(() => {
     const maxX = Math.max(
-      ...initialNodes.map((n) => n.position.x + NODE_WIDTH),
+      ...initialNodes.map((n) => n.position.x + NODE_WIDTH)
     );
     const maxY = Math.max(
-      ...initialNodes.map((n) => n.position.y + NODE_HEIGHT),
+      ...initialNodes.map((n) => n.position.y + NODE_HEIGHT)
     );
     return { width: maxX + 50, height: maxY + 50 };
   });
@@ -196,8 +196,8 @@ export function N8nWorkflowBlock() {
         prev.map((node) =>
           node.id === nodeId
             ? { ...node, position: { x: constrainedX, y: constrainedY } }
-            : node,
-        ),
+            : node
+        )
       );
     });
 

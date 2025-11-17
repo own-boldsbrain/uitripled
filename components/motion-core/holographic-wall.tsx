@@ -86,7 +86,7 @@ export function HolographicWall({
           const distance = mousePosition
             ? Math.sqrt(
                 Math.pow(letter.x - mousePosition.x, 2) +
-                  Math.pow(letter.y - mousePosition.y, 2),
+                  Math.pow(letter.y - mousePosition.y, 2)
               )
             : Infinity;
 

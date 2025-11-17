@@ -57,7 +57,7 @@ export function ScrollReveal() {
             },
       },
     }),
-    [shouldReduceMotion],
+    [shouldReduceMotion]
   );
 
   const cardVariants: Variants = useMemo(
@@ -76,7 +76,7 @@ export function ScrollReveal() {
           : { type: "spring", stiffness: 160, damping: 22, mass: 0.8 },
       },
     }),
-    [shouldReduceMotion],
+    [shouldReduceMotion]
   );
 
   const iconVariants: Variants = useMemo(
@@ -93,7 +93,7 @@ export function ScrollReveal() {
           : { duration: 0.45, ease: [0.18, 0.89, 0.32, 1.28] },
       },
     }),
-    [shouldReduceMotion],
+    [shouldReduceMotion]
   );
 
   return (

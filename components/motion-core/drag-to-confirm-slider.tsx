@@ -26,7 +26,7 @@ export function DragToConfirmSlider({
 
   const handleDragEnd = (
     _: MouseEvent | TouchEvent | PointerEvent,
-    info: PanInfo,
+    info: PanInfo
   ) => {
     const currentX = x.get();
     if (currentX >= 180) {

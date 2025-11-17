@@ -416,7 +416,7 @@ export function WeatherDashboard(): React.ReactElement {
         label: "Precipitation",
         value: weatherData.current.precipitationChance + "%",
         description: describePrecipitation(
-          weatherData.current.precipitationChance,
+          weatherData.current.precipitationChance
         ),
         icon: Umbrella,
       },
@@ -430,7 +430,7 @@ export function WeatherDashboard(): React.ReactElement {
         temperature: hour.temperature,
         feelsLike: hour.feelsLike,
       })),
-    [weatherData],
+    [weatherData]
   );
 
   const hourlyForecast = weatherData.hourly.slice(0, 8);
@@ -441,7 +441,7 @@ export function WeatherDashboard(): React.ReactElement {
   const updatedMinutesAgo = useMemo(() => {
     const updatedDate = new Date(weatherData.updatedAt);
     const diffMinutes = Math.floor(
-      (Date.now() - updatedDate.getTime()) / (1000 * 60),
+      (Date.now() - updatedDate.getTime()) / (1000 * 60)
     );
     if (diffMinutes <= 1) return "Updated moments ago";
     if (diffMinutes < 60) return "Updated " + diffMinutes + " minutes ago";

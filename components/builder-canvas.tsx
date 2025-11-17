@@ -19,12 +19,12 @@ type CanvasComponentProps = {
   onRegisterTextNode: (
     componentId: string,
     nodeId: string,
-    originalText: string,
+    originalText: string
   ) => void;
   onUpdateTextNode: (
     componentId: string,
     nodeId: string,
-    newValue: string,
+    newValue: string
   ) => void;
 };
 
@@ -61,7 +61,7 @@ function CanvasComponent({
       const newValue = target.textContent ?? "";
       onUpdateTextNode(component.id, textId, newValue);
     },
-    [component.id, onUpdateTextNode],
+    [component.id, onUpdateTextNode]
   );
 
   useEffect(() => {
@@ -71,7 +71,7 @@ function CanvasComponent({
     const selector =
       "h1,h2,h3,h4,h5,h6,p,span,button,a,li,blockquote,figcaption,label,strong,em,small,div";
     const allElements = Array.from(
-      container.querySelectorAll<HTMLElement>(selector),
+      container.querySelectorAll<HTMLElement>(selector)
     );
 
     const editableElements = allElements.filter((el) => {
@@ -81,7 +81,7 @@ function CanvasComponent({
       }
 
       const hasChildWithText = Array.from(
-        el.querySelectorAll<HTMLElement>(selector),
+        el.querySelectorAll<HTMLElement>(selector)
       ).some((child) => {
         if (child === el) return false;
         const childText = child.textContent?.trim();
@@ -212,12 +212,12 @@ type BuilderCanvasProps = {
   onRegisterTextNode: (
     componentId: string,
     nodeId: string,
-    originalText: string,
+    originalText: string
   ) => void;
   onUpdateTextNode: (
     componentId: string,
     nodeId: string,
-    newValue: string,
+    newValue: string
   ) => void;
 };
 

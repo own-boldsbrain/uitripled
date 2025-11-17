@@ -47,7 +47,7 @@ export function TestimonialSection() {
 
   const prevTestimonial = () => {
     setCurrentIndex(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
     );
   };
 
@@ -91,7 +91,7 @@ export function TestimonialSection() {
                         >
                           <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                         </motion.div>
-                      ),
+                      )
                     )}
                   </div>
                   <motion.div

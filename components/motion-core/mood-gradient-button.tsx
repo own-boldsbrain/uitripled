@@ -37,7 +37,7 @@ export function MoodGradientButton({
 
   // Use a state-based approach for the gradient since useTransform with arrays isn't directly supported
   const [bgStyle, setBgStyle] = useState(
-    "radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.8), rgba(139, 92, 246, 0.6), rgba(236, 72, 153, 0.4))",
+    "radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.8), rgba(139, 92, 246, 0.6), rgba(236, 72, 153, 0.4))"
   );
 
   // Update gradient on mouse move
@@ -45,13 +45,13 @@ export function MoodGradientButton({
     const unsubscribeX = springX.on("change", (xVal) => {
       const yVal = springY.get();
       setBgStyle(
-        `radial-gradient(circle at ${xVal}% ${yVal}%, rgba(99, 102, 241, 0.8), rgba(139, 92, 246, 0.6), rgba(236, 72, 153, 0.4))`,
+        `radial-gradient(circle at ${xVal}% ${yVal}%, rgba(99, 102, 241, 0.8), rgba(139, 92, 246, 0.6), rgba(236, 72, 153, 0.4))`
       );
     });
     const unsubscribeY = springY.on("change", (yVal) => {
       const xVal = springX.get();
       setBgStyle(
-        `radial-gradient(circle at ${xVal}% ${yVal}%, rgba(99, 102, 241, 0.8), rgba(139, 92, 246, 0.6), rgba(236, 72, 153, 0.4))`,
+        `radial-gradient(circle at ${xVal}% ${yVal}%, rgba(99, 102, 241, 0.8), rgba(139, 92, 246, 0.6), rgba(236, 72, 153, 0.4))`
       );
     });
     return () => {

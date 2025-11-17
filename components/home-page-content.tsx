@@ -26,9 +26,18 @@ export default function HomePageContent() {
       {/* Top centered actions */}
       <section className="bg-background/80">
         <div className="container relative mx-auto flex flex-col items-center gap-4 px-4 py-32">
-          <div aria-hidden="true" className="pointer-events-none absolute -top-24 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-primary/20 blur-[160px]"></div>
-          <div aria-hidden="true" className="pointer-events-none absolute -top-24 left-0 h-64 w-64 -translate-x-1/2 rounded-full bg-primary/20 blur-[160px]"></div>
-          <div aria-hidden="true" className="pointer-events-none absolute -top-24 right-0 h-64 w-64 -translate-x-1/2 rounded-full bg-primary/20 blur-[160px]"></div>
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-24 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-primary/20 blur-[160px]"
+          ></div>
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-24 left-0 h-64 w-64 -translate-x-1/2 rounded-full bg-primary/20 blur-[160px]"
+          ></div>
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-24 right-0 h-64 w-64 -translate-x-1/2 rounded-full bg-primary/20 blur-[160px]"
+          ></div>
           <motion.p
             initial={{ opacity: 0, y: 4 }}
             animate={{ opacity: 1, y: 0 }}

@@ -64,7 +64,7 @@ export function StatsSection() {
             },
       },
     }),
-    [shouldReduceMotion],
+    [shouldReduceMotion]
   );
 
   const cardVariants: Variants = useMemo(
@@ -83,7 +83,7 @@ export function StatsSection() {
           : { type: "spring", mass: 0.8, stiffness: 160, damping: 24 },
       },
     }),
-    [shouldReduceMotion],
+    [shouldReduceMotion]
   );
 
   const iconVariants: Variants = useMemo(
@@ -100,7 +100,7 @@ export function StatsSection() {
           : { duration: 0.45, ease: [0.18, 0.89, 0.32, 1.28] },
       },
     }),
-    [shouldReduceMotion],
+    [shouldReduceMotion]
   );
 
   return (

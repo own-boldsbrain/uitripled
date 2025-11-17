@@ -44,7 +44,7 @@ export function CTABannerSection() {
             },
       },
     }),
-    [shouldReduceMotion],
+    [shouldReduceMotion]
   );
 
   const itemVariants: Variants = useMemo(
@@ -63,7 +63,7 @@ export function CTABannerSection() {
           : { type: "spring", stiffness: 120, damping: 18, mass: 0.9 },
       },
     }),
-    [shouldReduceMotion],
+    [shouldReduceMotion]
   );
 
   const arrowAnimation = shouldReduceMotion

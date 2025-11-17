@@ -63,7 +63,7 @@ export function GalleryGridBlock() {
   const handleNext = () => {
     if (selectedImage !== null) {
       const currentIndex = galleryImages.findIndex(
-        (img) => img.id === selectedImage,
+        (img) => img.id === selectedImage
       );
       const nextIndex = (currentIndex + 1) % galleryImages.length;
       setSelectedImage(galleryImages[nextIndex].id);
@@ -73,7 +73,7 @@ export function GalleryGridBlock() {
   const handlePrev = () => {
     if (selectedImage !== null) {
       const currentIndex = galleryImages.findIndex(
-        (img) => img.id === selectedImage,
+        (img) => img.id === selectedImage
       );
       const prevIndex =
         (currentIndex - 1 + galleryImages.length) % galleryImages.length;
@@ -82,12 +82,12 @@ export function GalleryGridBlock() {
   };
 
   const selectedImageData = galleryImages.find(
-    (img) => img.id === selectedImage,
+    (img) => img.id === selectedImage
   );
 
   const handleCardKeyDown = (
     event: KeyboardEvent<HTMLDivElement>,
-    imageId: number,
+    imageId: number
   ) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();

@@ -120,7 +120,7 @@ export function DetailTaskCard() {
   const [title, setTitle] = useState("Edit Design System");
   const [priority, setPriority] = useState<Priority>("high");
   const [assignees, setAssignees] = useState<TeamMember[]>(
-    allMembers.slice(0, 3),
+    allMembers.slice(0, 3)
   );
   const [description, setDescription] = useState(defaultDescription);
   const [reminderEnabled, setReminderEnabled] = useState(true);
@@ -132,9 +132,9 @@ export function DetailTaskCard() {
   const availableMembers = useMemo(
     () =>
       allMembers.filter(
-        (member) => !assignees.some((assigned) => assigned.id === member.id),
+        (member) => !assignees.some((assigned) => assigned.id === member.id)
       ),
-    [assignees],
+    [assignees]
   );
 
   const handleRemoveAssignee = (id: string) => {
@@ -370,7 +370,7 @@ export function DetailTaskCard() {
                 value={description}
                 onChange={(event) =>
                   setDescription(
-                    event.target.value.slice(0, maxDescriptionLength),
+                    event.target.value.slice(0, maxDescriptionLength)
                   )
                 }
                 className="h-32 resize-none border-0 bg-transparent px-3 py-3 text-sm text-foreground/80 focus-visible:ring-0 focus-visible:ring-offset-0"

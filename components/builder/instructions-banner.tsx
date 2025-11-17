@@ -10,10 +10,7 @@ type InstructionsBannerProps = {
   onHide: () => void;
 };
 
-export function InstructionsBanner({
-  show,
-  onHide,
-}: InstructionsBannerProps) {
+export function InstructionsBanner({ show, onHide }: InstructionsBannerProps) {
   return (
     <AnimatePresence>
       {show && (
@@ -65,4 +62,3 @@ export function InstructionsBanner({
     </AnimatePresence>
   );
 }
-

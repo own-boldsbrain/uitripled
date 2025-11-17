@@ -49,7 +49,7 @@ export function PreviewDetailsCard() {
           : { duration: 0.2, ease: [0.4, 0, 0.2, 1] },
       },
     }),
-    [shouldReduceMotion],
+    [shouldReduceMotion]
   );
 
   const hoverMotion = shouldReduceMotion ? undefined : { scale: 1.02, y: -2 };

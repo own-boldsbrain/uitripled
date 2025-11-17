@@ -161,7 +161,7 @@ type ReplyCursorState = Record<string, number>;
 
 export function Messenger() {
   const [selectedConversationId, setSelectedConversationId] = useState<string>(
-    initialConversations[0]?.id ?? "",
+    initialConversations[0]?.id ?? ""
   );
   const [conversations, setConversations] =
     useState<Conversation[]>(initialConversations);
@@ -181,7 +181,7 @@ export function Messenger() {
 
   const activeConversation = useMemo(() => {
     return conversations.find(
-      (conversation) => conversation.id === selectedConversationId,
+      (conversation) => conversation.id === selectedConversationId
     );
   }, [conversations, selectedConversationId]);
 
@@ -191,8 +191,8 @@ export function Messenger() {
       prev.map((conversation) =>
         conversation.id === selectedConversationId
           ? { ...conversation, unread: 0 }
-          : conversation,
-      ),
+          : conversation
+      )
     );
   }, [selectedConversationId]);
 
@@ -274,8 +274,8 @@ export function Messenger() {
               messages: [...conversation.messages, outgoing],
               unread: 0,
             }
-          : conversation,
-      ),
+          : conversation
+      )
     );
     setDraft("");
 
@@ -313,7 +313,7 @@ export function Messenger() {
             messages: [...conversation.messages, incoming],
             unread: isActive ? 0 : conversation.unread + 1,
           };
-        }),
+        })
       );
 
       setReplyCursor((prev) => ({
@@ -432,7 +432,7 @@ export function Messenger() {
                     "group relative flex w-full items-start gap-3 rounded-2xl border border-transparent p-3 text-left transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
                     isActive
                       ? "border-primary/40 bg-primary/10"
-                      : "bg-background/70 hover:border-border/40 hover:bg-muted/40",
+                      : "bg-background/70 hover:border-border/40 hover:bg-muted/40"
                   )}
                   role="listitem"
                 >
@@ -455,7 +455,7 @@ export function Messenger() {
                         variant="outline"
                         className={cn(
                           "rounded-full px-2.5 py-1 text-[0.65rem] font-medium hover:bg-inherit hover:text-inherit",
-                          statusTone[conversation.status],
+                          statusTone[conversation.status]
                         )}
                       >
                         {statusCopy[conversation.status]}
@@ -504,7 +504,7 @@ export function Messenger() {
                   <span
                     className={cn(
                       "absolute right-1 top-1 inline-flex h-2.5 w-2.5 rounded-full",
-                      statusTone[activeConversation.status],
+                      statusTone[activeConversation.status]
                     )}
                     aria-hidden="true"
                   />
@@ -580,7 +580,7 @@ export function Messenger() {
                       className={cn(
                         "relative max-w-[82%] rounded-2xl border border-border/40 bg-background/80 px-4 py-3 text-sm leading-relaxed text-foreground backdrop-blur",
                         message.sender === "user" &&
-                          "ml-auto border-primary/40 bg-primary text-primary-foreground",
+                          "ml-auto border-primary/40 bg-primary text-primary-foreground"
                       )}
                     >
                       <p className="font-medium text-foreground/80">
@@ -591,7 +591,7 @@ export function Messenger() {
                           "mt-1 text-[0.95rem]",
                           message.sender === "user"
                             ? "text-primary-foreground/90"
-                            : "text-foreground/90",
+                            : "text-foreground/90"
                         )}
                       >
                         {message.text}
@@ -601,7 +601,7 @@ export function Messenger() {
                           className={cn(
                             "text-muted-foreground",
                             message.sender === "user" &&
-                              "text-primary-foreground/80",
+                              "text-primary-foreground/80"
                           )}
                         >
                           {message.timestamp}

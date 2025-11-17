@@ -77,7 +77,7 @@ export function AIChatInterface() {
   }, []);
 
   const handleTextareaChange = (
-    event: React.ChangeEvent<HTMLTextAreaElement>,
+    event: React.ChangeEvent<HTMLTextAreaElement>
   ) => {
     setInputValue(event.target.value);
 
@@ -90,7 +90,7 @@ export function AIChatInterface() {
   const renderDropdown = (
     type: DropdownType,
     options: ActionOption[],
-    align: "left" | "right" = "left",
+    align: "left" | "right" = "left"
   ) => (
     <AnimatePresence>
       {activeDropdown === type && (
@@ -171,7 +171,7 @@ export function AIChatInterface() {
                 <Button
                   onClick={() =>
                     setActiveDropdown(
-                      activeDropdown === "share" ? null : "share",
+                      activeDropdown === "share" ? null : "share"
                     )
                   }
                   className="group rounded-xl p-2 bg-background/80 transition-all hover:bg-foreground/[0.05] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/40"
@@ -193,7 +193,7 @@ export function AIChatInterface() {
                 <Button
                   onClick={() =>
                     setActiveDropdown(
-                      activeDropdown === "quick" ? null : "quick",
+                      activeDropdown === "quick" ? null : "quick"
                     )
                   }
                   className="group rounded-xl p-2 bg-background/80 transition-all hover:bg-foreground/[0.05] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/40"
@@ -215,7 +215,7 @@ export function AIChatInterface() {
                 <Button
                   onClick={() =>
                     setActiveDropdown(
-                      activeDropdown === "history" ? null : "history",
+                      activeDropdown === "history" ? null : "history"
                     )
                   }
                   className="group rounded-xl p-2 bg-background/80 transition-all hover:bg-foreground/[0.05] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/40"
@@ -237,7 +237,7 @@ export function AIChatInterface() {
                 <Button
                   onClick={() =>
                     setActiveDropdown(
-                      activeDropdown === "magic" ? null : "magic",
+                      activeDropdown === "magic" ? null : "magic"
                     )
                   }
                   className="group rounded-xl p-2 bg-background/80 transition-all hover:bg-foreground/[0.05] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/40"
@@ -259,7 +259,7 @@ export function AIChatInterface() {
                 <Button
                   onClick={() =>
                     setActiveDropdown(
-                      activeDropdown === "model" ? null : "model",
+                      activeDropdown === "model" ? null : "model"
                     )
                   }
                   className="flex items-center gap-2 rounded-xl border border-border/30 bg-background/80 px-3 py-1.5 text-sm font-medium text-foreground/80 transition hover:border-border/40 hover:bg-background/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/40"

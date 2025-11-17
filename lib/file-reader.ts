@@ -1,5 +1,5 @@
 // lib/get-component-code.ts
-'use server'
+"use server";
 
 import { readFileSync } from "fs";
 import { join } from "path";

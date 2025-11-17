@@ -4,7 +4,10 @@ import { useState, useMemo, useEffect, useCallback } from "react";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
-import { getComponentById, componentsRegistry } from "@/lib/components-registry";
+import {
+  getComponentById,
+  componentsRegistry,
+} from "@/lib/components-registry";
 import { AnimationsSidebar } from "@/components/animation-sidebar";
 import { Button } from "@/components/ui/button";
 import {
@@ -33,14 +36,16 @@ export default function ComponentsLayout({
 
   // Get visible animations (display !== false)
   const visibleAnimations = useMemo(() => {
-    return componentsRegistry.filter((component) => component.display !== false);
+    return componentsRegistry.filter(
+      (component) => component.display !== false
+    );
   }, []);
 
   // Find current animation index and navigation
   const currentIndex = useMemo(() => {
     if (!selectedAnimation) return -1;
     return visibleAnimations.findIndex(
-      (anim) => anim.id === selectedAnimation.id,
+      (anim) => anim.id === selectedAnimation.id
     );
   }, [selectedAnimation, visibleAnimations]);
 
@@ -55,7 +60,7 @@ export default function ComponentsLayout({
     (animationId: string) => {
       router.push(`/components/${animationId}`);
     },
-    [router],
+    [router]
   );
 
   const handleMobileSelect = useCallback(
@@ -63,7 +68,7 @@ export default function ComponentsLayout({
       handleNavigate(animationId);
       setMobileSidebarOpen(false);
     },
-    [handleNavigate],
+    [handleNavigate]
   );
 
   // Keyboard navigation

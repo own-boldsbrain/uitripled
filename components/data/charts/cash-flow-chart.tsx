@@ -139,12 +139,12 @@ export function CashFlowChart() {
 
   const displayData = useMemo(
     () => (activeView === "monthly" ? monthlyData : yearlyData),
-    [activeView],
+    [activeView]
   );
 
   const maxValue = useMemo(
     () => Math.max(...displayData.map((d) => d.value)),
-    [displayData],
+    [displayData]
   );
 
   const summaryText = useMemo(() => {
@@ -153,22 +153,22 @@ export function CashFlowChart() {
     }
 
     const highest = displayData.reduce((prev, current) =>
-      current.value > prev.value ? current : prev,
+      current.value > prev.value ? current : prev
     );
     const lowest = displayData.reduce((prev, current) =>
-      current.value < prev.value ? current : prev,
+      current.value < prev.value ? current : prev
     );
     const first = displayData[0];
     const last = displayData[displayData.length - 1];
 
     if (activeView === "monthly") {
       return `Monthly cash flow from ${first.label} to ${last.label}. Highest cash flow in ${highest.label} at ${formatCurrency(
-        highest.value,
+        highest.value
       )}. Lowest in ${lowest.label} at ${formatCurrency(lowest.value)}.`;
     }
 
     return `Yearly cash flow from ${first.label} to ${last.label}. Highest cash flow in ${highest.label} at ${formatCurrency(
-      highest.value,
+      highest.value
     )}. Lowest in ${lowest.label} at ${formatCurrency(lowest.value)}.`;
   }, [activeView, displayData]);
 
@@ -208,7 +208,7 @@ export function CashFlowChart() {
             className="text-5xl font-bold text-foreground"
           >
             {formatCurrency(
-              displayData.reduce((total, datum) => total + datum.cashflow, 0),
+              displayData.reduce((total, datum) => total + datum.cashflow, 0)
             )}
           </motion.h2>
           <p id={chartSummaryId} className="sr-only" aria-live="polite">
@@ -228,7 +228,7 @@ export function CashFlowChart() {
               "px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-secondary",
               activeView === "monthly"
                 ? "bg-primary text-primary-foreground shadow-lg"
-                : "text-foreground hover:text-primary",
+                : "text-foreground hover:text-primary"
             )}
             aria-pressed={activeView === "monthly"}
             aria-controls="cashflow-chart-bars"
@@ -242,7 +242,7 @@ export function CashFlowChart() {
               "px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-secondary",
               activeView === "yearly"
                 ? "bg-primary text-primary-foreground shadow-lg"
-                : "text-foreground hover:text-primary",
+                : "text-foreground hover:text-primary"
             )}
             aria-pressed={activeView === "yearly"}
             aria-controls="cashflow-chart-bars"
@@ -358,13 +358,13 @@ export function CashFlowChart() {
                     className={`w-full rounded-t-2xl relative overflow-hidden cursor-pointer transition-colors duration-300 min-h-[0.5rem] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background ${tooltipVisible ? "bg-gradient-to-b from-primary to-primary/20" : "bg-primary/30"}
                     `}
                     aria-label={`${data.label} cash flow ${formatCurrency(
-                      data.cashflow,
+                      data.cashflow
                     )} with ${formatCurrency(data.inflow)} in inflow`}
                     aria-describedby={`${data.shortLabel}-summary`}
                   >
                     <span id={`${data.shortLabel}-summary`} className="sr-only">
                       {`${data.label}: cash flow ${formatCurrency(
-                        data.cashflow,
+                        data.cashflow
                       )}, inflow ${formatCurrency(data.inflow)}`}
                     </span>
                   </motion.button>

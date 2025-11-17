@@ -84,7 +84,7 @@ export function ThemeProvider({
       }
       applyTheme(nextTheme);
     },
-    [applyTheme],
+    [applyTheme]
   );
 
   const toggleTheme = useCallback(() => {
@@ -149,7 +149,7 @@ export function ThemeProvider({
       setTheme,
       toggleTheme,
     }),
-    [resolvedTheme, setTheme, theme, toggleTheme],
+    [resolvedTheme, setTheme, theme, toggleTheme]
   );
 
   return (

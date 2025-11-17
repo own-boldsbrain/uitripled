@@ -1,11 +1,15 @@
 import { NextResponse } from "next/server";
-import { componentsRegistry, getComponentById, loadComponentCode } from "@/lib/components-registry";
+import {
+  componentsRegistry,
+  getComponentById,
+  loadComponentCode,
+} from "@/lib/components-registry";
 
 /**
  * GET handler for registry
  * Returns component data from components-registry.tsx
  * Compatible with shadcn registry format
- * 
+ *
  * @param request - Next.js request object
  * @param params - Route parameters containing the component name
  */
@@ -19,7 +23,7 @@ export async function GET(
     // If name is provided, return specific component
     if (name && name !== "index") {
       const component = getComponentById(name);
-      
+
       if (!component) {
         return NextResponse.json(
           { error: `Component "${name}" not found` },
@@ -54,7 +58,7 @@ export async function GET(
     }
 
     // Return full registry (all components)
-      const registry = componentsRegistry.map((component) => ({
+    const registry = componentsRegistry.map((component) => ({
       id: component.id,
       name: component.name,
       description: component.description,

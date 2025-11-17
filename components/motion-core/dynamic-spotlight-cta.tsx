@@ -41,7 +41,7 @@ export function DynamicSpotlightCTA({
         duration: Math.random() * 3 + 2,
         delay: Math.random() * 2,
       })),
-    [],
+    []
   );
 
   const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
