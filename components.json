@@ -19,6 +19,6 @@
     "hooks": "@/hooks"
   },
   "registries": {
-    "@uitripled": "https://ui.tripled.work/r/{name}.json"
+    "@uitripled": "https://ui.tripled.work/api/registry/${name}.json"
   }
 }
