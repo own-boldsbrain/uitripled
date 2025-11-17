@@ -4,156 +4,32 @@ import { useState, useEffect, useCallback, useMemo } from "react";
 import {
   DndContext,
   DragEndEvent,
-  DragOverlay,
   DragStartEvent,
   PointerSensor,
   useSensor,
   useSensors,
 } from "@dnd-kit/core";
-import {
-  SortableContext,
-  verticalListSortingStrategy,
-  arrayMove,
-} from "@dnd-kit/sortable";
+import { arrayMove } from "@dnd-kit/sortable";
 import { BuilderSidebar } from "@/components/builder-sidebar";
 import { BuilderCanvas } from "@/components/builder-canvas";
 import { BuilderCodeView } from "@/components/builder-code-view";
 import { componentsRegistry } from "@/lib/components-registry";
-import { Component } from "@/types";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import {
-  Info,
-  FolderOpen,
-  Trash2,
-  Eye,
-  Type,
-  Plus,
-  Edit3,
-  Menu,
-  X,
-} from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-
-type TextContentEntry = {
-  original: string;
-  value: string;
-};
-
-export type BuilderComponent = {
-  id: string;
-  animationId: string;
-  animation: Component;
-  textContent?: Record<string, TextContentEntry>;
-};
-
-export type BuilderProjectPage = {
-  id: string;
-  name: string;
-  slug: string;
-  components: BuilderComponent[];
-};
-
-type SavedProjectComponent = {
-  id: string;
-  animationId: string;
-  textContent?: Record<string, TextContentEntry>;
-};
-
-type SavedProjectPage = {
-  id: string;
-  name: string;
-  slug: string;
-  components: SavedProjectComponent[];
-  code?: string;
-};
-
-type SavedProject = {
-  name: string;
-  uuid?: string;
-  deploymentSlug?: string;
-  pages?: SavedProjectPage[];
-  entryPageId?: string;
-  components?: SavedProjectComponent[];
-  code?: string;
-  savedAt: string;
-  deploymentId?: string;
-  deploymentUrl?: string;
-};
-
-const sanitizeSlug = (value: string) =>
-  value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 48);
-
-function generateUniqueSlug(baseName: string, existingSlugs: string[]): string {
-  const baseSlug = sanitizeSlug(baseName) || "page";
-  if (!existingSlugs.includes(baseSlug)) {
-    return baseSlug;
-  }
-
-  let attempt = 2;
-  let candidate = `${baseSlug}-${attempt}`;
-  while (existingSlugs.includes(candidate)) {
-    attempt += 1;
-    candidate = `${baseSlug}-${attempt}`;
-  }
-
-  return candidate;
-}
-
-function createPage(name: string, existingSlugs: string[]): BuilderProjectPage {
-  const id =
-    typeof crypto !== "undefined" && typeof crypto.randomUUID === "function"
-      ? crypto.randomUUID()
-      : `page-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
-
-  const slug = generateUniqueSlug(name, existingSlugs);
-
-  return {
-    id,
-    name,
-    slug,
-    components: [],
-  };
-}
-
-function extractSavedPages(project: SavedProject): SavedProjectPage[] {
-  if (project.pages && project.pages.length > 0) {
-    return project.pages;
-  }
-
-  return [
-    {
-      id:
-        project.entryPageId ||
-        `page-${sanitizeSlug(project.name || "landing") || "landing"}`,
-      name: "Landing",
-      slug: "landing",
-      components: project.components ?? [],
-      code: project.code,
-    },
-  ];
-}
-
-function countSavedProjectComponents(project: SavedProject): number {
-  return extractSavedPages(project).reduce(
-    (total, page) => total + (page.components?.length ?? 0),
-    0,
-  );
-}
+  createPage,
+  generateUniqueSlug,
+  extractSavedPages,
+} from "@/lib/builder-utils";
+import type {
+  BuilderComponent,
+  BuilderProjectPage,
+  SavedProject,
+} from "@/types/builder";
+import { BuilderHeader } from "@/components/builder/builder-header";
+import { InstructionsBanner } from "@/components/builder/instructions-banner";
+import { TextEditingBanner } from "@/components/builder/text-editing-banner";
+import { PageTabs } from "@/components/builder/page-tabs";
+import { LoadProjectDialog } from "@/components/builder/load-project-dialog";
+import { DragOverlay } from "@/components/builder/drag-overlay";
 
 export default function BuilderPage() {
   const [pages, setPages] = useState<BuilderProjectPage[]>(() => {
@@ -167,7 +43,6 @@ export default function BuilderPage() {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const [savedProjects, setSavedProjects] = useState<SavedProject[]>([]);
   const [isTextEditing, setIsTextEditing] = useState(false);
-  const hasFullAccess = true;
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -619,13 +494,13 @@ export default function BuilderPage() {
         (component) => component.id === activeId,
       );
       if (canvasComponent) {
-        return { name: canvasComponent.animation.name, type: "canvas" };
+        return { name: canvasComponent.animation.name, type: "canvas" as const };
       }
     }
 
     const animation = componentsRegistry.find((a) => a.id === activeId);
     if (animation) {
-      return { name: animation.name, type: "sidebar" };
+      return { name: animation.name, type: "sidebar" as const };
     }
 
     return null;
@@ -635,64 +510,15 @@ export default function BuilderPage() {
 
   return (
     <div className="flex h-screen flex-col bg-background">
-      {/* Top Header Bar */}
-      <div className="border-b border-border bg-card px-4 py-3 sm:px-6">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center gap-2">
-            <h1 className="text-xl font-bold">Page Builder</h1>
-            <Dialog
-              open={mobileSidebarOpen}
-              onOpenChange={setMobileSidebarOpen}
-            >
-              <DialogTrigger asChild>
-                <Button variant="outline" size="sm" className="gap-2 md:hidden">
-                  <Menu className="h-4 w-4" />
-                  Library
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="md:hidden inset-x-0 bottom-0 left-0 right-0 top-auto flex h-[calc(100vh-5rem)] max-w-none translate-x-0 translate-y-0 flex-col rounded-t-3xl border border-border bg-background p-0 pb-4 shadow-xl data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom">
-                <div className="flex items-center justify-between border-b border-border px-4 py-3">
-                  <div>
-                    <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                      Component Library
-                    </p>
-                    <p className="text-sm font-semibold">Blocks</p>
-                  </div>
-                  <DialogClose asChild>
-                    <Button variant="ghost" size="icon">
-                      <X className="h-4 w-4" />
-                      <span className="sr-only">Close</span>
-                    </Button>
-                  </DialogClose>
-                </div>
-                <div className="flex-1 overflow-hidden">
-                  <BuilderSidebar
-                    allowDrag={false}
-                    className="flex h-full flex-col bg-background"
-                    onSelectComponent={handleMobileComponentSelect}
-                  />
-                </div>
-              </DialogContent>
-            </Dialog>
-          </div>
-          <div className="flex items-center gap-2">
-            <Button variant="outline" size="sm" onClick={loadSavedProjects}>
-              <FolderOpen className="mr-2 h-4 w-4" />
-              Load Project
-            </Button>
-            <Button
-              variant={isTextEditing ? "default" : "outline"}
-              size="sm"
-              onClick={() => setIsTextEditing((prev) => !prev)}
-              className="gap-2"
-              disabled={activeComponentCount === 0}
-            >
-              <Type className="h-4 w-4" />
-              {isTextEditing ? "Done editing" : "Edit text"}
-            </Button>
-          </div>
-        </div>
-      </div>
+      <BuilderHeader
+        mobileSidebarOpen={mobileSidebarOpen}
+        onMobileSidebarChange={setMobileSidebarOpen}
+        onLoadProjects={loadSavedProjects}
+        onToggleTextEditing={() => setIsTextEditing((prev) => !prev)}
+        isTextEditing={isTextEditing}
+        activeComponentCount={activeComponentCount}
+        onMobileComponentSelect={handleMobileComponentSelect}
+      />
 
       <div className="flex flex-1 overflow-hidden">
         <DndContext
@@ -708,134 +534,22 @@ export default function BuilderPage() {
 
           {/* Main Canvas Area */}
           <div className="flex flex-1 flex-col overflow-y-auto md:overflow-hidden">
-            {/* Instructions Banner */}
-            <AnimatePresence>
-              {showInstructions && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
-                  className="border-b border-border bg-muted/30"
-                >
-                  <Card className="m-4 border-2 border-primary/20 bg-primary/5 p-4">
-                    <div className="flex items-start gap-3">
-                      <Info className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
-                      <div className="flex-1 space-y-2 text-sm">
-                        <h3 className="font-semibold text-foreground">
-                          Important Notes
-                        </h3>
-                        <ul className="space-y-1.5 text-muted-foreground">
-                          <li className="flex items-start gap-2">
-                            <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                            <span>
-                              The builder is currently in beta and may have some
-                              bugs and limitations
-                            </span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                            <span>
-                              The builder doesn&apos;t support auto-grid yet
-                            </span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                            <span>Only blocks are allowed for use</span>
-                          </li>
-                        </ul>
-                        <div className="flex justify-end">
-                          <Button
-                            variant="default"
-                            className="flex justify-start"
-                            size="sm"
-                            onClick={() => setShowInstructions(false)}
-                          >
-                            {" "}
-                            Hide
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
-                  </Card>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            <InstructionsBanner
+              show={showInstructions}
+              onHide={() => setShowInstructions(false)}
+            />
 
-            <AnimatePresence>
-              {isTextEditing && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  className="mx-4 mb-4 rounded-md border border-primary/30 bg-primary/10 p-3 text-sm text-primary"
-                >
-                  Text editing mode enabled. Click highlighted text to edit.
-                  Dragging is disabled while this mode is active.
-                </motion.div>
-              )}
-            </AnimatePresence>
+            <TextEditingBanner show={isTextEditing} />
 
-            <div className="px-4 pb-4 md:px-6">
-              <div className="flex flex-wrap items-center gap-2">
-                {pages.map((page, index) => (
-                  <div
-                    key={page.id}
-                    className="flex items-center gap-1 rounded-lg border border-border bg-card/60 p-1"
-                  >
-                    <Button
-                      size="sm"
-                      variant={page.id === activePage?.id ? "default" : "ghost"}
-                      className="gap-2"
-                      onClick={() => handleSelectPage(page.id)}
-                    >
-                      {page.name}
-                      {index === 0 && (
-                        <span className="rounded-full bg-primary/15 px-2 py-0.5 text-[10px] font-semibold uppercase text-primary">
-                          Home
-                        </span>
-                      )}
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="h-8 w-8 text-muted-foreground"
-                      onClick={() => handleRenamePage(page.id)}
-                      aria-label={`Rename ${page.name}`}
-                    >
-                      <Edit3 className="h-4 w-4" />
-                    </Button>
-                    {pages.length > 1 && (
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        className="h-8 w-8 text-destructive"
-                        onClick={() => handleDeletePage(page.id)}
-                        aria-label={`Delete ${page.name}`}
-                      >
-                        <Trash2 className="h-4 w-4" />
-                      </Button>
-                    )}
-                  </div>
-                ))}
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="gap-1"
-                  onClick={handleAddPage}
-                >
-                  <Plus className="h-4 w-4" />
-                  Add page
-                </Button>
-              </div>
-              {activePage && (
-                <p className="mt-2 text-xs text-muted-foreground">
-                  Route:{" "}
-                  <span className="font-mono text-foreground">
-                    {activeRoute}
-                  </span>
-                </p>
-              )}
-            </div>
+            <PageTabs
+              pages={pages}
+              activePage={activePage}
+              onSelectPage={handleSelectPage}
+              onAddPage={handleAddPage}
+              onRenamePage={handleRenamePage}
+              onDeletePage={handleDeletePage}
+              activeRoute={activeRoute}
+            />
 
             <div className="md:flex-1 md:overflow-y-auto p-4 md:p-6">
               <BuilderCanvas
@@ -854,110 +568,18 @@ export default function BuilderPage() {
             />
           </div>
 
-          {/* Drag Overlay */}
-          <DragOverlay>
-            {activeComponentInfo && (
-              <div className="rounded-lg border-2 border-primary bg-card p-4 shadow-lg opacity-90">
-                <div className="text-sm font-medium">
-                  {activeComponentInfo.name}
-                </div>
-                {activeComponentInfo.type === "canvas" && (
-                  <div className="mt-1 text-xs text-muted-foreground">
-                    Reordering...
-                  </div>
-                )}
-              </div>
-            )}
-          </DragOverlay>
+          <DragOverlay activeComponentInfo={activeComponentInfo} />
         </DndContext>
       </div>
 
-      {/* Load Projects Dialog */}
-      <Dialog open={loadDialogOpen} onOpenChange={setLoadDialogOpen}>
-        <DialogContent className="max-w-2xl">
-          <DialogHeader>
-            <DialogTitle>Load Project</DialogTitle>
-            <DialogDescription>
-              Select a saved project to load into the builder
-            </DialogDescription>
-          </DialogHeader>
-          <div className="max-h-[400px] overflow-y-auto">
-            {savedProjects.length === 0 ? (
-              <div className="py-8 text-center text-sm text-muted-foreground">
-                No saved projects found. Create and save a project first.
-              </div>
-            ) : (
-              <div className="space-y-2">
-                {savedProjects.map((project) => {
-                  const pagesForProject = extractSavedPages(project);
-                  const totalComponents = pagesForProject.reduce(
-                    (total, page) => total + (page.components?.length ?? 0),
-                    0,
-                  );
-                  const savedDate = new Date(project.savedAt);
-
-                  return (
-                    <Card
-                      key={project.name}
-                      className="p-4 transition-colors hover:bg-accent/50"
-                    >
-                      <div className="flex items-start justify-between gap-4">
-                        <div className="flex-1">
-                          <h3 className="font-semibold">{project.name}</h3>
-                          <p className="mt-1 text-sm text-muted-foreground">
-                            {pagesForProject.length}{" "}
-                            {pagesForProject.length === 1 ? "page" : "pages"}
-                            {" • "}
-                            {totalComponents}{" "}
-                            {totalComponents === 1 ? "component" : "components"}
-                            {" • "}
-                            Saved {savedDate.toLocaleDateString()} at{" "}
-                            {savedDate.toLocaleTimeString()}
-                          </p>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            onClick={() => previewProject(project.name)}
-                          >
-                            <Eye className="h-4 w-4" />
-                          </Button>
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            onClick={() => {
-                              if (
-                                confirm(`Delete project "${project.name}"?`)
-                              ) {
-                                deleteProject(project.name);
-                              }
-                            }}
-                          >
-                            <Trash2 className="h-4 w-4 text-destructive" />
-                          </Button>
-                          <Button
-                            variant="default"
-                            size="sm"
-                            onClick={() => loadProject(project)}
-                          >
-                            Load
-                          </Button>
-                        </div>
-                      </div>
-                    </Card>
-                  );
-                })}
-              </div>
-            )}
-          </div>
-          <DialogFooter>
-            <Button variant="outline" onClick={() => setLoadDialogOpen(false)}>
-              Cancel
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
+      <LoadProjectDialog
+        open={loadDialogOpen}
+        onOpenChange={setLoadDialogOpen}
+        savedProjects={savedProjects}
+        onLoadProject={loadProject}
+        onDeleteProject={deleteProject}
+        onPreviewProject={previewProject}
+      />
     </div>
   );
 }

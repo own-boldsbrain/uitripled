@@ -17,7 +17,7 @@ import { CodeBlock } from "./code-block";
 import type {
   BuilderComponent,
   BuilderProjectPage,
-} from "@/app/builder/page";
+} from "@/types/builder";
 import { mergeComponentImports } from "@/lib/merge-imports";
 import {
   Dialog,
