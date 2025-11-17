@@ -3,10 +3,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Animation, categoryNames } from "@/lib/animations";
+import { Component, categoryNames } from "@/types";
 
 type AnimationCardProps = {
-  animation: Animation;
+  animation: Component;
 };
 
 export function AnimationCard({ animation }: AnimationCardProps) {

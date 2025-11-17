@@ -71,7 +71,7 @@ const itemVariants: Variants = {
   },
 };
 
-export function AnimatedProfileMenu(): JSX.Element {
+export function AnimatedProfileMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const menuId = useId();
 
