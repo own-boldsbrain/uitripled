@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Code, ExternalLink, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CodeBlock } from "@/components/CodeBlock";
-import { animationRegistry } from "@/lib/animation-registry";
+import { CodeBlock } from "@/components/code-block";
+import { componentsRegistry } from "@/lib/components-registry";
 import Link from "next/link";
 
 type SavedProjectComponent = {
@@ -134,7 +134,7 @@ function normalizeProject(project: SavedProject): NormalizedProject | null {
 
     const componentInstances = (page.components ?? [])
       .map<ComponentInstance | null>((comp, componentIndex) => {
-        const animation = animationRegistry.find(
+        const animation = componentsRegistry.find(
           (a) => a.id === comp.animationId,
         );
         if (!animation) {

@@ -21,7 +21,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { notFound } from "next/navigation";
 
-export default function AnimationDetailPageClient() {
+export default function AnimationDetailPageClient({ code }: { code: string }) {
   const params = useParams();
   const component = getComponentById(params.id as string);
   const [refreshKey, setRefreshKey] = React.useState(0);
@@ -35,8 +35,8 @@ export default function AnimationDetailPageClient() {
   const Component = component.component;
   const requiresShadcn = component.tags.includes("shadcn");
   const codeLineCount = React.useMemo(
-    () => component.code.split("\n").length,
-    [component.code],
+    () => code.split("\n").length,
+    [code],
   );
   const showLongCodeNote = codeLineCount > 400;
 
@@ -446,7 +446,7 @@ export default function AnimationDetailPageClient() {
                       </div>
                     </motion.div>
                   )}
-                  <CodeBlock code={component.code} />
+                  <CodeBlock code={code} />
                 </>
               </div>
             </TabsContent>
@@ -477,7 +477,7 @@ export default function AnimationDetailPageClient() {
                     </div>
                   </div>
                 </motion.div>
-                <LiveEditor initialCode={component.code} />
+                <LiveEditor initialCode={code} />
               </div>
             </TabsContent>
           </Tabs>

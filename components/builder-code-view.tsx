@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   Copy,
@@ -17,7 +17,7 @@ import { CodeBlock } from "./code-block";
 import type {
   BuilderComponent,
   BuilderProjectPage,
-} from "@/app/builder/BuilderPage.client";
+} from "@/app/builder/page";
 import { mergeComponentImports } from "@/lib/merge-imports";
 import {
   Dialog,
@@ -95,19 +95,42 @@ const slugifyName = (value: string) =>
     .replace(/^-+|-+$/g, "")
     .slice(0, 48);
 
-const buildPageCode = (
+const buildPageCode = async (
   currentPage: BuilderProjectPage,
   allPages: BuilderProjectPage[],
-): string => {
+): Promise<string> => {
   const components = currentPage.components;
 
   const componentUsages: string[] = [];
   const allImports: string[] = [];
   const componentDefinitions: string[] = [];
 
-  components.forEach((component) => {
+  for (const component of components) {
+    let animationCode = component.animation.code;
+    
+    // If code is not available, fetch it from the API
+    if (!animationCode && component.animation.id) {
+      try {
+        const response = await fetch(`/api/registry/${component.animation.id}`);
+        if (response.ok) {
+          const data = await response.json();
+          animationCode = data.code;
+        } else {
+          console.warn(`Failed to load code for component ${component.animation.id}: ${response.status}`);
+          continue;
+        }
+      } catch (error) {
+        console.error(`Error loading code for component ${component.animation.id}:`, error);
+        continue;
+      }
+    }
+    
+    if (!animationCode) {
+      console.warn(`Component ${component.animation.id} has no code available`);
+      continue;
+    }
     const codeWithOverrides = applyTextOverrides(
-      component.animation.code,
+      animationCode,
       component.textContent,
     );
 
@@ -184,7 +207,7 @@ const buildPageCode = (
         `// ${component.animation.name}\n${componentCode}`,
       );
     }
-  });
+  }
 
   const mainContent =
     componentUsages.length > 0
@@ -321,6 +344,8 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
   >(null);
   const [exporting, setExporting] = useState(false);
   const [exported, setExported] = useState(false);
+  const [pageArtifacts, setPageArtifacts] = useState<PageArtifact[]>([]);
+  const [loadingCode, setLoadingCode] = useState(false);
   const router = useRouter();
 
   const totalComponentCount = useMemo(
@@ -328,17 +353,44 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
     [pages],
   );
 
-  const pageArtifacts = useMemo<PageArtifact[]>(
-    () =>
-      pages.map((page) => ({
-        id: page.id,
-        name: page.name,
-        slug: page.slug,
-        code: buildPageCode(page, pages),
-        componentCount: page.components.length,
-      })),
-    [pages],
-  );
+  // Load code for all pages asynchronously
+  useEffect(() => {
+    let cancelled = false;
+    
+    async function loadPageCodes() {
+      setLoadingCode(true);
+      try {
+        const artifacts = await Promise.all(
+          pages.map(async (page) => ({
+            id: page.id,
+            name: page.name,
+            slug: page.slug,
+            code: await buildPageCode(page, pages),
+            componentCount: page.components.length,
+          }))
+        );
+        
+        if (!cancelled) {
+          setPageArtifacts(artifacts);
+        }
+      } catch (error) {
+        console.error("Failed to load page codes:", error);
+        if (!cancelled) {
+          setPageArtifacts([]);
+        }
+      } finally {
+        if (!cancelled) {
+          setLoadingCode(false);
+        }
+      }
+    }
+    
+    loadPageCodes();
+    
+    return () => {
+      cancelled = true;
+    };
+  }, [pages]);
 
   const pageCodeMap = useMemo(() => {
     const map: Record<string, string> = {};
@@ -386,7 +438,7 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleSave = useCallback(() => {
+  const handleSave = useCallback(async () => {
     const normalizedName = projectName.trim();
     if (!normalizedName || totalComponentCount === 0) return;
 
@@ -423,17 +475,20 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
       delete existingProjects[normalizedName];
     }
 
-    const serializedPages = pages.map((page) => ({
-      id: page.id,
-      name: page.name,
-      slug: page.slug,
-      components: page.components.map((component) => ({
-        id: component.id,
-        animationId: component.animationId,
-        textContent: component.textContent ?? {},
-      })),
-      code: pageCodeMap[page.id] ?? buildPageCode(page, pages),
-    }));
+    // Ensure all page codes are loaded before saving
+    const serializedPages = await Promise.all(
+      pages.map(async (page) => ({
+        id: page.id,
+        name: page.name,
+        slug: page.slug,
+        components: page.components.map((component) => ({
+          id: component.id,
+          animationId: component.animationId,
+          textContent: component.textContent ?? {},
+        })),
+        code: pageCodeMap[page.id] || (await buildPageCode(page, pages)),
+      }))
+    );
 
     const fallbackPage: BuilderProjectPage = {
       id: "page-fallback",
@@ -441,7 +496,7 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
       slug: "home",
       components: [],
     };
-    const fallbackCode = buildPageCode(fallbackPage, [fallbackPage]);
+    const fallbackCode = await buildPageCode(fallbackPage, [fallbackPage]);
 
     // Generate a short unique ID (5 characters) for the project if it doesn't exist
     const generateShortId = () => {
@@ -674,19 +729,25 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
     setSaveDialogOpen(true);
   };
 
-  const displayedCode = useMemo(() => {
-    if (activeArtifact) {
-      return activeArtifact.code;
+  const [displayedCode, setDisplayedCode] = useState<string>("");
+
+  useEffect(() => {
+    async function loadDisplayedCode() {
+      if (activeArtifact) {
+        setDisplayedCode(activeArtifact.code);
+      } else {
+        const fallbackPage: BuilderProjectPage = {
+          id: "page-preview-fallback",
+          name: "Home",
+          slug: "home",
+          components: [],
+        };
+        const code = await buildPageCode(fallbackPage, [fallbackPage]);
+        setDisplayedCode(code);
+      }
     }
-
-    const fallbackPage: BuilderProjectPage = {
-      id: "page-preview-fallback",
-      name: "Home",
-      slug: "home",
-      components: [],
-    };
-
-    return buildPageCode(fallbackPage, [fallbackPage]);
+    
+    loadDisplayedCode();
   }, [activeArtifact]);
 
   return (
@@ -809,7 +870,18 @@ export function BuilderCodeView({ pages, activePageId }: BuilderCodeViewProps) {
             animate={{ opacity: 1 }}
             className="max-h-[500px] overflow-auto"
           >
-            <CodeBlock code={displayedCode} language="tsx" />
+            {loadingCode || !displayedCode ? (
+              <div className="flex items-center justify-center py-12">
+                <div className="flex flex-col items-center gap-3">
+                  <Loader2 className="h-6 w-6 animate-spin text-primary" />
+                  <p className="text-sm text-muted-foreground">
+                    Generating code...
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <CodeBlock code={displayedCode} language="tsx" />
+            )}
           </motion.div>
         )}
       </motion.div>

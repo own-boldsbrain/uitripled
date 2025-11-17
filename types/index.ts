@@ -13,7 +13,8 @@ export type Component = {
   category: ComponentCategory;
   tags: string[];
   component: React.ComponentType<any>;
-  code: string;
+  code?: string; // Optional - loaded on demand
+  codePath: string; // Path to the component file
   duration?: string;
   easing?: string;
   isFree?: boolean;

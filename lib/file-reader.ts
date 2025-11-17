@@ -1,13 +1,16 @@
+// lib/get-component-code.ts
+'use server'
+
 import { readFileSync } from "fs";
 import { join } from "path";
 
 /**
- * Reads a file and returns its content as a string
+ * Reads a component file and returns its source code as a string
  * @param filePath - The path to the file (supports @/ alias or relative/absolute paths)
  * @returns The file content as a string
  * @throws Error if the file cannot be read
  */
-export function getComponentCode(filePath: string): string {
+export async function getComponentCode(filePath: string): Promise<string> {
   try {
     // Resolve @/ alias to project root
     let resolvedPath = filePath;
@@ -28,4 +31,3 @@ export function getComponentCode(filePath: string): string {
     );
   }
 }
-

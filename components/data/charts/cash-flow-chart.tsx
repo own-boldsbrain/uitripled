@@ -312,7 +312,7 @@ export function CashFlowChart() {
                         transition={
                           shouldAnimate ? { duration: 0.2 } : { duration: 0 }
                         }
-                        className="absolute -translate-x-1/2 bg-popover rounded-2xl p-4 shadow-xl border border-border min-w-[200px] z-10 text-left"
+                        className="absolute mx-auto bg-popover rounded-2xl p-4 shadow-xl border border-border min-w-[200px] z-10 text-left"
                         role="status"
                         aria-live="polite"
                         style={{ bottom: tooltipPosition }}

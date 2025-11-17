@@ -100,7 +100,7 @@ export default function ComponentsLayout({
   }, [selectedAnimation, previousAnimation, nextAnimation, handleNavigate]);
 
   return (
-    <div className="relative flex h-[calc(100vh-3.5rem)] overflow-hidden">
+    <div className="relative flex h-[calc(100vh-3.5rem)] overflow-hidden px-4">
       {/* Sidebar */}
       <AnimatePresence>
         {sidebarOpen && (
@@ -130,7 +130,7 @@ export default function ComponentsLayout({
                 </button>
               </div>
               <AnimationsSidebar
-                selectedAnimation={selectedAnimation}
+                selectedComponent={selectedAnimation}
                 useLinks={true}
               />
             </div>
@@ -223,9 +223,9 @@ export default function ComponentsLayout({
             </div>
             <div className="flex-1 overflow-hidden">
               <AnimationsSidebar
-                selectedAnimation={selectedAnimation}
-                onSelectAnimation={(animation) =>
-                  handleMobileSelect(animation.id)
+                selectedComponent={selectedAnimation}
+                onSelectComponent={(component) =>
+                  handleMobileSelect(component.id)
                 }
               />
             </div>

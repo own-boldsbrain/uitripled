@@ -55,12 +55,12 @@ function parseComponentsRegistry() {
     });
   }
   
-  // Extract animationRegistry entries
-  const registryStart = content.indexOf('export const animationRegistry: Animation[] = [');
+  // Extract componentsRegistry entries
+  const registryStart = content.indexOf('export const componentsRegistry: Component[] = [');
   const registryEnd = content.lastIndexOf('];', content.length);
   
   if (registryStart === -1 || registryEnd === -1) {
-    throw new Error('Could not find animationRegistry in components-registry.tsx');
+    throw new Error('Could not find componentsRegistry in components-registry.tsx');
   }
   
   const registryContent = content.substring(registryStart, registryEnd);

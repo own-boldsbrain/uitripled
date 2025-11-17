@@ -5,22 +5,22 @@ import { useDraggable } from "@dnd-kit/core";
 import { motion } from "framer-motion";
 import { Search } from "lucide-react";
 
-import { animationRegistry } from "@/lib/animation-registry";
-import { categoryNames } from "@/lib/animations";
+import { componentsRegistry } from "@/lib/components-registry";
+import { categoryNames } from "@/types";
 import { cn } from "@/lib/utils";
 
-type AnimationItem = (typeof animationRegistry)[number];
+type ComponentItem = (typeof componentsRegistry)[number];
 
 type BuilderSidebarProps = {
   className?: string;
-  onSelectComponent?: (animationId: string) => void;
+  onSelectComponent?: (componentId: string) => void;
   allowDrag?: boolean;
 };
 
-function DraggableComponent({ animation }: { animation: AnimationItem }) {
+function DraggableComponent({ component }: { component: ComponentItem }) {
   const { attributes, listeners, setNodeRef, transform, isDragging } =
     useDraggable({
-      id: animation.id,
+      id: component.id,
     });
 
   const style = transform
@@ -42,12 +42,12 @@ function DraggableComponent({ animation }: { animation: AnimationItem }) {
         isDragging && "opacity-50",
       )}
     >
-      <div className="text-sm font-medium">{animation.name}</div>
+      <div className="text-sm font-medium">{component.name}</div>
       <div className="mt-1 text-xs text-muted-foreground">
-        {animation.description}
+        {component.description}
       </div>
       <div className="mt-2 flex flex-wrap gap-1">
-        {animation.tags.slice(0, 3).map((tag) => (
+        {component.tags.slice(0, 3).map((tag) => (
           <span
             key={tag}
             className="rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary"
@@ -61,26 +61,26 @@ function DraggableComponent({ animation }: { animation: AnimationItem }) {
 }
 
 function SelectableComponent({
-  animation,
+  component,
   onSelect,
 }: {
-  animation: AnimationItem;
-  onSelect?: (animationId: string) => void;
+  component: ComponentItem;
+  onSelect?: (componentId: string) => void;
 }) {
   return (
     <motion.button
       type="button"
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      onClick={() => onSelect?.(animation.id)}
+      onClick={() => onSelect?.(component.id)}
       className="w-full rounded-lg border border-border bg-card p-3 text-left transition-colors hover:border-primary hover:bg-accent/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/30"
     >
-      <div className="text-sm font-medium">{animation.name}</div>
+      <div className="text-sm font-medium">{component.name}</div>
       <div className="mt-1 text-xs text-muted-foreground">
-        {animation.description}
+        {component.description}
       </div>
       <div className="mt-2 flex flex-wrap gap-1">
-        {animation.tags.slice(0, 3).map((tag) => (
+        {component.tags.slice(0, 3).map((tag) => (
           <span
             key={tag}
             className="rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary"
@@ -103,17 +103,17 @@ export function BuilderSidebar({
   const filteredAnimations = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
 
-    return animationRegistry
+    return componentsRegistry
       .filter(
-        (animation) =>
-          animation.display !== false && animation.category === "blocks",
+        (component) =>
+          component.display !== false && component.category === "blocks",
       )
-      .filter((animation) => {
+      .filter((component) => {
         if (!query) return true;
         return (
-          animation.name.toLowerCase().includes(query) ||
-          animation.description.toLowerCase().includes(query) ||
-          animation.tags.some((tag) => tag.toLowerCase().includes(query))
+          component.name.toLowerCase().includes(query) ||
+          component.description.toLowerCase().includes(query) ||
+          component.tags.some((tag) => tag.toLowerCase().includes(query))
         );
       });
   }, [searchQuery]);
@@ -157,13 +157,13 @@ export function BuilderSidebar({
           </div>
         ) : (
           <div className="space-y-2">
-            {filteredAnimations.map((animation) =>
+            {filteredAnimations.map((component) =>
               allowDrag ? (
-                <DraggableComponent key={animation.id} animation={animation} />
+                <DraggableComponent key={component.id} component={component} />
               ) : (
                 <SelectableComponent
-                  key={animation.id}
-                  animation={animation}
+                  key={component.id}
+                  component={component}
                   onSelect={onSelectComponent}
                 />
               ),

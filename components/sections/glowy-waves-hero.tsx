@@ -75,15 +75,45 @@ export function GlowyWavesHero() {
 
     const computeThemeColors = () => {
       const rootStyles = getComputedStyle(document.documentElement);
+      
+      // Helper to convert any CSS color to a Canvas-compatible format
       const resolveColor = (variables: string[], alpha = 1) => {
+        // Create a temporary element to get computed color
+        const tempEl = document.createElement("div");
+        tempEl.style.position = "absolute";
+        tempEl.style.visibility = "hidden";
+        tempEl.style.width = "1px";
+        tempEl.style.height = "1px";
+        document.body.appendChild(tempEl);
+
+        let color = `rgba(255, 255, 255, ${alpha})`;
+
         for (const variable of variables) {
           const value = rootStyles.getPropertyValue(variable).trim();
           if (value) {
-            return alpha === 1 ? `hsl(${value})` : `hsl(${value} / ${alpha})`;
+            // Try to set the background color using the CSS variable
+            tempEl.style.backgroundColor = `var(${variable})`;
+            const computedColor = getComputedStyle(tempEl).backgroundColor;
+            
+            if (computedColor && computedColor !== "rgba(0, 0, 0, 0)") {
+              // Convert RGB to RGBA with alpha if needed
+              if (alpha < 1) {
+                const rgbMatch = computedColor.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*[\d.]+)?\)/);
+                if (rgbMatch) {
+                  color = `rgba(${rgbMatch[1]}, ${rgbMatch[2]}, ${rgbMatch[3]}, ${alpha})`;
+                } else {
+                  color = computedColor;
+                }
+              } else {
+                color = computedColor;
+              }
+              break;
+            }
           }
         }
 
-        return `hsla(0, 0%, 100%, ${alpha})`;
+        document.body.removeChild(tempEl);
+        return color;
       };
 
       return {

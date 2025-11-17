@@ -36,7 +36,7 @@ export function BottomModal() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="fixed inset-0 bg-background/80 backdrop-blur-sm z-40"
+              className="fixed inset-0 bg-background/80 backdrop-blur-sm z-40 h-full"
               onClick={() => setIsModalOpen(false)}
               aria-hidden="true"
             />
@@ -51,7 +51,7 @@ export function BottomModal() {
                 damping: 25,
                 stiffness: 300,
               }}
-              className="fixed bottom-0 right-0 left-0 mx-auto w-full md:max-w-md z-50 mb-4 md:px-4"
+              className="fixed bottom-0 right-0 left-0 mx-auto w-full md:max-w-md z-50"
               role="dialog"
               aria-modal="true"
               aria-labelledby="modal-title"

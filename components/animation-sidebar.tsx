@@ -4,28 +4,28 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, ChevronDown, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { animationRegistry } from "@/lib/animation-registry";
-import { Animation, AnimationCategory, categoryNames } from "@/lib/animations";
+import { componentsRegistry } from "@/lib/components-registry";
+import { Component, ComponentCategory, categoryNames } from "@/types";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
 
 type AnimationsSidebarProps = {
-  selectedAnimation: Animation | null;
-  onSelectAnimation?: (animation: Animation) => void;
+  selectedComponent: Component | null;
+  onSelectComponent?: (component: Component) => void;
   useLinks?: boolean;
 };
 
 export function AnimationsSidebar({
-  selectedAnimation,
-  onSelectAnimation,
+  selectedComponent,
+  onSelectComponent,
   useLinks = false,
 }: AnimationsSidebarProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [expandedCategories, setExpandedCategories] = useState<
-    Set<AnimationCategory | "all">
+    Set<ComponentCategory | "all">
   >(new Set(["all"]));
 
-  const categories: Array<AnimationCategory | "all"> = [
+  const categories: Array<ComponentCategory | "all"> = [
     "all",
     "blocks",
     "microinteractions",
@@ -37,7 +37,7 @@ export function AnimationsSidebar({
 
   const filteredAnimations = useMemo(() => {
     // First filter by display property (only show animations where display !== false)
-    let filtered = animationRegistry.filter((anim) => anim.display !== false);
+    let filtered = componentsRegistry.filter((anim) => anim.display !== false);
 
     if (searchQuery) {
       const lowerQuery = searchQuery.toLowerCase();
@@ -53,7 +53,7 @@ export function AnimationsSidebar({
   }, [searchQuery]);
 
   const animationsByCategory = useMemo(() => {
-    const grouped: Record<AnimationCategory | "all", Animation[]> = {
+    const grouped: Record<ComponentCategory | "all", Component[]> = {
       all: filteredAnimations,
       blocks: [],
       microinteractions: [],
@@ -70,7 +70,7 @@ export function AnimationsSidebar({
     return grouped;
   }, [filteredAnimations]);
 
-  const toggleCategory = (category: AnimationCategory | "all") => {
+  const toggleCategory = (category: ComponentCategory | "all") => {
     setExpandedCategories((prev) => {
       const next = new Set(prev);
       if (next.has(category)) {
@@ -138,10 +138,10 @@ export function AnimationsSidebar({
                       className="overflow-hidden"
                     >
                       <div className="ml-4 mt-1 space-y-0.5 border-l border-border pl-2">
-                        {animations.map((animation) => {
+                        {animations.map((component) => {
                           const isSelected =
-                            selectedAnimation?.id === animation.id;
-                          const isFree = animation.isFree !== false;
+                            selectedComponent?.id === component.id;
+                          const isFree = component.isFree !== false;
                           const hasAccess = true; // All features accessible
                           const showProBadge = false; // No pro badge shown
                           const itemClass = `flex w-full items-center justify-between rounded-md px-2 py-1.5 text-left text-xs transition-colors ${
@@ -153,12 +153,12 @@ export function AnimationsSidebar({
                           if (useLinks) {
                             return (
                               <Link
-                                key={animation.id}
-                                href={`/components/${animation.id}`}
+                                key={component.id}
+                                href={`/components/${component.id}`}
                                 className={itemClass}
                               >
                                 <span className="flex-1 truncate">
-                                  {animation.name}
+                                  {component.name}
                                 </span>
                                 {showProBadge && (
                                   <span
@@ -177,24 +177,13 @@ export function AnimationsSidebar({
 
                           return (
                             <button
-                              key={animation.id}
-                              onClick={() => onSelectAnimation?.(animation)}
+                              key={component.id}
+                              onClick={() => onSelectComponent?.(component)}
                               className={itemClass}
                             >
                               <span className="flex-1 truncate">
-                                {animation.name}
+                                {component.name}
                               </span>
-                              {showProBadge && (
-                                <span
-                                  className={`ml-2 whitespace-nowrap rounded border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${
-                                    isSelected
-                                      ? "border-primary-foreground/80 bg-primary-foreground/10 text-primary-foreground"
-                                      : "border-amber-500/60 bg-amber-500/10 text-amber-600 dark:text-amber-400"
-                                  }`}
-                                >
-                                  PRO
-                                </span>
-                              )}
                             </button>
                           );
                         })}

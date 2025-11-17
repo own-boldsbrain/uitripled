@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { componentsRegistry, getComponentById } from "@/lib/components-registry";
+import { componentsRegistry, getComponentById, loadComponentCode } from "@/lib/components-registry";
 
 /**
  * GET handler for registry
@@ -27,6 +27,9 @@ export async function GET(
         );
       }
 
+      // Load code on demand
+      const code = await loadComponentCode(component);
+
       // Return component data
       return NextResponse.json(
         {
@@ -38,7 +41,7 @@ export async function GET(
           duration: component.duration,
           easing: component.easing,
           display: component.display,
-          code: component.code,
+          code: code,
         },
         {
           headers: {

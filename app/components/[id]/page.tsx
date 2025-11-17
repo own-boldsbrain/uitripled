@@ -1,12 +1,12 @@
 import AnimationDetailPageClient from "./AnimationDetailPage.client";
 import { createMetadata } from "@/lib/seo";
-import { getComponentById, componentsRegistry } from "@/lib/components-registry";
+import { getComponentById, componentsRegistry, loadComponentCode } from "@/lib/components-registry";
 import { notFound } from "next/navigation";
 
 type PageParams = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
 export function generateStaticParams() {
@@ -17,15 +17,16 @@ export function generateStaticParams() {
 
 export const dynamicParams = true;
 
-export function generateMetadata({ params }: PageParams) {
-  const component = getComponentById(params.id);
+export async function generateMetadata({ params }: PageParams) {
+  const { id } = await params;
+  const component = getComponentById(id);
 
   if (!component) {
     return createMetadata({
       title: "Component Not Found",
       description:
         "The requested motion component could not be found in the UI TripleD library.",
-      path: `/components/${params.id}`,
+      path: `/components/${id}`,
       index: false,
     });
   }
@@ -49,12 +50,16 @@ export function generateMetadata({ params }: PageParams) {
   });
 }
 
-export default function AnimationDetailPage({ params }: PageParams) {
-  const component = getComponentById(params.id);
+export default async function AnimationDetailPage({ params }: PageParams) {
+  const { id } = await params;
+  const component = getComponentById(id);
 
   if (!component) {
     notFound();
   }
 
-  return <AnimationDetailPageClient />;
+  // Load code on the server
+  const code = await loadComponentCode(component);
+
+  return <AnimationDetailPageClient code={code} />;
 }

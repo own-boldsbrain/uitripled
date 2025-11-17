@@ -1,4 +1,4 @@
-import HomePageContent from "@/components/pages/HomePageContent";
+import HomePageContent from "@/components/home-page-content";
 import { createMetadata, siteConfig } from "@/lib/seo";
 
 export const metadata = createMetadata({
