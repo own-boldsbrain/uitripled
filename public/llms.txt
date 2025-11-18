@@ -1,0 +1,224 @@
+# UI TripleD
+
+> Production-ready UI components, blocks, and pages built on top of shadcn/ui and Framer Motion.
+
+## Table of Contents
+
+### Components
+
+#### Components
+
+##### Cards
+
+- [Accessible Image Slider Card](https://ui.tripled.work/components/image-slider-card): Image carousel card with keyboard support, reduced motion handling, and screen reader-friendly labels
+- [Animated Card Stack](https://ui.tripled.work/components/animated-card-stack): Stacked cards that expand on hover
+- [Credit Card](https://ui.tripled.work/components/credit-card): 3D animated credit card with flip animation to show CVV
+- [Detail Task Card](https://ui.tripled.work/components/detail-task-card): Task management detail panel with animated assignee chips and editor controls
+- [Ecommerce Highlight Card](https://ui.tripled.work/components/ecommerce-highlight-card): Product spotlight card with blurred border, bundle selector, and fulfillment details
+- [Hover Expand Card](https://ui.tripled.work/components/hover-expand-card): Card that lifts and expands on hover
+
+##### Chat
+
+- [AI Chat Interface](https://ui.tripled.work/components/ai-chat-interface): Chat input with attachments, model selector, and accessible controls
+- [Chat App](https://ui.tripled.work/components/chat-app): Fully functional chat interface with animated messages
+- [Messenger](https://ui.tripled.work/components/messenger): Glassmorphism messenger workspace with accessible motion and quick replies
+
+- [AI Loading Skeleton](https://ui.tripled.work/components/ai-loading-skeleton): Loading state with diagonal shimmer gradient and opacity wave
+- [AI Response Typing Stream](https://ui.tripled.work/components/ai-response-typing): Character-by-character typing animation with natural pauses and thinking states
+- [Animated Accordion](https://ui.tripled.work/components/animated-accordion): Accordion with smooth expand/collapse and rotate arrow
+- [Animated Navbar](https://ui.tripled.work/components/animated-navbar): Navigation bar with animated underline indicator
+- [Animated Pagination](https://ui.tripled.work/components/animated-pagination): Pagination with smooth page transition indicator
+- [Animated Profile Menu](https://ui.tripled.work/components/animated-profile-menu): Floating profile avatar that reveals quick action cards with smooth motion
+- [Animated Sidebar](https://ui.tripled.work/components/animated-sidebar): Sidebar with slide-in animation and overlay
+- [Animated Tooltip](https://ui.tripled.work/components/animated-tooltip): Tooltip with delay and slide animation
+- [Avatar Group](https://ui.tripled.work/components/avatar-group): Stacked avatar group with hover reveal and tooltips
+- [Browse Folder](https://ui.tripled.work/components/browse-folder): Folder browser with animated tabs and content
+- [Command Palette](https://ui.tripled.work/components/command-palette): Command palette with search and keyboard navigation
+- [Context Menu](https://ui.tripled.work/components/context-menu): Right-click context menu with nested items animation
+- [Context Menu Bubble](https://ui.tripled.work/components/context-menu-bubble): Right-click reveals circular expanding radial menu with icons
+- [Drag-to-Confirm Slider](https://ui.tripled.work/components/drag-to-confirm-slider): Slider that activates action only when fully dragged to end
+- [Expanding Search Dock](https://ui.tripled.work/components/expanding-search-dock): Minimal search icon that expands into full input with blur
+- [Glassmorphism Statistics Card](https://ui.tripled.work/components/glassmorphism-statistics-card): Interactive statistics card with hover reveal and smooth transitions
+- [Interactive Timeline](https://ui.tripled.work/components/interactive-timeline): Vertical timeline where elements animate and connect with lines on scroll
+- [Mac Searchbar](https://ui.tripled.work/components/mac-searchbar): Mac-style searchbar with animated dropdown, glassmorphism effects, and smooth transitions
+- [Magnetic Avatar Group](https://ui.tripled.work/components/magnetic-avatar-group): Stacked avatars that spread apart on hover showing tooltips
+- [Multiple Accounts Switcher](https://ui.tripled.work/components/multiple-accounts): Glassmorphic account switcher with animated dropdown and accessible listbox controls
+- [Projects Block](https://ui.tripled.work/components/projects-block): Animated project card with hover effects, image zoom, and link buttons
+- [Smart Hover Card](https://ui.tripled.work/components/smart-hover-card): Card that detects cursor direction and reveals content from that side
+- [Stacked Card Carousel](https://ui.tripled.work/components/stacked-card-carousel): Three stacked cards that shift and tilt dynamically on hover
+- [Weather Dashboard](https://ui.tripled.work/components/weather-dashboard): Immersive weather dashboard with hourly charting, weekly outlook, and live air-quality alerts
+
+##### Dropdown
+
+- [Staggered Dropdown](https://ui.tripled.work/components/staggered-dropdown): Dropdown menu with staggered item animations
+
+##### Forms
+
+- [Animated Checkbox](https://ui.tripled.work/components/animated-checkbox): Checkbox with checkmark animation
+- [Animated Radio](https://ui.tripled.work/components/animated-radio): Radio button group with selection ripple
+- [Animated Select](https://ui.tripled.work/components/animated-select): Select dropdown with smooth open/close animation
+- [Glass Account Settings Card](https://ui.tripled.work/components/glass-account-settings-card): Account management card with subscription overview and billing actions in glassmorphic style
+- [Glass Forgot Password Card](https://ui.tripled.work/components/glass-forgot-password-card): Reset-password screen with glassmorphic styling and status messaging
+- [Glass Profile Settings Card](https://ui.tripled.work/components/glass-profile-settings-card): Glassmorphic profile settings form with avatar upload, bio, and notification preferences
+- [Glass Sign-In Card](https://ui.tripled.work/components/glass-sign-in-card): Glassmorphic sign-in panel with social auth buttons and email form
+- [Glass Sign-Up Card](https://ui.tripled.work/components/glass-sign-up-card): Glassmorphic sign-up flow with social providers, email fields, and terms checkbox
+- [Glass Verification Code Card](https://ui.tripled.work/components/glass-verification-code-card): Verification code entry with glassmorphic inputs, status messaging, and reduced-motion support
+- [Simple Calendar](https://ui.tripled.work/components/simple-calendar): Calendar picker with date selection animation
+
+##### Inputs
+
+- [AI Glow Input](https://ui.tripled.work/components/ai-glow-input): Input field with dynamic glow that pulses based on typing speed - smart motion feedback
+- [Floating Label Input](https://ui.tripled.work/components/floating-label-input): Input with animated floating label
+- [Password Input](https://ui.tripled.work/components/password-input): Password input with toggle visibility and strength indicator
+
+##### Lists
+
+- [Animated List](https://ui.tripled.work/components/animated-list): List with staggered item animations
+- [Draggable List](https://ui.tripled.work/components/draggable-list): Reorderable list with drag and drop spring physics
+
+##### Modal
+
+- [Animated Dialog](https://ui.tripled.work/components/animated-dialog): Modal dialog with backdrop fade and spring animation
+- [Bottom Modal](https://ui.tripled.work/components/bottom-modal): Cute bottom-centered modal with smooth slide-up animation and glassmorphism design
+- [Fade & Slide Modal](https://ui.tripled.work/components/fade-slide-modal): Modal with fade backdrop and slide-up animation
+- [Fluid Modal Transition](https://ui.tripled.work/components/fluid-modal-transition): Modal that expands smoothly from clicked trigger element using layoutId
+
+##### Notifications
+
+- [Notification Center](https://ui.tripled.work/components/notification-center): Multi-variant notification stack with accessible announcements, actions, and motion states
+
+##### Tabs
+
+- [Animated Tabs](https://ui.tripled.work/components/animated-tabs): Tabs with sliding indicator animation
+
+### Blocks
+
+- [About Us](https://ui.tripled.work/components/about-us-section): About us section with value cards, icons, and animated reveal effects
+- [Bento Grid Block](https://ui.tripled.work/components/bento-grid-block): Layered bento grid with imagery, metrics, and smooth motion reveals
+- [Blog Block](https://ui.tripled.work/components/blog-block): Animated blog posts grid with staggered cards, date/time indicators, and hover effects
+- [Contact Block](https://ui.tripled.work/components/contact-block): Contact form with animated contact info cards, working hours, and interactive icons
+- [Contact Form](https://ui.tripled.work/components/contact-form-section): Contact form section with animated inputs, validation, and form handling
+- [CTA Block](https://ui.tripled.work/components/cta-block): Call-to-action section with gradient overlay, animated buttons, and status indicator
+- [CTA Hero Block](https://ui.tripled.work/components/cta-hero-block): Engaging hero section with email signup, video preview, and social proof
+- [Currency Converter Card](https://ui.tripled.work/components/currency-converter-card): Finance conversion widget with animated inputs, simulated exchange updates, and contextual feedback
+- [Dashboard](https://ui.tripled.work/components/dashboard): Interactive stock portfolio dashboard with status cards, data table, and detailed stock information modal
+- [FAQ Accordion](https://ui.tripled.work/components/faq-accordion-block): Expandable FAQ section with smooth accordion animations
+- [Feature Cards Grid](https://ui.tripled.work/components/feature-cards-block): Three feature cards with icons, hover effects, and glassmorphism styling
+- [Feature Comparison Table](https://ui.tripled.work/components/feature-comparison-block): Interactive pricing comparison table with animated checkmarks and plan highlights
+- [Footer Block](https://ui.tripled.work/components/footer-block): Comprehensive footer with links, newsletter signup, social icons, and scroll-to-top
+- [Gallery Grid with Lightbox](https://ui.tripled.work/components/gallery-grid-block): Filterable image gallery with animated lightbox and navigation
+- [Glassmorphism CTA](https://ui.tripled.work/components/glassmorphism-cta-block): Call-to-action section with glassy card, gradient background, and animated buttons
+- [Glassmorphism Hero](https://ui.tripled.work/components/glassmorphism-hero-block): Modern hero section with glassmorphism effects, animated background orbs, and CTA buttons
+- [Glassmorphism Launch Timeline](https://ui.tripled.work/components/glassmorphism-launch-timeline-block): Frictionless launch roadmap with staggered motion, glassmorphism milestones, and paired CTA actions
+- [Glassmorphism Listen App](https://ui.tripled.work/components/glassmorphism-listen-app-block): Music streaming block with glassmorphism player, curated highlights, and animated controls
+- [Glassmorphism Logo Showcase](https://ui.tripled.work/components/glassmorphism-logo-showcase-block): Glassmorphism partner grid with floating motion, brand hints, and collaborative call-to-action
+- [Glassmorphism Minimal Metrics](https://ui.tripled.work/components/glassmorphism-minimal-metrics-block): Focused metric cards with glass surfaces, subtle motion, and concierge insight CTA banner
+- [Glassmorphism Portfolio](https://ui.tripled.work/components/glassmorphism-portfolio-block): Personal portfolio spotlight with profile portrait, narrative highlights, and animated social links
+- [Glassmorphism Pricing](https://ui.tripled.work/components/glassmorphism-pricing-block): Pricing cards with glassmorphism effects, hover animations, and feature lists
+- [Glassmorphism Product Updates](https://ui.tripled.work/components/glassmorphism-product-update-block): Multi-state changelog cards with glass overlays, status badges, and GitHub integration banner
+- [Glassmorphism Testimonials](https://ui.tripled.work/components/glassmorphism-testimonials-block): Customer testimonials with glassmorphism cards, star ratings, and hover effects
+- [Glowy Waves Hero](https://ui.tripled.work/components/glowy-waves-hero): Hero section with glowy waves effect
+- [Hero Block](https://ui.tripled.work/components/hero-block): Personal portfolio hero section with animated avatar, staggered text, social links, and scroll indicator
+- [Interactive Logs Table](https://ui.tripled.work/components/interactive-logs-table): Observability logs panel with animated filters, search, and expandable rows
+- [N8N Workflow Block](https://ui.tripled.work/components/n8n-workflow-block): Visual workflow automation builder with animated nodes, connections, and real-time execution monitoring
+- [New Hero Section](https://ui.tripled.work/components/new-hero-section): Modern hero section with gradient background, animated stats, and call-to-action buttons
+- [Newsletter Signup Block](https://ui.tripled.work/components/newsletter-signup-block): Animated newsletter subscription form with success state and gradient background
+- [Notion Blog Page](https://ui.tripled.work/components/notion-blog-page): Notion-style publishing playbook with rich text, toggles, and supporting visuals
+- [Our Services](https://ui.tripled.work/components/our-services-section): Services section with service cards, badges, icons, and hover animations
+- [Services Grid](https://ui.tripled.work/components/services-grid-block): 8-column responsive services grid with icons, features, and hover effects
+- [Stats Counter Block](https://ui.tripled.work/components/stats-counter-block): Animated statistics counters with icons and gradient backgrounds
+- [Stocks Dashboard](https://ui.tripled.work/components/stocks-dashboard): Interactive stock portfolio dashboard with status cards, data table, and detailed stock information modal
+- [Team Section Block](https://ui.tripled.work/components/team-section-block): Animated team member cards with avatars, roles, and social links
+- [Testimonials Block](https://ui.tripled.work/components/testimonials-block): Animated testimonials grid with staggered cards, star ratings, and hover effects
+- [Timeline Block](https://ui.tripled.work/components/timeline-block): Vertical timeline with alternating cards and animated progress line
+
+### Pages
+
+#### Page
+
+##### About
+
+- [About Us Page](https://ui.tripled.work/components/about-us-page): Glassmorphism about page showcasing mission, values, and leadership with motion accents.
+
+- [Auto-Revealing Heading](https://ui.tripled.work/components/auto-revealing-heading): Heading that reveals each letter/word with staggered motion on scroll
+- [CTA Banner Section](https://ui.tripled.work/components/cta-banner-section): Animated call-to-action banner with gradient background and button animations
+- [Dynamic Spotlight CTA](https://ui.tripled.work/components/dynamic-spotlight-cta): Floating spotlight follows cursor to reveal gradient CTA text with premium effects
+- [FAQ Section](https://ui.tripled.work/components/faq-section): Animated FAQ section with expandable questions and smooth transitions
+- [Feature Grid Section](https://ui.tripled.work/components/feature-grid-section): Animated feature grid with staggered card animations and icon reveals
+- [Pricing Section](https://ui.tripled.work/components/pricing-section): Animated pricing cards with hover effects and feature lists
+- [Scroll Progress Tracker](https://ui.tripled.work/components/scroll-progress-tracker): Fixed progress bar that follows scroll and glows on section changes
+- [Scroll Reveal](https://ui.tripled.work/components/scroll-reveal): Section that animates into view on scroll with intersection observer
+- [Stats Section](https://ui.tripled.work/components/stats-section): Animated statistics section with cards and counters
+- [Testimonial Section](https://ui.tripled.work/components/testimonial-section): Carousel-style testimonial section with smooth transitions
+
+##### Hero
+
+- [Hero Section](https://ui.tripled.work/components/hero-section): Hero section with staggered text and button reveal
+- [Staggered Text Hero](https://ui.tripled.work/components/staggered-hero): Hero section with staggered text reveal
+
+##### Notifications
+
+- [Toast Notification](https://ui.tripled.work/components/toast-notification): Animated toast notification popup
+
+### UI Elements
+
+#### Data
+
+##### Charts
+
+- [Accessible Cash Flow Chart](https://ui.tripled.work/components/cash-flow-chart): Interactive cash flow bar chart with keyboard focus, tooltips, and screen reader support
+
+##### Progress
+
+- [Animated Counter](https://ui.tripled.work/components/counter-up): Number counter that animates up from zero
+- [Animated Progress Bar](https://ui.tripled.work/components/animated-progress): Progress bar with smooth animation
+
+#### Decorative
+
+##### Background
+
+- [Floating Gradient](https://ui.tripled.work/components/floating-gradient): Animated floating gradient background effect
+- [Gradient Animation](https://ui.tripled.work/components/gradient-animation): Smoothly transitioning gradient background
+- [Reactive Background Grid](https://ui.tripled.work/components/reactive-background-grid): Background pattern that reacts to mouse movement and click ripples
+
+- [Animated Quote Block](https://ui.tripled.work/components/animated-quote-block): Quote that types itself in, pauses, then subtly breathes
+- [Dynamic Tag Cloud](https://ui.tripled.work/components/dynamic-tag-cloud): Floating cluster of tags that drift and rearrange when hovered
+- [Floating Info Panel](https://ui.tripled.work/components/floating-info-panel): Info tooltip that drifts up/down while fading in/out intermittently
+- [Holographic Wall](https://ui.tripled.work/components/holographic-wall): Black wall with Pharaonic hieroglyphs and golden cursor light reflection
+- [Spotlight Section](https://ui.tripled.work/components/spotlight-section): Container where mouse creates soft radial spotlight following cursor
+
+##### Text
+
+- [Typewriter Effect](https://ui.tripled.work/components/typewriter-text): Text that types out character by character
+
+#### Micro
+
+##### Badges
+
+- [Animated Badge](https://ui.tripled.work/components/animated-badge): Badge with scale and spin animation
+
+##### Buttons
+
+- [Magnetic Button](https://ui.tripled.work/components/magnetic-button): Button that magnetically follows your cursor
+- [Ripple Click Effect](https://ui.tripled.work/components/ripple-click-button): Material design inspired ripple effect on click
+- [Scale Hover Button](https://ui.tripled.work/components/scale-hover-button): A button that scales up smoothly on hover
+- [Shimmer Button](https://ui.tripled.work/components/shimmer-button): Button with continuous shimmer effect
+
+- [AI Unlock Animation](https://ui.tripled.work/components/ai-unlock-animation): Premium unlock animation with particles, ripples, and loading states
+- [Magnetic Cursor Link](https://ui.tripled.work/components/magnetic-cursor-link): Link that slightly follows mouse cursor within boundary and snaps back
+- [Mood Gradient Button](https://ui.tripled.work/components/mood-gradient-button): Button with background gradient that shifts based on hover angle
+- [Morphing Action Button](https://ui.tripled.work/components/morphing-action-button): A circular FAB that morphs into a rectangular action panel using layoutId
+- [Notification Bell](https://ui.tripled.work/components/notification-bell): Bell icon that gently swings when new notification appears
+
+##### Icons
+
+- [Heart Favorite](https://ui.tripled.work/components/heart-favorite): Animated heart icon for like/favorite actions
+
+##### Links
+
+- [Preview Details Card](https://ui.tripled.work/components/preview-details-card): Link card that reveals a smooth detail preview box on hover
+
+##### Toggles
+
+- [Elastic Toggle Switch](https://ui.tripled.work/components/elastic-switch): Toggle switch with elastic spring animation
+
