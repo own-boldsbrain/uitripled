@@ -223,7 +223,7 @@ export default function AnimationDetailPageClient({ code }: { code: string }) {
                           <button
                             onClick={() =>
                               handleCopyInstall(
-                                `npx uitripled add ${component.id}`,
+                                `npx shadcn@latest add @uitripled/${component.id}`,
                                 "npx"
                               )
                             }
@@ -258,7 +258,7 @@ export default function AnimationDetailPageClient({ code }: { code: string }) {
                         </div>
                         <div className="overflow-x-auto bg-card p-4">
                           <code className="text-sm text-foreground">
-                            npx uitripled add {component.id}
+                            npx shadcn@latest add @uitripled/{component.id}
                           </code>
                         </div>
                       </div>
@@ -272,7 +272,7 @@ export default function AnimationDetailPageClient({ code }: { code: string }) {
                           <button
                             onClick={() =>
                               handleCopyInstall(
-                                `npm install -g uitripled && uitripled add ${component.id}`,
+                                `npx shadcn@latest add @uitripled/${component.id}`,
                                 "npm"
                               )
                             }
@@ -307,8 +307,7 @@ export default function AnimationDetailPageClient({ code }: { code: string }) {
                         </div>
                         <div className="overflow-x-auto bg-card p-4">
                           <code className="text-sm text-foreground">
-                            npm install -g uitripled && uitripled add{" "}
-                            {component.id}
+                            npx shadcn@latest add @uitripled/{component.id}
                           </code>
                         </div>
                       </div>
@@ -322,7 +321,7 @@ export default function AnimationDetailPageClient({ code }: { code: string }) {
                           <button
                             onClick={() =>
                               handleCopyInstall(
-                                `yarn dlx uitripled add ${component.id}`,
+                                `npx shadcn@latest add @uitripled/${component.id}`,
                                 "yarn"
                               )
                             }
@@ -357,7 +356,7 @@ export default function AnimationDetailPageClient({ code }: { code: string }) {
                         </div>
                         <div className="overflow-x-auto bg-card p-4">
                           <code className="text-sm text-foreground">
-                            yarn dlx uitripled add {component.id}
+                            npx shadcn@latest add @uitripled/{component.id}
                           </code>
                         </div>
                       </div>
@@ -371,7 +370,7 @@ export default function AnimationDetailPageClient({ code }: { code: string }) {
                           <button
                             onClick={() =>
                               handleCopyInstall(
-                                `pnpm dlx uitripled add ${component.id}`,
+                                `npx shadcn@latest add @uitripled/${component.id}`,
                                 "pnpm"
                               )
                             }
@@ -406,7 +405,7 @@ export default function AnimationDetailPageClient({ code }: { code: string }) {
                         </div>
                         <div className="overflow-x-auto bg-card p-4">
                           <code className="text-sm text-foreground">
-                            pnpm dlx uitripled add {component.id}
+                            npx shadcn@latest add @uitripled/{component.id}
                           </code>
                         </div>
                       </div>
@@ -502,19 +501,10 @@ export default function AnimationDetailPageClient({ code }: { code: string }) {
                   2
                 </span>
                 <span>
-                  Install this component using uitripled:{" "}
+                  Install this component using shadcn:{" "}
                   <div className="mt-2 flex flex-wrap gap-2">
                     <code className="rounded border border-border bg-muted px-1.5 py-0.5 text-xs">
-                      npx uitripled add {component.id}
-                    </code>
-                    <code className="rounded border border-border bg-muted px-1.5 py-0.5 text-xs">
-                      npm install -g uitripled && uitripled add {component.id}
-                    </code>
-                    <code className="rounded border border-border bg-muted px-1.5 py-0.5 text-xs">
-                      yarn dlx uitripled add {component.id}
-                    </code>
-                    <code className="rounded border border-border bg-muted px-1.5 py-0.5 text-xs">
-                      pnpm dlx uitripled add {component.id}
+                      npx shadcn@latest add @uitripled/{component.id}
                     </code>
                   </div>
                 </span>

@@ -18,7 +18,7 @@
       ],
       "files": [
         {
-          "path": "components/page/about/about-us-page.tsx",
+          "path": "components/about-us-page.tsx",
           "type": "registry:page"
         }
       ],
@@ -40,7 +40,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/about-us-section.tsx",
+          "path": "components/about-us-section.tsx",
           "type": "registry:block"
         }
       ],
@@ -63,7 +63,7 @@
       ],
       "files": [
         {
-          "path": "components/components/chat/ai-chat-interface.tsx",
+          "path": "components/ai-chat-interface.tsx",
           "type": "registry:component"
         }
       ],
@@ -84,7 +84,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/ai-glow-input.tsx",
+          "path": "components/ai-glow-input.tsx",
           "type": "registry:component"
         }
       ],
@@ -104,7 +104,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/ai-loading-skeleton.tsx",
+          "path": "components/ai-loading-skeleton.tsx",
           "type": "registry:component"
         }
       ],
@@ -125,7 +125,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/ai-response-typing.tsx",
+          "path": "components/ai-response-typing.tsx",
           "type": "registry:component"
         }
       ],
@@ -144,7 +144,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/ai-unlock-animation.tsx",
+          "path": "components/ai-unlock-animation.tsx",
           "type": "registry:ui"
         }
       ],
@@ -166,7 +166,7 @@
       ],
       "files": [
         {
-          "path": "components/disclosure/animated-accordion.tsx",
+          "path": "components/animated-accordion.tsx",
           "type": "registry:component"
         }
       ],
@@ -187,7 +187,7 @@
       ],
       "files": [
         {
-          "path": "components/micro/badges/animated-badge.tsx",
+          "path": "components/animated-badge.tsx",
           "type": "registry:ui"
         }
       ],
@@ -207,7 +207,7 @@
       ],
       "files": [
         {
-          "path": "components/components/cards/animated-card-stack.tsx",
+          "path": "components/animated-card-stack.tsx",
           "type": "registry:component"
         }
       ],
@@ -229,7 +229,7 @@
       ],
       "files": [
         {
-          "path": "components/forms/animated-checkbox.tsx",
+          "path": "components/animated-checkbox.tsx",
           "type": "registry:component"
         }
       ],
@@ -251,7 +251,7 @@
       ],
       "files": [
         {
-          "path": "components/modals/animated-dialog.tsx",
+          "path": "components/animated-dialog.tsx",
           "type": "registry:component"
         }
       ],
@@ -272,7 +272,7 @@
       ],
       "files": [
         {
-          "path": "components/components/lists/animated-list.tsx",
+          "path": "components/animated-list.tsx",
           "type": "registry:component"
         }
       ],
@@ -293,7 +293,7 @@
       ],
       "files": [
         {
-          "path": "components/navigation/animated-navbar.tsx",
+          "path": "components/animated-navbar.tsx",
           "type": "registry:component"
         }
       ],
@@ -315,7 +315,7 @@
       ],
       "files": [
         {
-          "path": "components/navigation/animated-pagination.tsx",
+          "path": "components/animated-pagination.tsx",
           "type": "registry:component"
         }
       ],
@@ -337,7 +337,7 @@
       ],
       "files": [
         {
-          "path": "components/navigation/animated-profile-menu.tsx",
+          "path": "components/animated-profile-menu.tsx",
           "type": "registry:component"
         }
       ],
@@ -358,7 +358,7 @@
       ],
       "files": [
         {
-          "path": "components/data/progress/animated-progress.tsx",
+          "path": "components/animated-progress.tsx",
           "type": "registry:ui"
         }
       ],
@@ -377,7 +377,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/animated-quote-block.tsx",
+          "path": "components/animated-quote-block.tsx",
           "type": "registry:ui"
         }
       ],
@@ -398,7 +398,7 @@
       ],
       "files": [
         {
-          "path": "components/forms/animated-radio.tsx",
+          "path": "components/animated-radio.tsx",
           "type": "registry:component"
         }
       ],
@@ -420,7 +420,7 @@
       ],
       "files": [
         {
-          "path": "components/forms/animated-select.tsx",
+          "path": "components/animated-select.tsx",
           "type": "registry:component"
         }
       ],
@@ -442,7 +442,7 @@
       ],
       "files": [
         {
-          "path": "components/navigation/animated-sidebar.tsx",
+          "path": "components/animated-sidebar.tsx",
           "type": "registry:component"
         }
       ],
@@ -463,7 +463,7 @@
       ],
       "files": [
         {
-          "path": "components/components/tabs/animated-tabs.tsx",
+          "path": "components/animated-tabs.tsx",
           "type": "registry:component"
         }
       ],
@@ -485,7 +485,7 @@
       ],
       "files": [
         {
-          "path": "components/tooltips/animated-tooltip.tsx",
+          "path": "components/animated-tooltip.tsx",
           "type": "registry:component"
         }
       ],
@@ -504,7 +504,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/auto-revealing-heading.tsx",
+          "path": "components/auto-revealing-heading.tsx",
           "type": "registry:page"
         }
       ],
@@ -526,7 +526,7 @@
       ],
       "files": [
         {
-          "path": "components/avatars/avatar-group.tsx",
+          "path": "components/avatar-group.tsx",
           "type": "registry:component"
         }
       ],
@@ -548,7 +548,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/bento-grid-block.tsx",
+          "path": "components/bento-grid-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -571,7 +571,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/blog-block.tsx",
+          "path": "components/blog-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -593,7 +593,7 @@
       ],
       "files": [
         {
-          "path": "components/modals/bottom-modal.tsx",
+          "path": "components/bottom-modal.tsx",
           "type": "registry:component"
         }
       ],
@@ -617,7 +617,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/browse-folder.tsx",
+          "path": "components/browse-folder.tsx",
           "type": "registry:component"
         }
       ],
@@ -636,7 +636,7 @@
       ],
       "files": [
         {
-          "path": "components/data/charts/cash-flow-chart.tsx",
+          "path": "components/cash-flow-chart.tsx",
           "type": "registry:ui"
         }
       ],
@@ -661,7 +661,7 @@
       ],
       "files": [
         {
-          "path": "components/components/chat/chat-app.tsx",
+          "path": "components/chat-app.tsx",
           "type": "registry:component"
         }
       ],
@@ -683,7 +683,7 @@
       ],
       "files": [
         {
-          "path": "components/search/command-palette.tsx",
+          "path": "components/command-palette.tsx",
           "type": "registry:component"
         }
       ],
@@ -708,7 +708,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/contact-block.tsx",
+          "path": "components/contact-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -734,7 +734,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/contact-form-section.tsx",
+          "path": "components/contact-form-section.tsx",
           "type": "registry:block"
         }
       ],
@@ -756,7 +756,7 @@
       ],
       "files": [
         {
-          "path": "components/navigation/context-menu.tsx",
+          "path": "components/context-menu.tsx",
           "type": "registry:component"
         }
       ],
@@ -778,7 +778,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/context-menu-bubble.tsx",
+          "path": "components/context-menu-bubble.tsx",
           "type": "registry:component"
         }
       ],
@@ -797,7 +797,7 @@
       ],
       "files": [
         {
-          "path": "components/data/progress/counter-up.tsx",
+          "path": "components/counter-up.tsx",
           "type": "registry:ui"
         }
       ],
@@ -819,7 +819,7 @@
       ],
       "files": [
         {
-          "path": "components/components/cards/credit-card.tsx",
+          "path": "components/credit-card.tsx",
           "type": "registry:component"
         }
       ],
@@ -842,7 +842,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/cta-banner-section.tsx",
+          "path": "components/cta-banner-section.tsx",
           "type": "registry:page"
         }
       ],
@@ -864,7 +864,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/cta-block.tsx",
+          "path": "components/cta-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -889,7 +889,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/cta-hero-block.tsx",
+          "path": "components/cta-hero-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -912,7 +912,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/currency-converter-card.tsx",
+          "path": "components/currency-converter-card.tsx",
           "type": "registry:block"
         }
       ],
@@ -935,7 +935,7 @@
       ],
       "files": [
         {
-          "path": "components/components/stocks-dashboard/dashboard.tsx",
+          "path": "components/dashboard.tsx",
           "type": "registry:block"
         }
       ],
@@ -962,7 +962,7 @@
       ],
       "files": [
         {
-          "path": "components/components/cards/detail-task.tsx",
+          "path": "components/detail-task.tsx",
           "type": "registry:component"
         }
       ],
@@ -984,7 +984,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/drag-to-confirm-slider.tsx",
+          "path": "components/drag-to-confirm-slider.tsx",
           "type": "registry:component"
         }
       ],
@@ -1006,7 +1006,7 @@
       ],
       "files": [
         {
-          "path": "components/components/lists/draggable-list.tsx",
+          "path": "components/draggable-list.tsx",
           "type": "registry:component"
         }
       ],
@@ -1025,7 +1025,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/dynamic-spotlight-cta.tsx",
+          "path": "components/dynamic-spotlight-cta.tsx",
           "type": "registry:page"
         }
       ],
@@ -1044,7 +1044,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/dynamic-tag-cloud.tsx",
+          "path": "components/dynamic-tag-cloud.tsx",
           "type": "registry:ui"
         }
       ],
@@ -1069,7 +1069,7 @@
       ],
       "files": [
         {
-          "path": "components/components/cards/ecommerce-highlight-card.tsx",
+          "path": "components/ecommerce-highlight-card.tsx",
           "type": "registry:component"
         }
       ],
@@ -1088,7 +1088,7 @@
       ],
       "files": [
         {
-          "path": "components/micro/toggles/elastic-switch.tsx",
+          "path": "components/elastic-switch.tsx",
           "type": "registry:ui"
         }
       ],
@@ -1110,7 +1110,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/expanding-search-dock.tsx",
+          "path": "components/expanding-search-dock.tsx",
           "type": "registry:component"
         }
       ],
@@ -1132,7 +1132,7 @@
       ],
       "files": [
         {
-          "path": "components/components/modal/fade-slide.tsx",
+          "path": "components/fade-slide.tsx",
           "type": "registry:component"
         }
       ],
@@ -1156,7 +1156,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/faq-accordion-block.tsx",
+          "path": "components/faq-accordion-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -1178,7 +1178,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/faq-section.tsx",
+          "path": "components/faq-section.tsx",
           "type": "registry:page"
         }
       ],
@@ -1198,7 +1198,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/feature-cards-block.tsx",
+          "path": "components/feature-cards-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -1222,7 +1222,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/feature-comparison-block.tsx",
+          "path": "components/feature-comparison-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -1244,7 +1244,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/feature-grid-section.tsx",
+          "path": "components/feature-grid-section.tsx",
           "type": "registry:page"
         }
       ],
@@ -1262,7 +1262,7 @@
       ],
       "files": [
         {
-          "path": "components/decorative/background/floating-gradient.tsx",
+          "path": "components/floating-gradient.tsx",
           "type": "registry:ui"
         }
       ],
@@ -1281,7 +1281,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/floating-info-panel.tsx",
+          "path": "components/floating-info-panel.tsx",
           "type": "registry:ui"
         }
       ],
@@ -1302,7 +1302,7 @@
       ],
       "files": [
         {
-          "path": "components/components/inputs/floating-label-input.tsx",
+          "path": "components/floating-label-input.tsx",
           "type": "registry:component"
         }
       ],
@@ -1324,7 +1324,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/fluid-modal-transition.tsx",
+          "path": "components/fluid-modal-transition.tsx",
           "type": "registry:component"
         }
       ],
@@ -1348,7 +1348,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/footer-block.tsx",
+          "path": "components/footer-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -1372,7 +1372,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/gallery-grid-block.tsx",
+          "path": "components/gallery-grid-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -1397,7 +1397,7 @@
       ],
       "files": [
         {
-          "path": "components/components/forms/glass-account-settings.tsx",
+          "path": "components/glass-account-settings.tsx",
           "type": "registry:component"
         }
       ],
@@ -1420,7 +1420,7 @@
       ],
       "files": [
         {
-          "path": "components/components/forms/glass-forgot-password.tsx",
+          "path": "components/glass-forgot-password.tsx",
           "type": "registry:component"
         }
       ],
@@ -1448,7 +1448,7 @@
       ],
       "files": [
         {
-          "path": "components/components/forms/glass-profile-settings.tsx",
+          "path": "components/glass-profile-settings.tsx",
           "type": "registry:component"
         }
       ],
@@ -1473,7 +1473,7 @@
       ],
       "files": [
         {
-          "path": "components/components/forms/glass-sign-in.tsx",
+          "path": "components/glass-sign-in.tsx",
           "type": "registry:component"
         }
       ],
@@ -1498,7 +1498,7 @@
       ],
       "files": [
         {
-          "path": "components/components/forms/glass-sign-up.tsx",
+          "path": "components/glass-sign-up.tsx",
           "type": "registry:component"
         }
       ],
@@ -1520,7 +1520,7 @@
       ],
       "files": [
         {
-          "path": "components/components/forms/glass-verification-code.tsx",
+          "path": "components/glass-verification-code.tsx",
           "type": "registry:component"
         }
       ],
@@ -1542,7 +1542,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/glassmorphism-cta-block.tsx",
+          "path": "components/glassmorphism-cta-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -1562,7 +1562,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/glassmorphism-hero-block.tsx",
+          "path": "components/glassmorphism-hero-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -1584,7 +1584,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/glassmorphism-launch-timeline-block.tsx",
+          "path": "components/glassmorphism-launch-timeline-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -1607,7 +1607,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/glassmorphism-listen-app-block.tsx",
+          "path": "components/glassmorphism-listen-app-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -1629,7 +1629,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/glassmorphism-logo-showcase-block.tsx",
+          "path": "components/glassmorphism-logo-showcase-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -1652,7 +1652,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/glassmorphism-minimal-metrics-block.tsx",
+          "path": "components/glassmorphism-minimal-metrics-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -1674,7 +1674,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/glassmorphism-portfolio-block.tsx",
+          "path": "components/glassmorphism-portfolio-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -1695,7 +1695,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/glassmorphism-pricing-block.tsx",
+          "path": "components/glassmorphism-pricing-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -1718,7 +1718,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/glassmorphism-product-update-block.tsx",
+          "path": "components/glassmorphism-product-update-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -1740,7 +1740,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/glassmorphism-statistics-card.tsx",
+          "path": "components/glassmorphism-statistics-card.tsx",
           "type": "registry:component"
         }
       ],
@@ -1760,7 +1760,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/glassmorphism-testimonials-block.tsx",
+          "path": "components/glassmorphism-testimonials-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -1782,7 +1782,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/glowy-waves-hero.tsx",
+          "path": "components/glowy-waves-hero.tsx",
           "type": "registry:block"
         }
       ],
@@ -1800,7 +1800,7 @@
       ],
       "files": [
         {
-          "path": "components/decorative/backgrounds/gradient-animation.tsx",
+          "path": "components/gradient-animation.tsx",
           "type": "registry:ui"
         }
       ],
@@ -1820,7 +1820,7 @@
       ],
       "files": [
         {
-          "path": "components/micro/icons/heart-favorite.tsx",
+          "path": "components/heart-favorite.tsx",
           "type": "registry:ui"
         }
       ],
@@ -1841,7 +1841,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/hero-block.tsx",
+          "path": "components/hero-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -1862,7 +1862,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/hero-section.tsx",
+          "path": "components/hero-section.tsx",
           "type": "registry:page"
         }
       ],
@@ -1881,7 +1881,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/holographic-wall.tsx",
+          "path": "components/holographic-wall.tsx",
           "type": "registry:ui"
         }
       ],
@@ -1901,7 +1901,7 @@
       ],
       "files": [
         {
-          "path": "components/components/cards/hover-expand.tsx",
+          "path": "components/hover-expand.tsx",
           "type": "registry:component"
         }
       ],
@@ -1924,7 +1924,7 @@
       ],
       "files": [
         {
-          "path": "components/components/cards/image-slider-card.tsx",
+          "path": "components/image-slider-card.tsx",
           "type": "registry:component"
         }
       ],
@@ -1948,7 +1948,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/interactive-logs-table.tsx",
+          "path": "components/interactive-logs-table.tsx",
           "type": "registry:block"
         }
       ],
@@ -1969,7 +1969,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/interactive-timeline.tsx",
+          "path": "components/interactive-timeline.tsx",
           "type": "registry:component"
         }
       ],
@@ -1991,7 +1991,7 @@
       ],
       "files": [
         {
-          "path": "components/search/mac-searchbar.tsx",
+          "path": "components/mac-searchbar.tsx",
           "type": "registry:component"
         }
       ],
@@ -2012,7 +2012,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/magnetic-avatar-group.tsx",
+          "path": "components/magnetic-avatar-group.tsx",
           "type": "registry:component"
         }
       ],
@@ -2033,7 +2033,7 @@
       ],
       "files": [
         {
-          "path": "components/micro/buttons/magnetic-button.tsx",
+          "path": "components/magnetic-button.tsx",
           "type": "registry:ui"
         }
       ],
@@ -2052,7 +2052,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/magnetic-cursor-link.tsx",
+          "path": "components/magnetic-cursor-link.tsx",
           "type": "registry:ui"
         }
       ],
@@ -2078,7 +2078,7 @@
       ],
       "files": [
         {
-          "path": "components/components/chat/messenger.tsx",
+          "path": "components/messenger.tsx",
           "type": "registry:component"
         }
       ],
@@ -2097,7 +2097,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/mood-gradient-button.tsx",
+          "path": "components/mood-gradient-button.tsx",
           "type": "registry:ui"
         }
       ],
@@ -2117,7 +2117,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/morphing-action-button.tsx",
+          "path": "components/morphing-action-button.tsx",
           "type": "registry:ui"
         }
       ],
@@ -2139,7 +2139,7 @@
       ],
       "files": [
         {
-          "path": "components/components/account-switcher/multiple-accounts.tsx",
+          "path": "components/multiple-accounts.tsx",
           "type": "registry:component"
         }
       ],
@@ -2164,7 +2164,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/n8n-workflow-block.tsx",
+          "path": "components/n8n-workflow-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -2185,7 +2185,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/new-hero-section.tsx",
+          "path": "components/new-hero-section.tsx",
           "type": "registry:block"
         }
       ],
@@ -2210,7 +2210,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/newsletter-signup-block.tsx",
+          "path": "components/newsletter-signup-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -2230,7 +2230,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/notification-bell.tsx",
+          "path": "components/notification-bell.tsx",
           "type": "registry:ui"
         }
       ],
@@ -2253,7 +2253,7 @@
       ],
       "files": [
         {
-          "path": "components/components/notifications/notification-center.tsx",
+          "path": "components/notification-center.tsx",
           "type": "registry:component"
         }
       ],
@@ -2275,7 +2275,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/notion-blog-page.tsx",
+          "path": "components/notion-blog-page.tsx",
           "type": "registry:block"
         }
       ],
@@ -2298,7 +2298,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/our-services-section.tsx",
+          "path": "components/our-services-section.tsx",
           "type": "registry:block"
         }
       ],
@@ -2320,7 +2320,7 @@
       ],
       "files": [
         {
-          "path": "components/inputs/password-input.tsx",
+          "path": "components/password-input.tsx",
           "type": "registry:component"
         }
       ],
@@ -2340,7 +2340,7 @@
       ],
       "files": [
         {
-          "path": "components/micro/links/preview-details-card.tsx",
+          "path": "components/preview-details-card.tsx",
           "type": "registry:ui"
         }
       ],
@@ -2364,7 +2364,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/pricing-section.tsx",
+          "path": "components/pricing-section.tsx",
           "type": "registry:page"
         }
       ],
@@ -2386,7 +2386,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/projects-block.tsx",
+          "path": "components/projects-block.tsx",
           "type": "registry:component"
         }
       ],
@@ -2405,7 +2405,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/reactive-background-grid.tsx",
+          "path": "components/reactive-background-grid.tsx",
           "type": "registry:ui"
         }
       ],
@@ -2424,7 +2424,7 @@
       ],
       "files": [
         {
-          "path": "components/micro/buttons/ripple-click.tsx",
+          "path": "components/ripple-click.tsx",
           "type": "registry:ui"
         }
       ],
@@ -2442,7 +2442,7 @@
       ],
       "files": [
         {
-          "path": "components/micro/buttons/scale-hover.tsx",
+          "path": "components/scale-hover.tsx",
           "type": "registry:ui"
         }
       ],
@@ -2461,7 +2461,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/scroll-progress-tracker.tsx",
+          "path": "components/scroll-progress-tracker.tsx",
           "type": "registry:page"
         }
       ],
@@ -2481,7 +2481,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/scroll-reveal.tsx",
+          "path": "components/scroll-reveal.tsx",
           "type": "registry:page"
         }
       ],
@@ -2504,7 +2504,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/services-grid-block.tsx",
+          "path": "components/services-grid-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -2524,7 +2524,7 @@
       ],
       "files": [
         {
-          "path": "components/micro/buttons/shimmer-button.tsx",
+          "path": "components/shimmer-button.tsx",
           "type": "registry:ui"
         }
       ],
@@ -2546,7 +2546,7 @@
       ],
       "files": [
         {
-          "path": "components/forms/simple-calendar.tsx",
+          "path": "components/simple-calendar.tsx",
           "type": "registry:component"
         }
       ],
@@ -2568,7 +2568,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/smart-hover-card.tsx",
+          "path": "components/smart-hover-card.tsx",
           "type": "registry:component"
         }
       ],
@@ -2587,7 +2587,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/spotlight-section.tsx",
+          "path": "components/spotlight-section.tsx",
           "type": "registry:ui"
         }
       ],
@@ -2609,7 +2609,7 @@
       ],
       "files": [
         {
-          "path": "components/motion-core/stacked-card-carousel.tsx",
+          "path": "components/stacked-card-carousel.tsx",
           "type": "registry:component"
         }
       ],
@@ -2631,7 +2631,7 @@
       ],
       "files": [
         {
-          "path": "components/components/dropdown/staggered-items.tsx",
+          "path": "components/staggered-items.tsx",
           "type": "registry:component"
         }
       ],
@@ -2649,7 +2649,7 @@
       ],
       "files": [
         {
-          "path": "components/page/hero/staggered-text.tsx",
+          "path": "components/staggered-text.tsx",
           "type": "registry:page"
         }
       ],
@@ -2672,7 +2672,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/stats-counter-block.tsx",
+          "path": "components/stats-counter-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -2694,7 +2694,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/stats-section.tsx",
+          "path": "components/stats-section.tsx",
           "type": "registry:page"
         }
       ],
@@ -2718,7 +2718,7 @@
       ],
       "files": [
         {
-          "path": "components/components/stocks-dashboard/stocks-dashboard.tsx",
+          "path": "components/stocks-dashboard.tsx",
           "type": "registry:block"
         }
       ],
@@ -2742,7 +2742,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/team-section-block.tsx",
+          "path": "components/team-section-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -2765,7 +2765,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/testimonial-section.tsx",
+          "path": "components/testimonial-section.tsx",
           "type": "registry:page"
         }
       ],
@@ -2786,7 +2786,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/testimonials-block.tsx",
+          "path": "components/testimonials-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -2809,7 +2809,7 @@
       ],
       "files": [
         {
-          "path": "components/sections/timeline-block.tsx",
+          "path": "components/timeline-block.tsx",
           "type": "registry:block"
         }
       ],
@@ -2832,7 +2832,7 @@
       ],
       "files": [
         {
-          "path": "components/page/notifications/toast-notification.tsx",
+          "path": "components/toast-notification.tsx",
           "type": "registry:page"
         }
       ],
@@ -2850,7 +2850,7 @@
       ],
       "files": [
         {
-          "path": "components/decorative/text/typewriter.tsx",
+          "path": "components/typewriter.tsx",
           "type": "registry:ui"
         }
       ],
@@ -2873,7 +2873,7 @@
       ],
       "files": [
         {
-          "path": "components/components/weather/weather-dashboard.tsx",
+          "path": "components/weather-dashboard.tsx",
           "type": "registry:component"
         }
       ],
