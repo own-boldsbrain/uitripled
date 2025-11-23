@@ -6,6 +6,7 @@
     "sync-registry": "node scripts/sync-registry.js",
     "generate-llms-txt": "node scripts/generate-llms-txt.js",
     "generate-registry-scripts": "node scripts/generate-registry-files",
+    "mirror-registries": "node scripts/mirror-registries.js",
     "dev": "npm run generate-scripts && next dev -p 3333",
     "build": "next build",
     "start": "next start -p 3333",
