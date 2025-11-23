@@ -1,0 +1,8 @@
+{
+  "handle": "assistant-ui",
+  "name": "@assistant-ui",
+  "url": "https://www.assistant-ui.com",
+  "title": "Assistant UI",
+  "description": "Radix-style React primitives for AI chat with adapters for AI SDKs and custom backends.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

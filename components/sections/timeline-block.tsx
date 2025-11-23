@@ -9,37 +9,37 @@ import { Calendar, CheckCircle2 } from "lucide-react";
 const timelineEvents = [
   {
     year: "2020",
-    title: "Company Founded",
+    title: "Empresa Fundada",
     description:
-      "Started with a vision to transform how businesses operate digitally.",
+      "Iniciada com a visão de transformar como as empresas operam digitalmente.",
     icon: CheckCircle2,
   },
   {
     year: "2021",
-    title: "First 1,000 Customers",
+    title: "Primeiros 1.000 Clientes",
     description:
-      "Reached our first major milestone with customers across 20 countries.",
+      "Alcançamos nosso primeiro marco importante com clientes em 20 países.",
     icon: CheckCircle2,
   },
   {
     year: "2022",
-    title: "Series A Funding",
+    title: "Financiamento Série A",
     description:
-      "Raised $10M to accelerate product development and expand our team.",
+      "Levantou $10M para acelerar o desenvolvimento de produtos e expandir nossa equipe.",
     icon: CheckCircle2,
   },
   {
     year: "2023",
-    title: "Global Expansion",
+    title: "Expansão Global",
     description:
-      "Opened offices in 5 new countries and launched multilingual support.",
+      "Abriu escritórios em 5 novos países e lançou suporte multilíngue.",
     icon: CheckCircle2,
   },
   {
     year: "2024",
-    title: "AI Integration",
+    title: "Integração de IA",
     description:
-      "Launched AI-powered features to help businesses scale faster.",
+      "Lançou recursos alimentados por IA para ajudar as empresas a escalar mais rápido.",
     icon: CheckCircle2,
   },
 ];

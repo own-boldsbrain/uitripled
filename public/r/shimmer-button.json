@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "shimmer-button",
   "type": "registry:ui",
-  "title": "Shimmer Button",
-  "description": "Button with continuous shimmer effect",
+  "title": "Botão Brilhante",
+  "description": "Botão com efeito de brilho contínuo",
   "registryDependencies": [
     "button"
   ],
@@ -13,7 +13,7 @@
   "files": [
     {
       "path": "components/micro/buttons/shimmer-button.tsx",
-      "content": "\"use client\";\n\nimport { motion, useReducedMotion } from \"framer-motion\";\nimport { Button } from \"@/components/ui/button\";\n\nexport function ShimmerButton() {\n  const shouldReduceMotion = useReducedMotion();\n\n  return (\n    <div className=\"flex items-center justify-center p-12\">\n      <Button className=\"relative overflow-hidden bg-accent text-accent-foreground hover:bg-accent/90\">\n        <span className=\"relative z-10\">Shimmer Effect</span>\n        <motion.div\n          className=\"absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent\"\n          aria-hidden=\"true\"\n          animate={\n            shouldReduceMotion\n              ? undefined\n              : {\n                  x: [\"100%\", \"-100%\"],\n                }\n          }\n          transition={\n            shouldReduceMotion\n              ? undefined\n              : {\n                  duration: 2,\n                  repeat: Infinity,\n                  ease: \"linear\",\n                }\n          }\n        />\n      </Button>\n    </div>\n  );\n}\n",
+      "content": "\"use client\";\r\n\r\nimport { motion, useReducedMotion } from \"framer-motion\";\r\nimport { Button } from \"@/components/ui/button\";\r\n\r\nexport function ShimmerButton() {\r\n  const shouldReduceMotion = useReducedMotion();\r\n\r\n  return (\r\n    <div className=\"flex items-center justify-center p-12\">\r\n      <Button className=\"relative overflow-hidden bg-accent text-accent-foreground hover:bg-accent/90\">\r\n        <span className=\"relative z-10\">Shimmer Effect</span>\r\n        <motion.div\r\n          className=\"absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent\"\r\n          aria-hidden=\"true\"\r\n          animate={\r\n            shouldReduceMotion\r\n              ? undefined\r\n              : {\r\n                  x: [\"100%\", \"-100%\"],\r\n                }\r\n          }\r\n          transition={\r\n            shouldReduceMotion\r\n              ? undefined\r\n              : {\r\n                  duration: 2,\r\n                  repeat: Infinity,\r\n                  ease: \"linear\",\r\n                }\r\n          }\r\n        />\r\n      </Button>\r\n    </div>\r\n  );\r\n}\r\n",
       "type": "registry:ui",
       "target": "components/micro/buttons/shimmer-button"
     }

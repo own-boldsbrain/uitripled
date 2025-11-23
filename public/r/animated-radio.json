@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "animated-radio",
   "type": "registry:component",
-  "title": "Animated Radio",
-  "description": "Radio button group with selection ripple",
+  "title": "Botão de Opção Animado",
+  "description": "Grupo de botões de opção com ondulação de seleção",
   "registryDependencies": [
     "button"
   ],
@@ -14,7 +14,7 @@
   "files": [
     {
       "path": "components/forms/animated-radio.tsx",
-      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { motion } from \"framer-motion\";\n\nconst options = [\"Daily\", \"Weekly\", \"Monthly\", \"Never\"];\n\nexport function AnimatedRadio() {\n  const [selected, setSelected] = useState(\"Weekly\");\n\n  return (\n    <div className=\"space-y-3\">\n      <p className=\"text-sm font-medium\">Email frequency</p>\n      {options.map((option) => (\n        <label key={option} className=\"flex cursor-pointer items-center gap-3\">\n          <motion.div\n            className=\"relative flex h-6 w-6 items-center justify-center rounded-full border-2\"\n            style={{\n              borderColor:\n                selected === option\n                  ? \"rgb(var(--accent))\"\n                  : \"rgb(var(--border))\",\n            }}\n            whileHover={{ scale: 1.1 }}\n            whileTap={{ scale: 0.95 }}\n            onClick={() => setSelected(option)}\n          >\n            <motion.div\n              initial={false}\n              animate={{\n                scale: selected === option ? 1 : 0,\n              }}\n              transition={{ type: \"spring\", stiffness: 500, damping: 30 }}\n              className=\"h-3 w-3 rounded-full\"\n              style={{ backgroundColor: \"rgb(var(--accent))\" }}\n            />\n          </motion.div>\n          <span className=\"text-sm\">{option}</span>\n        </label>\n      ))}\n    </div>\n  );\n}\n",
+      "content": "\"use client\";\r\n\r\nimport { useState } from \"react\";\r\nimport { motion } from \"framer-motion\";\r\n\r\nconst options = [\"Daily\", \"Weekly\", \"Monthly\", \"Never\"];\r\n\r\nexport function AnimatedRadio() {\r\n  const [selected, setSelected] = useState(\"Weekly\");\r\n\r\n  return (\r\n    <div className=\"space-y-3\">\r\n      <p className=\"text-sm font-medium\">Email frequency</p>\r\n      {options.map((option) => (\r\n        <label key={option} className=\"flex cursor-pointer items-center gap-3\">\r\n          <motion.div\r\n            className=\"relative flex h-6 w-6 items-center justify-center rounded-full border-2\"\r\n            style={{\r\n              borderColor:\r\n                selected === option\r\n                  ? \"rgb(var(--accent))\"\r\n                  : \"rgb(var(--border))\",\r\n            }}\r\n            whileHover={{ scale: 1.1 }}\r\n            whileTap={{ scale: 0.95 }}\r\n            onClick={() => setSelected(option)}\r\n          >\r\n            <motion.div\r\n              initial={false}\r\n              animate={{\r\n                scale: selected === option ? 1 : 0,\r\n              }}\r\n              transition={{ type: \"spring\", stiffness: 500, damping: 30 }}\r\n              className=\"h-3 w-3 rounded-full\"\r\n              style={{ backgroundColor: \"rgb(var(--accent))\" }}\r\n            />\r\n          </motion.div>\r\n          <span className=\"text-sm\">{option}</span>\r\n        </label>\r\n      ))}\r\n    </div>\r\n  );\r\n}\r\n",
       "type": "registry:component",
       "target": "components/forms/animated-radio"
     }

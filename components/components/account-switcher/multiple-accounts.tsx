@@ -173,13 +173,13 @@ export function MultipleAccounts() {
             <div className="flex items-center justify-between rounded-xl border border-border/60 bg-white/[0.04] px-3 py-3 text-sm text-[var(--muted-foreground)]">
               <div className="flex items-center gap-2">
                 <LogOut className="h-4 w-4" aria-hidden />
-                <span>Manage accounts</span>
+                <span>Gerenciar contas</span>
               </div>
               <button
                 type="button"
                 className="rounded-full border border-border/60 px-3 py-1 text-xs text-foreground transition-colors duration-200 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70"
               >
-                Settings
+                Configurações
               </button>
             </div>
           </motion.div>

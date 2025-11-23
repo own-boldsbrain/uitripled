@@ -1,0 +1,8 @@
+{
+  "handle": "supabase",
+  "name": "@supabase",
+  "url": "https://supabase.com/ui",
+  "title": "Supabase UI",
+  "description": "React components and blocks to connect front-end to Supabase back-end with a single command.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

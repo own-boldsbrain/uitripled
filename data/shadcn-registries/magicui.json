@@ -1,0 +1,8 @@
+{
+  "handle": "magicui",
+  "name": "@magicui",
+  "url": "https://magicui.design",
+  "title": "Magic UI",
+  "description": "A UI library with 150+ free and open-source animated components built with React, TypeScript, Tailwind and Motion.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

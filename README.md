@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/moumen-soliman/uitripled">
-    <img width="100" height="100" alt="UI TripleD Logo" src="./public/logo.png" />
+    <img width="100" height="100" alt="Logo UI TripleD" src="./public/logo.png" />
   </a>
 
 </p>
@@ -8,30 +8,30 @@
 <h1 align="center">UI TripleD</h1>
 
 <p align="center">
-  <strong>Production-ready UI components and blocks powered by shadcn/ui and Framer Motion.</strong>
+  <strong>Componentes e blocos de UI prontos para produção, alimentados por shadcn/ui e Framer Motion.</strong>
 </p>
 
 <p align="center">
-  <a href="https://ui.tripled.work/components">Docs</a> ·
-  <a href="https://github.com/moumen-soliman/uitripled/issues/new?template=bug_report.md">Report a bug</a> ·
-  <a href="https://github.com/moumen-soliman/uitripled/issues/new?template=feature_request.md">Feature request</a> ·
+  <a href="https://ui.tripled.work/components">Documentação</a> ·
+  <a href="https://github.com/moumen-soliman/uitripled/issues/new?template=bug_report.md">Reportar um bug</a> ·
+  <a href="https://github.com/moumen-soliman/uitripled/issues/new?template=feature_request.md">Solicitar uma funcionalidade</a> ·
 </p>
 
 <p align="center">
-  <a href="LICENSE.md"><img src="https://img.shields.io/github/license/moumen-soliman/uitripled?label=license&logo=github" alt="License" /></a>
+  <a href="LICENSE.md"><img src="https://img.shields.io/github/license/moumen-soliman/uitripled?label=license&logo=github" alt="Licença" /></a>
   <a href="https://github.com/moumen-soliman/uitripled/issues"><img src="https://img.shields.io/github/issues/moumen-soliman/uitripled" alt="Issues" /></a>
 </p>
 
 <img width="2800" height="2044" alt="UI TripleD" src="./public/readme.png" />
 
-## Features
+## Funcionalidades
 
-- **Production-Ready Components** - Carefully crafted UI components built with shadcn/ui & Framer Motion
-- **Visual Builder** - Drag-and-drop interface for building and previewing components
-- **Copy & Paste** - One-click code copying for seamless integration
-- **TypeScript Support** - Full type safety throughout
+- **Componentes Prontos para Produção** - Componentes de UI cuidadosamente elaborados com shadcn/ui e Framer Motion
+- **Construtor Visual** - Interface de arrastar e soltar para construir e visualizar componentes
+- **Copiar e Colar** - Cópia de código com um clique para integração perfeita
+- **Suporte a TypeScript** - Segurança de tipos completa em todo o projeto
 
-## Tech Stack
+## Pilha Tecnológica
 
 - [Next.js](https://nextjs.org) 16
 - [React](https://react.dev) 19
@@ -41,30 +41,30 @@
 - [shadcn/ui](https://ui.shadcn.com)
 - [Radix UI](https://www.radix-ui.com)
 
-## Getting Started
+## Começando
 
-Install dependencies:
+Instale as dependências:
 
 ```bash
 npm install
 ```
 
-Run the development server:
+Execute o servidor de desenvolvimento:
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Abra [http://localhost:3333](http://localhost:3333) no seu navegador.
 
-## Usage
+## Uso
 
-Browse components in the library, preview them, and copy the code directly into your project. Use the visual builder to customize components and see live previews.
+Navegue pelos componentes na biblioteca, visualize-os e copie o código diretamente para o seu projeto. Use o construtor visual para personalizar componentes e ver visualizações ao vivo.
 
-## Contributing
+## Contribuição
 
-Contributions are welcome! Please read our [Contributing Guide](./CONTRIBUTING.md) before submitting pull requests.
+Contribuições são bem-vindas! Por favor, leia nosso [Guia de Contribuição](./CONTRIBUTING.md) antes de enviar pull requests.
 
-## License
+## Licença
 
-See [LICENSE](./LICENSE.md) for details.
+Veja [LICENSE](./LICENSE.md) para detalhes.

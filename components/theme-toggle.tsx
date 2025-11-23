@@ -19,9 +19,9 @@ const menuOptions: Array<{
   label: string;
   icon: typeof Sun;
 }> = [
-  { key: "light", label: "Light", icon: Sun },
-  { key: "dark", label: "Dark", icon: Moon },
-  { key: "system", label: "System", icon: Monitor },
+  { key: "light", label: "Claro", icon: Sun },
+  { key: "dark", label: "Escuro", icon: Moon },
+  { key: "system", label: "Sistema", icon: Monitor },
 ];
 
 export function ThemeToggle() {
@@ -32,7 +32,7 @@ export function ThemeToggle() {
     setIsMounted(true);
   }, []);
 
-  const activeTheme = theme === "system" ? `System (${resolvedTheme})` : theme;
+  const activeTheme = theme === "system" ? `Sistema (${resolvedTheme})` : theme;
 
   return (
     <DropdownMenu>
@@ -44,16 +44,16 @@ export function ThemeToggle() {
             "relative h-10 w-10",
             !isMounted && "animate-pulse bg-muted/30 text-muted-foreground"
           )}
-          aria-label="Toggle theme"
+          aria-label="Alternar tema"
         >
           <Sun className="h-[1.1rem] w-[1.1rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           <Moon className="absolute h-[1.1rem] w-[1.1rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">Toggle theme</span>
+          <span className="sr-only">Alternar tema</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-44">
         <DropdownMenuLabel className="text-xs text-muted-foreground">
-          Theme • {isMounted ? activeTheme : "Loading"}
+          Tema • {isMounted ? activeTheme : "Carregando"}
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         {menuOptions.map(({ key, label, icon: Icon }) => {

@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "floating-label-input",
   "type": "registry:component",
-  "title": "Floating Label Input",
-  "description": "Input with animated floating label",
+  "title": "Campo de Entrada com Rótulo Flutuante",
+  "description": "Campo de entrada com rótulo flutuante animado",
   "registryDependencies": [
     "input"
   ],
@@ -14,7 +14,7 @@
   "files": [
     {
       "path": "components/components/inputs/floating-label-input.tsx",
-      "content": "\"use client\";\n\nimport { motion, AnimatePresence } from \"framer-motion\";\nimport { useState } from \"react\";\nimport { Input } from \"@/components/ui/input\";\n\nexport function FloatingLabelInput() {\n  const [isFocused, setIsFocused] = useState(false);\n  const [value, setValue] = useState(\"\");\n\n  const isFloating = isFocused || value.length > 0;\n\n  return (\n    <div className=\"flex items-center justify-center p-12\">\n      <div className=\"relative w-64\">\n        <Input\n          type=\"text\"\n          value={value}\n          onChange={(e) => setValue(e.target.value)}\n          onFocus={() => setIsFocused(true)}\n          onBlur={() => setIsFocused(false)}\n          className=\"peer\"\n        />\n        <motion.label\n          animate={{\n            y: isFloating ? -24 : 10,\n            scale: isFloating ? 0.85 : 1,\n          }}\n          transition={{ duration: 0.2, ease: \"easeInOut\" }}\n          className=\"pointer-events-none absolute left-3 origin-left text-sm text-gray-500\"\n        >\n          Email address\n        </motion.label>\n      </div>\n    </div>\n  );\n}\n",
+      "content": "\"use client\";\r\n\r\nimport { motion, AnimatePresence } from \"framer-motion\";\r\nimport { useState } from \"react\";\r\nimport { Input } from \"@/components/ui/input\";\r\n\r\nexport function FloatingLabelInput() {\r\n  const [isFocused, setIsFocused] = useState(false);\r\n  const [value, setValue] = useState(\"\");\r\n\r\n  const isFloating = isFocused || value.length > 0;\r\n\r\n  return (\r\n    <div className=\"flex items-center justify-center p-12\">\r\n      <div className=\"relative w-64\">\r\n        <Input\r\n          type=\"text\"\r\n          value={value}\r\n          onChange={(e) => setValue(e.target.value)}\r\n          onFocus={() => setIsFocused(true)}\r\n          onBlur={() => setIsFocused(false)}\r\n          className=\"peer\"\r\n        />\r\n        <motion.label\r\n          animate={{\r\n            y: isFloating ? -24 : 10,\r\n            scale: isFloating ? 0.85 : 1,\r\n          }}\r\n          transition={{ duration: 0.2, ease: \"easeInOut\" }}\r\n          className=\"pointer-events-none absolute left-3 origin-left text-sm text-gray-500\"\r\n        >\r\n          Endereço de e-mail\r\n        </motion.label>\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n",
       "type": "registry:component",
       "target": "components/components/inputs/floating-label-input"
     }

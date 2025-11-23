@@ -37,7 +37,7 @@ export function FolderBrowser({
       transition={{ duration: 0.4 }}
       className="group relative overflow-hidden rounded-2xl border border-border/40 bg-background/60 backdrop-blur transition-all hover:border-border/60 hover:shadow-lg"
       role="region"
-      aria-label="Folder browser"
+      aria-label="Navegador de pastas"
     >
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-foreground/[0.04] via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 -z-10" />
@@ -111,7 +111,7 @@ export function FolderBrowser({
 export const BrowseFolder = () => {
   const sampleFolders: Folder[] = [
     {
-      name: "Documents",
+      name: "Documentos",
       content: (
         <ul className="list-disc space-y-2 pl-4">
           <li>Report.pdf</li>
@@ -121,7 +121,7 @@ export const BrowseFolder = () => {
       ),
     },
     {
-      name: "Images",
+      name: "Imagens",
       content: (
         <ul className="list-disc space-y-2 pl-4">
           <li>Photo1.jpg</li>
@@ -131,7 +131,7 @@ export const BrowseFolder = () => {
       ),
     },
     {
-      name: "Projects",
+      name: "Projetos",
       content: (
         <ul className="list-disc space-y-2 pl-4">
           <li>App.zip</li>
@@ -142,5 +142,5 @@ export const BrowseFolder = () => {
     },
   ];
 
-  return <FolderBrowser folders={sampleFolders} initialFolder="Documents" />;
+  return <FolderBrowser folders={sampleFolders} initialFolder="Documentos" />;
 };

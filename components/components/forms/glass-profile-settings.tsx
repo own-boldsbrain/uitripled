@@ -16,7 +16,7 @@ export function GlassProfileSettingsCard() {
   const [notifications, setNotifications] = useState(true);
   const [newsletter, setNewsletter] = useState(false);
   const [bio, setBio] = useState(
-    "Designing expressive interfaces that feel alive."
+    "Projetando interfaces expressivas que parecem vivas."
   );
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -41,21 +41,22 @@ export function GlassProfileSettingsCard() {
       <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.28em] text-muted-foreground">
-            Profile
+            Perfil
           </div>
           <h1
             id="glass-profile-settings-title"
             className="mt-3 text-2xl font-semibold text-foreground sm:text-3xl"
           >
-            Profile settings
+            Configurações do perfil
           </h1>
           <p className="mt-2 text-sm text-muted-foreground">
-            Update your avatar, personal details, and notification preferences.
+            Atualize seu avatar, detalhes pessoais e preferências de
+            notificação.
           </p>
         </div>
         <Badge className="group gap-2 rounded-full border border-border/60 bg-white/5 px-4 py-2 text-muted-foreground transition-colors duration-300 hover:border-primary/60 hover:bg-primary/15 hover:text-primary">
           <span className="h-2 w-2 rounded-full bg-primary" aria-hidden />
-          Auto-save enabled
+          Salvamento automático ativado
         </Badge>
       </div>
 
@@ -64,13 +65,13 @@ export function GlassProfileSettingsCard() {
           <div className="flex flex-col items-center gap-4 rounded-2xl border border-border/60 bg-background/40 p-6 backdrop-blur">
             <Avatar className="h-24 w-24 border border-border/60">
               <span className="flex h-full w-full items-center justify-center rounded-full bg-primary/20 text-lg font-semibold text-primary">
-                AP
+                JS
               </span>
             </Avatar>
             <div className="text-center">
-              <p className="text-sm font-medium text-foreground">Alex Parker</p>
+              <p className="text-sm font-medium text-foreground">João Silva</p>
               <p className="text-xs text-muted-foreground">
-                Lead Product Designer
+                Designer de Produto Líder
               </p>
             </div>
             <Button
@@ -79,7 +80,7 @@ export function GlassProfileSettingsCard() {
               className="rounded-full border-border/60 bg-white/5 px-4 py-2 text-sm text-foreground"
             >
               <UploadCloud className="mr-2 h-4 w-4" />
-              Update avatar
+              Atualizar avatar
             </Button>
           </div>
         </div>
@@ -87,19 +88,19 @@ export function GlassProfileSettingsCard() {
         <div className="space-y-6 sm:col-span-3">
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="space-y-2">
-              <Label htmlFor="profile-first-name">First name</Label>
+              <Label htmlFor="profile-first-name">Nome</Label>
               <Input
                 id="profile-first-name"
-                defaultValue="Alex"
+                defaultValue="João"
                 className="h-11 rounded-2xl border-border/60 bg-background/60 px-4"
                 autoComplete="given-name"
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="profile-last-name">Last name</Label>
+              <Label htmlFor="profile-last-name">Sobrenome</Label>
               <Input
                 id="profile-last-name"
-                defaultValue="Parker"
+                defaultValue="Silva"
                 className="h-11 rounded-2xl border-border/60 bg-background/60 px-4"
                 autoComplete="family-name"
               />
@@ -108,21 +109,21 @@ export function GlassProfileSettingsCard() {
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="space-y-2">
-              <Label htmlFor="profile-email">Email address</Label>
+              <Label htmlFor="profile-email">Endereço de e-mail</Label>
               <Input
                 id="profile-email"
                 type="email"
-                defaultValue="alex.parker@example.com"
+                defaultValue="joao.silva@exemplo.com"
                 className="h-11 rounded-2xl border-border/60 bg-background/60 px-4"
                 autoComplete="email"
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="profile-phone">Phone number</Label>
+              <Label htmlFor="profile-phone">Número de telefone</Label>
               <Input
                 id="profile-phone"
                 type="tel"
-                placeholder="+1 (555) 123-4567"
+                placeholder="+55 (11) 99999-9999"
                 className="h-11 rounded-2xl border-border/60 bg-background/60 px-4"
                 autoComplete="tel"
               />
@@ -130,37 +131,38 @@ export function GlassProfileSettingsCard() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="profile-bio">Bio</Label>
+            <Label htmlFor="profile-bio">Biografia</Label>
             <Textarea
               id="profile-bio"
               value={bio}
               onChange={(event) => setBio(event.target.value)}
               rows={4}
               className="rounded-2xl border-border/60 bg-background/60 px-4 py-3 text-sm"
-              placeholder="Tell us about your role, interests, or current focus."
+              placeholder="Conte-nos sobre seu papel, interesses ou foco atual."
             />
             <p className="text-right text-xs text-muted-foreground">
-              {bio.length}/160 characters
+              {bio.length}/160 caracteres
             </p>
           </div>
 
           <div className="rounded-2xl border border-border/60 bg-background/40 p-5 backdrop-blur">
             <h2 className="text-sm font-medium text-foreground">
-              Notifications
+              Notificações
             </h2>
             <p className="mb-4 text-xs text-muted-foreground">
-              Choose the updates you want to receive about your workspace.
+              Escolha as atualizações que deseja receber sobre seu espaço de
+              trabalho.
             </p>
             <div className="space-y-3">
               <label className="flex items-center justify-between gap-3 text-sm text-muted-foreground">
-                Enable notifications
+                Habilitar notificações
                 <Switch
                   checked={notifications}
                   onCheckedChange={setNotifications}
                 />
               </label>
               <label className="flex items-center justify-between gap-3 text-sm text-muted-foreground">
-                Subscribe to newsletter
+                Inscrever-se na newsletter
                 <Switch checked={newsletter} onCheckedChange={setNewsletter} />
               </label>
             </div>
@@ -173,13 +175,13 @@ export function GlassProfileSettingsCard() {
               className="rounded-full border-border/60 bg-white/5 px-6 py-3 text-sm text-muted-foreground hover:text-primary"
               onClick={() => window.location.reload()}
             >
-              Reset changes
+              Redefinir alterações
             </Button>
             <Button
               type="submit"
               className="rounded-full bg-primary px-6 py-3 text-primary-foreground shadow-[0_20px_60px_-30px_rgba(79,70,229,0.75)] transition-transform duration-300 hover:-translate-y-1"
             >
-              Save settings
+              Salvar configurações
             </Button>
           </div>
         </div>

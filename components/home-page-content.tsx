@@ -57,7 +57,7 @@ export default function HomePageContent() {
             transition={{ duration: 0.25 }}
             className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground text-center"
           >
-            When Framer Motion meets shadcn/ui
+            Quando Framer Motion encontra shadcn/ui
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 6 }}
@@ -65,7 +65,7 @@ export default function HomePageContent() {
             transition={{ duration: 0.3, delay: 0.05 }}
             className="text-center text-2xl font-semibold tracking-tight text-foreground sm:text-3xl"
           >
-            Browse, copy, and ship
+            Navegue, copie e envie
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 6 }}
@@ -73,8 +73,8 @@ export default function HomePageContent() {
             transition={{ duration: 0.3, delay: 0.05 }}
             className="text-center text-sm text-foreground/70 md:max-w-md mx-auto"
           >
-            You&apos;ll see more blocks than components here because we
-            prioritize copy-ready pieces over complex builds.
+            Você verá mais blocos do que componentes aqui porque priorizamos
+            peças prontas para cópia sobre construções complexas.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 6 }}
@@ -83,7 +83,7 @@ export default function HomePageContent() {
             className="mt-2 flex items-center justify-center gap-2"
           >
             <span className="text-xs text-muted-foreground">
-              Try different colors:
+              Experimente cores diferentes:
             </span>
             <ColorThemePicker />
           </motion.div>
@@ -95,7 +95,7 @@ export default function HomePageContent() {
           >
             <Button asChild size="lg" className="min-w-[160px]">
               <Link href="/components">
-                Browse
+                Navegar
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

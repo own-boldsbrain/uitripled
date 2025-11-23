@@ -1,171 +1,171 @@
-# Contributing Guide
+# Guia de Contribuição
 
-This guide explains how to add new components and blocks to UITripleD.
+Este guia explica como adicionar novos componentes e blocos ao UITripleD.
 
-## Table of Contents
+## Índice
 
-- [Adding a New Component](#adding-a-new-component)
-- [Adding a New Block](#adding-a-new-block)
-- [File Structure](#file-structure)
-- [Component Categories](#component-categories)
+- [Adicionando um Novo Componente](#adicionando-um-novo-componente)
+- [Adicionando um Novo Bloco](#adicionando-um-novo-bloco)
+- [Estrutura de Arquivos](#estrutura-de-arquivos)
+- [Categorias de Componentes](#categorias-de-componentes)
 
 ---
 
-## Adding a New Component
+## Adicionando um Novo Componente
 
-Components are reusable UI elements organized by category (microinteractions, components, page, data, decorative, blocks).
+Componentes são elementos de UI reutilizáveis organizados por categoria (microinterações, componentes, página, dados, decorativos, blocos).
 
-### Step 1: Create Component File
+### Passo 1: Criar Arquivo do Componente
 
-Create the component file in the appropriate category directory:
+Crie o arquivo do componente no diretório de categoria apropriado:
 
 ```
-components/{category}/{component-id}.tsx
+components/{categoria}/{id-componente}.tsx
 ```
 
-Examples:
+Exemplos:
 
-- `components/micro/buttons/new-button.tsx` (for microinteractions)
-- `components/components/cards/new-card.tsx` (for components)
-- `components/sections/new-section.tsx` (for blocks)
-- `components/motion-core/new-animation.tsx` (for motion-core components)
+- `components/micro/buttons/novo-botao.tsx` (para microinterações)
+- `components/components/cards/novo-card.tsx` (para componentes)
+- `components/sections/nova-secao.tsx` (para blocos)
+- `components/motion-core/nova-animacao.tsx` (para componentes motion-core)
 
-**Note:** The file path should match the component's category and subcategory structure.
+**Nota:** O caminho do arquivo deve corresponder à estrutura de categoria e subcategoria do componente.
 
-### Step 2: Update Components Registry
+### Passo 2: Atualizar Registro de Componentes
 
-Edit `lib/components-registry.tsx`:
+Edite `lib/components-registry.tsx`:
 
-1. **Import the component** at the top:
+1. **Importe o componente** no topo:
 
    ```tsx
-   import { NewComponent } from "@/components/{category}/{component-id}";
+   import { NovoComponente } from "@/components/{categoria}/{id-componente}";
    ```
 
-2. **Add to `componentsRegistry`** array:
+2. **Adicione ao array `componentsRegistry`**:
    ```tsx
    {
-     id: "new-component",
-     name: "New Component",
-     description: "Description of what this component does.",
-     category: "components", // or "microinteractions", "page", "data", "decorative", "blocks"
+     id: "novo-componente",
+     name: "Novo Componente",
+     description: "Descrição do que este componente faz.",
+     category: "components", // ou "microinteractions", "page", "data", "decorative", "blocks"
      tags: ["tag1", "tag2", "tag3"],
-     component: NewComponent,
-     codePath: "@/components/{category}/{component-id}.tsx",
+     component: NovoComponente,
+     codePath: "@/components/{categoria}/{id-componente}.tsx",
      duration: "300ms",
      easing: "easeOut",
-     display: true, // Set to false if component needs fixes or is not ready
+     display: true, // Defina como false se o componente precisar de correções ou não estiver pronto
    },
    ```
 
-**Important:**
+**Importante:**
 
-- Use kebab-case for `id` (e.g., `new-component`)
-- Provide a clear `description`
-- Add relevant `tags` for searchability
-- Set `display: false` if the component needs fixes or isn't ready for production
-- The `codePath` should match the actual file location
+- Use kebab-case para `id` (ex.: `novo-componente`)
+- Forneça uma `description` clara
+- Adicione `tags` relevantes para pesquisabilidade
+- Defina `display: false` se o componente precisar de correções ou não estiver pronto para produção
+- O `codePath` deve corresponder à localização real do arquivo
 
-### Step 3: Sync Registry JSON
+### Passo 3: Sincronizar Registro JSON
 
-Run the sync script to update `registry.json`:
+Execute o script de sincronização para atualizar `registry.json`:
 
 ```bash
 npm run sync-registry
 ```
 
-This script automatically:
+Este script automaticamente:
 
-- Reads components from `lib/components-registry.tsx`
-- Detects dependencies from component imports
-- Updates `registry.json` with the correct structure
-- Preserves existing dependencies if they exist
+- Lê componentes de `lib/components-registry.tsx`
+- Detecta dependências das importações do componente
+- Atualiza `registry.json` com a estrutura correta
+- Preserva dependências existentes se elas existirem
 
-**Note:** The sync script will automatically:
+**Nota:** O script de sincronização irá automaticamente:
 
-- Map categories to registry types (e.g., `microinteractions` → `registry:ui`)
-- Detect `registryDependencies` from `@/components/ui/` imports
-- Detect external `dependencies` from npm packages
-- Set appropriate `category` and `subcategory` based on file path
+- Mapear categorias para tipos de registro (ex.: `microinteractions` → `registry:ui`)
+- Detectar `registryDependencies` de importações `@/components/ui/`
+- Detectar `dependencies` externas de pacotes npm
+- Definir `category` e `subcategory` apropriados com base no caminho do arquivo
 
-### Step 4: Verify
+### Passo 4: Verificar
 
-1. Check that the component appears in the components list
-2. Verify the component page loads correctly
-3. Test the component functionality
-4. Ensure all dependencies are correctly listed in `registry.json`
+1. Verifique se o componente aparece na lista de componentes
+2. Verifique se a página do componente carrega corretamente
+3. Teste a funcionalidade do componente
+4. Garanta que todas as dependências estejam corretamente listadas em `registry.json`
 
 ---
 
-## Adding a New Block
+## Adicionando um Novo Bloco
 
-Blocks are complex, feature-rich sections typically used in landing pages (hero sections, pricing tables, testimonials, etc.).
+Blocos são seções complexas e ricas em funcionalidades, tipicamente usadas em landing pages (seções hero, tabelas de preços, depoimentos, etc.).
 
-### Step 1: Create Block File
+### Passo 1: Criar Arquivo do Bloco
 
-Create the block file in the sections directory:
+Crie o arquivo do bloco no diretório de seções:
 
 ```
-components/sections/{block-id}.tsx
+components/sections/{id-bloco}.tsx
 ```
 
-Example: `components/sections/new-feature-block.tsx`
+Exemplo: `components/sections/novo-bloco-funcionalidade.tsx`
 
-### Step 2: Update Components Registry
+### Passo 2: Atualizar Registro de Componentes
 
-Edit `lib/components-registry.tsx`:
+Edite `lib/components-registry.tsx`:
 
-1. **Import the block** at the top:
+1. **Importe o bloco** no topo:
 
    ```tsx
-   import { NewFeatureBlock } from "@/components/sections/new-feature-block";
+   import { NovoBlocoFuncionalidade } from "@/components/sections/novo-bloco-funcionalidade";
    ```
 
-2. **Add to `componentsRegistry`** array with `category: "blocks"`:
+2. **Adicione ao array `componentsRegistry`** com `category: "blocks"`:
    ```tsx
    {
-     id: "new-feature-block",
-     name: "New Feature Block",
-     description: "Description of what this block does.",
+     id: "novo-bloco-funcionalidade",
+     name: "Novo Bloco Funcionalidade",
+     description: "Descrição do que este bloco faz.",
      category: "blocks",
-     tags: ["feature", "landing", "section"],
-     component: NewFeatureBlock,
-     codePath: "@/components/sections/new-feature-block.tsx",
+     tags: ["funcionalidade", "landing", "secao"],
+     component: NovoBlocoFuncionalidade,
+     codePath: "@/components/sections/novo-bloco-funcionalidade.tsx",
      duration: "600ms",
      easing: "easeOut",
      display: true,
    },
    ```
 
-### Step 3: Sync Registry JSON
+### Passo 3: Sincronizar Registro JSON
 
-Run the sync script:
+Execute o script de sincronização:
 
 ```bash
 npm run sync-registry
 ```
 
-### Step 4: Verify
+### Passo 4: Verificar
 
-1. Check that the block appears in the blocks category
-2. Verify the block page loads correctly
-3. Test the block functionality
-4. Ensure responsive design works on different screen sizes
+1. Verifique se o bloco aparece na categoria de blocos
+2. Verifique se a página do bloco carrega corretamente
+3. Teste a funcionalidade do bloco
+4. Garanta que o design responsivo funcione em diferentes tamanhos de tela
 
 ---
 
-## File Structure
+## Estrutura de Arquivos
 
 ```
 UITripleD/
 ├── components/
-│   ├── micro/              # Microinteractions (buttons, toggles, icons, badges, links)
+│   ├── micro/              # Microinterações (botões, toggles, ícones, badges, links)
 │   │   ├── buttons/
 │   │   ├── toggles/
 │   │   ├── icons/
 │   │   ├── badges/
 │   │   └── links/
-│   ├── components/         # Reusable UI components
+│   ├── components/         # Componentes de UI reutilizáveis
 │   │   ├── cards/
 │   │   ├── chat/
 │   │   ├── forms/
@@ -175,203 +175,203 @@ UITripleD/
 │   │   ├── notifications/
 │   │   ├── tabs/
 │   │   └── ...
-│   ├── sections/          # Block sections (landing page components)
-│   ├── motion-core/        # Advanced motion components
-│   ├── navigation/         # Navigation components
-│   ├── forms/              # Form components
-│   ├── modals/             # Modal components
-│   ├── tooltips/           # Tooltip components
-│   ├── decorative/         # Decorative components (backgrounds, text)
-│   ├── data/               # Data visualization components
-│   ├── page/               # Page-level components
-│   └── ui/                 # Base UI components (shadcn/ui)
+│   ├── sections/          # Seções de blocos (componentes de landing page)
+│   ├── motion-core/        # Componentes de movimento avançados
+│   ├── navigation/         # Componentes de navegação
+│   ├── forms/              # Componentes de formulário
+│   ├── modals/             # Componentes de modal
+│   ├── tooltips/           # Componentes de tooltip
+│   ├── decorative/         # Componentes decorativos (fundos, texto)
+│   ├── data/               # Componentes de visualização de dados
+│   ├── page/               # Componentes de nível de página
+│   └── ui/                 # Componentes de UI base (shadcn/ui)
 ├── lib/
-│   ├── components-registry.tsx   # Component metadata and mapping
-│   ├── file-reader.ts            # Code loading utilities
-│   └── utils.ts                   # Utility functions
+│   ├── components-registry.tsx   # Metadados e mapeamento de componentes
+│   ├── file-reader.ts            # Utilitários de carregamento de código
+│   └── utils.ts                   # Funções utilitárias
 ├── scripts/
-│   └── sync-registry.js           # Auto-sync registry.json
-├── registry.json                  # Shadcn registry configuration (auto-generated)
+│   └── sync-registry.js           # Sincronização automática de registry.json
+├── registry.json                  # Configuração de registro shadcn (auto-gerado)
 └── types/
-    └── index.ts                   # TypeScript types
+    └── index.ts                   # Tipos TypeScript
 ```
 
 ---
 
-## Component Categories
+## Categorias de Componentes
 
-### Microinteractions (`microinteractions`)
+### Microinterações (`microinteractions`)
 
-Small, delightful interactions for buttons, toggles, and icons.
+Pequenas interações deliciosas para botões, toggles e ícones.
 
-- **Location:** `components/micro/`
-- **Registry Type:** `registry:ui`
-- **Examples:** Magnetic buttons, shimmer effects, animated badges
+- **Localização:** `components/micro/`
+- **Tipo de Registro:** `registry:ui`
+- **Exemplos:** Botões magnéticos, efeitos de brilho, badges animados
 
-### Components (`components`)
+### Componentes (`components`)
 
-Animated UI components like modals, dropdowns, and cards.
+Componentes de UI animados como modais, dropdowns e cards.
 
-- **Location:** `components/components/`
-- **Registry Type:** `registry:component`
-- **Examples:** Chat interfaces, animated cards, form components
+- **Localização:** `components/components/`
+- **Tipo de Registro:** `registry:component`
+- **Exemplos:** Interfaces de chat, cards animados, componentes de formulário
 
-### Page (`page`)
+### Página (`page`)
 
-Smooth transitions and hero sections for pages.
+Transições suaves e seções hero para páginas.
 
-- **Location:** `components/page/` or `components/sections/`
-- **Registry Type:** `registry:page`
-- **Examples:** Hero sections, scroll reveals, page transitions
+- **Localização:** `components/page/` ou `components/sections/`
+- **Tipo de Registro:** `registry:page`
+- **Exemplos:** Seções hero, revelações de rolagem, transições de página
 
-### Data (`data`)
+### Dados (`data`)
 
-Bring your data to life with counters, progress bars, and lists.
+Dê vida aos seus dados com contadores, barras de progresso e listas.
 
-- **Location:** `components/data/`
-- **Registry Type:** `registry:ui`
-- **Examples:** Animated counters, progress bars, charts
+- **Localização:** `components/data/`
+- **Tipo de Registro:** `registry:ui`
+- **Exemplos:** Contadores animados, barras de progresso, gráficos
 
-### Decorative (`decorative`)
+### Decorativos (`decorative`)
 
-Beautiful text and background effects.
+Belos efeitos de texto e fundo.
 
-- **Location:** `components/decorative/`
-- **Registry Type:** `registry:ui`
-- **Examples:** Gradient animations, typewriter text, floating effects
+- **Localização:** `components/decorative/`
+- **Tipo de Registro:** `registry:ui`
+- **Exemplos:** Animações de gradiente, texto máquina de escrever, efeitos flutuantes
 
-### Blocks (`blocks`)
+### Blocos (`blocks`)
 
-Reusable block sections for landing pages and portfolios.
+Seções de blocos reutilizáveis para landing pages e portfólios.
 
-- **Location:** `components/sections/`
-- **Registry Type:** `registry:block`
-- **Examples:** Hero blocks, pricing sections, testimonials
-
----
-
-## Quick Checklist
-
-### For Components:
-
-- [ ] Component file created in appropriate category directory
-- [ ] Component imported in `lib/components-registry.tsx`
-- [ ] Added to `componentsRegistry` array with all required fields
-- [ ] Ran `npm run sync-registry` to update `registry.json`
-- [ ] Verified component appears in the UI
-- [ ] Tested component functionality
-- [ ] Checked dependencies in `registry.json`
-
-### For Blocks:
-
-- [ ] Block file created in `components/sections/`
-- [ ] Block imported in `lib/components-registry.tsx`
-- [ ] Added to `componentsRegistry` with `category: "blocks"`
-- [ ] Ran `npm run sync-registry` to update `registry.json`
-- [ ] Verified block appears in blocks category
-- [ ] Tested responsive design
-- [ ] Checked dependencies in `registry.json`
+- **Localização:** `components/sections/`
+- **Tipo de Registro:** `registry:block`
+- **Exemplos:** Blocos hero, seções de preços, depoimentos
 
 ---
 
-## Tips
+## Lista de Verificação Rápida
 
-1. **Naming Convention:**
-   - Use kebab-case for component IDs (e.g., `new-component`, `hero-section`)
-   - Use PascalCase for component names (e.g., `NewComponent`, `HeroSection`)
-   - File names should match component IDs
+### Para Componentes:
 
-2. **Dependencies:**
-   - The sync script automatically detects dependencies from imports
-   - `registryDependencies` are detected from `@/components/ui/` imports
-   - External `dependencies` are detected from npm package imports
-   - Always verify dependencies after syncing
+- [ ] Arquivo do componente criado no diretório de categoria apropriado
+- [ ] Componente importado em `lib/components-registry.tsx`
+- [ ] Adicionado ao array `componentsRegistry` com todos os campos obrigatórios
+- [ ] Executado `npm run sync-registry` para atualizar `registry.json`
+- [ ] Verificado que o componente aparece na UI
+- [ ] Funcionalidade do componente testada
+- [ ] Dependências verificadas em `registry.json`
 
-3. **Component Metadata:**
-   - Provide clear, descriptive `description` fields
-   - Add relevant `tags` for better searchability
-   - Set appropriate `duration` and `easing` for animations
-   - Use `display: false` for components that need fixes
+### Para Blocos:
 
-4. **Code Quality:**
-   - Follow TypeScript best practices
-   - Use proper React patterns (hooks, composition)
-   - Ensure accessibility (ARIA labels, keyboard navigation)
-   - Support reduced motion preferences where applicable
-   - Make components responsive
-
-5. **Testing:**
-   - Always test components after adding
-   - Verify the component appears in the UI
-   - Test on different screen sizes
-   - Check browser console for errors
-   - Verify dependencies are correctly listed
-
-6. **Sync Script:**
-   - Run `npm run sync-registry` after adding new components
-   - The script preserves existing dependencies
-   - Check the output for any warnings or errors
-   - Verify `registry.json` was updated correctly
+- [ ] Arquivo do bloco criado em `components/sections/`
+- [ ] Bloco importado em `lib/components-registry.tsx`
+- [ ] Adicionado ao `componentsRegistry` com `category: "blocks"`
+- [ ] Executado `npm run sync-registry` para atualizar `registry.json`
+- [ ] Verificado que o bloco aparece na categoria de blocos
+- [ ] Design responsivo testado
+- [ ] Dependências verificadas em `registry.json`
 
 ---
 
-## Registry Sync Details
+## Dicas
 
-The `sync-registry.js` script automatically:
+1. **Convenção de Nomenclatura:**
+   - Use kebab-case para IDs de componentes (ex.: `novo-componente`, `secao-hero`)
+   - Use PascalCase para nomes de componentes (ex.: `NovoComponente`, `SecaoHero`)
+   - Nomes de arquivos devem corresponder aos IDs de componentes
 
-1. **Parses** `lib/components-registry.tsx` to extract component metadata
-2. **Detects** dependencies from component file imports
-3. **Maps** categories to registry types:
+2. **Dependências:**
+   - O script de sincronização detecta automaticamente dependências de importações
+   - `registryDependencies` são detectadas de importações `@/components/ui/`
+   - `dependencies` externas são detectadas de importações de pacotes npm
+   - Sempre verifique dependências após sincronizar
+
+3. **Metadados do Componente:**
+   - Forneça campos `description` claros e descritivos
+   - Adicione `tags` relevantes para melhor pesquisabilidade
+   - Defina `duration` e `easing` apropriados para animações
+   - Use `display: false` para componentes que precisam de correções
+
+4. **Qualidade do Código:**
+   - Siga as melhores práticas do TypeScript
+   - Use padrões adequados do React (hooks, composição)
+   - Garanta acessibilidade (rótulos ARIA, navegação por teclado)
+   - Suporte a preferências de movimento reduzido quando aplicável
+   - Torne componentes responsivos
+
+5. **Teste:**
+   - Sempre teste componentes após adicionar
+   - Verifique se o componente aparece na UI
+   - Teste em diferentes tamanhos de tela
+   - Verifique o console do navegador para erros
+   - Verifique se as dependências estão corretamente listadas
+
+6. **Script de Sincronização:**
+   - Execute `npm run sync-registry` após adicionar novos componentes
+   - O script preserva dependências existentes
+   - Verifique a saída para avisos ou erros
+   - Verifique se `registry.json` foi atualizado corretamente
+
+---
+
+## Detalhes da Sincronização do Registro
+
+O script `sync-registry.js` automaticamente:
+
+1. **Analisa** `lib/components-registry.tsx` para extrair metadados do componente
+2. **Detecta** dependências de importações de arquivos de componentes
+3. **Mapeia** categorias para tipos de registro:
    - `microinteractions` → `registry:ui`
    - `components` → `registry:component`
    - `page` → `registry:page`
    - `data` → `registry:ui`
    - `decorative` → `registry:ui`
    - `blocks` → `registry:block`
-4. **Updates** `registry.json` with new/updated entries
-5. **Preserves** existing dependencies if they exist
+4. **Atualiza** `registry.json` com entradas novas/atualizadas
+5. **Preserva** dependências existentes se elas existirem
 
-**Important:** Always run `npm run sync-registry` after adding new components to ensure `registry.json` stays in sync.
-
----
-
-## Need Help?
-
-If you encounter issues:
-
-1. **Check existing components** for reference patterns
-2. **Verify file paths** match the `codePath` in registry
-3. **Ensure TypeScript types** match the `Component` interface
-4. **Run the linter** to catch errors: `npm run lint`
-5. **Check browser console** for runtime errors
-6. **Verify dependencies** are correctly listed in `registry.json`
-7. **Test the sync script** output for warnings
+**Importante:** Sempre execute `npm run sync-registry` após adicionar novos componentes para garantir que `registry.json` fique sincronizado.
 
 ---
 
-## Code Style
+## Precisa de Ajuda?
 
-- Use TypeScript for all components
-- Follow React best practices
-- Use functional components with hooks
-- Prefer composition over inheritance
-- Use meaningful variable and function names
-- Add comments for complex logic
-- Keep components focused and single-purpose
+Se encontrar problemas:
 
----
-
-## Accessibility
-
-When creating components, consider:
-
-- **Keyboard Navigation:** Ensure all interactive elements are keyboard accessible
-- **Screen Readers:** Add appropriate ARIA labels and roles
-- **Reduced Motion:** Respect `prefers-reduced-motion` media query
-- **Focus Management:** Provide visible focus indicators
-- **Color Contrast:** Ensure sufficient contrast ratios
-- **Semantic HTML:** Use appropriate HTML elements
+1. **Verifique componentes existentes** para padrões de referência
+2. **Verifique caminhos de arquivo** correspondem ao `codePath` no registro
+3. **Garanta tipos TypeScript** correspondem à interface `Component`
+4. **Execute o linter** para capturar erros: `npm run lint`
+5. **Verifique console do navegador** para erros de runtime
+6. **Verifique dependências** estão corretamente listadas em `registry.json`
+7. **Teste a saída do script de sincronização** para avisos
 
 ---
 
-Thank you for contributing to UITripleD! 🎉
+## Estilo de Código
+
+- Use TypeScript para todos os componentes
+- Siga as melhores práticas do React
+- Use componentes funcionais com hooks
+- Prefira composição sobre herança
+- Use nomes significativos para variáveis e funções
+- Adicione comentários para lógica complexa
+- Mantenha componentes focados e de propósito único
+
+---
+
+## Acessibilidade
+
+Ao criar componentes, considere:
+
+- **Navegação por Teclado:** Garanta que todos os elementos interativos sejam acessíveis por teclado
+- **Leitores de Tela:** Adicione rótulos e papéis ARIA apropriados
+- **Movimento Reduzido:** Respeite a consulta de mídia `prefers-reduced-motion`
+- **Gerenciamento de Foco:** Forneça indicadores de foco visíveis
+- **Contraste de Cor:** Garanta proporções de contraste suficientes
+- **HTML Semântico:** Use elementos HTML apropriados
+
+---
+
+Obrigado por contribuir com o UITripleD! 🎉

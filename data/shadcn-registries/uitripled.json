@@ -1,0 +1,13 @@
+{
+  "handle": "uitripled",
+  "name": "@uitripled",
+  "url": "https://ui.tripled.work",
+  "title": "UI Tripled",
+  "description": "Open-source, production-ready UI components and blocks powered by shadcn/ui and Framer Motion.",
+  "source": "https://ui.shadcn.com/docs/directory",
+  "registry": {
+    "manifestUrl": "https://raw.githubusercontent.com/moumen-soliman/uitripled/master/registry.json",
+    "itemUrlPattern": "https://ui.tripled.work/r/${name}.json",
+    "cliBaseUrl": "https://ui.tripled.work/r/${name}.json"
+  }
+}

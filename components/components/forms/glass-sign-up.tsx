@@ -39,17 +39,17 @@ export function GlassSignUpCard() {
       />
       <div className="mb-8 text-center">
         <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-border/60 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.28em] text-muted-foreground">
-          Sign Up
+          Cadastrar-se
         </div>
         <h1
           id="glass-sign-up-title"
           className="mt-3 text-2xl font-semibold text-foreground sm:text-3xl"
         >
-          Create your account
+          Crie sua conta
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Start building expressive interfaces. Choose a provider or sign up
-          with email.
+          Comece a construir interfaces expressivas. Escolha um provedor ou
+          cadastre-se com e-mail.
         </p>
       </div>
 
@@ -59,7 +59,7 @@ export function GlassSignUpCard() {
             key={provider.name}
             variant="outline"
             className="flex items-center justify-center gap-2 rounded-full border-border/60 bg-card/70 text-sm text-foreground transition-transform duration-300 hover:-translate-y-1 hover:text-primary"
-            aria-label={`Continue with ${provider.name}`}
+            aria-label={`Continuar com ${provider.name}`}
           >
             <provider.icon className="h-4 w-4" aria-hidden />
             <span className="hidden sm:inline">{provider.name}</span>
@@ -70,62 +70,62 @@ export function GlassSignUpCard() {
       <div className="mb-6 flex items-center gap-3">
         <div className="h-px flex-1 bg-border/70" />
         <span className="text-xs uppercase tracking-[0.34em] text-muted-foreground">
-          or
+          ou
         </span>
         <div className="h-px flex-1 bg-border/70" />
       </div>
 
       <form className="grid gap-6 sm:grid-cols-2" onSubmit={handleSubmit}>
         <div className="space-y-2 sm:col-span-1">
-          <Label htmlFor="first-name">First name</Label>
+          <Label htmlFor="first-name">Nome</Label>
           <Input
             id="first-name"
             name="firstName"
-            placeholder="Alex"
+            placeholder="João"
             autoComplete="given-name"
             required
             className="h-11 rounded-2xl border-border/60 bg-background/60 px-4"
           />
         </div>
         <div className="space-y-2 sm:col-span-1">
-          <Label htmlFor="last-name">Last name</Label>
+          <Label htmlFor="last-name">Sobrenome</Label>
           <Input
             id="last-name"
             name="lastName"
-            placeholder="Johnson"
+            placeholder="Silva"
             autoComplete="family-name"
             required
             className="h-11 rounded-2xl border-border/60 bg-background/60 px-4"
           />
         </div>
         <div className="space-y-2 sm:col-span-2">
-          <Label htmlFor="sign-up-email">Email address</Label>
+          <Label htmlFor="sign-up-email">Endereço de e-mail</Label>
           <Input
             id="sign-up-email"
             type="email"
-            placeholder="you@example.com"
+            placeholder="voce@exemplo.com"
             autoComplete="email"
             required
             className="h-11 rounded-2xl border-border/60 bg-background/60 px-4"
           />
         </div>
         <div className="space-y-2 sm:col-span-1">
-          <Label htmlFor="sign-up-password">Password</Label>
+          <Label htmlFor="sign-up-password">Senha</Label>
           <Input
             id="sign-up-password"
             type="password"
-            placeholder="Create a password"
+            placeholder="Crie uma senha"
             autoComplete="new-password"
             required
             className="h-11 rounded-2xl border-border/60 bg-background/60 px-4"
           />
         </div>
         <div className="space-y-2 sm:col-span-1">
-          <Label htmlFor="sign-up-confirm-password">Confirm password</Label>
+          <Label htmlFor="sign-up-confirm-password">Confirmar senha</Label>
           <Input
             id="sign-up-confirm-password"
             type="password"
-            placeholder="Repeat password"
+            placeholder="Repita a senha"
             autoComplete="new-password"
             required
             className="h-11 rounded-2xl border-border/60 bg-background/60 px-4"
@@ -140,19 +140,19 @@ export function GlassSignUpCard() {
               onCheckedChange={(checked) => setAcceptedTerms(Boolean(checked))}
             />
             <span>
-              I agree to the{" "}
+              Concordo com os{" "}
               <button
                 type="button"
                 className="text-primary underline-offset-4 hover:underline"
               >
-                terms of service
+                termos de serviço
               </button>{" "}
-              and{" "}
+              e{" "}
               <button
                 type="button"
                 className="text-primary underline-offset-4 hover:underline"
               >
-                privacy policy
+                política de privacidade
               </button>
               .
             </span>
@@ -165,18 +165,18 @@ export function GlassSignUpCard() {
             disabled={!acceptedTerms}
             className="w-full rounded-full bg-primary px-6 py-3 text-primary-foreground shadow-[0_20px_60px_-30px_rgba(79,70,229,0.75)] transition-transform duration-300 hover:-translate-y-1 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            Create account
+            Criar conta
           </Button>
         </div>
       </form>
 
       <p className="mt-6 text-center text-xs text-muted-foreground">
-        Already have an account?{" "}
+        Já tem uma conta?{" "}
         <button
           type="button"
           className="text-primary underline-offset-4 hover:underline"
         >
-          Sign in
+          Entrar
         </button>
       </p>
     </motion.div>

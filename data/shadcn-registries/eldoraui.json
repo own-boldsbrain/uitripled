@@ -1,0 +1,8 @@
+{
+  "handle": "eldoraui",
+  "name": "@eldoraui",
+  "url": "https://eldoraui.site",
+  "title": "Eldora UI",
+  "description": "Open-source modern UI component library for React built with TypeScript, Tailwind CSS, and Framer Motion.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

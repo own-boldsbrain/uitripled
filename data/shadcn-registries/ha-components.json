@@ -1,0 +1,8 @@
+{
+  "handle": "ha-components",
+  "name": "@ha-components",
+  "url": "https://hacomponents.keshuac.com",
+  "title": "HA Components",
+  "description": "Customisable components to build Home Assistant dashboards.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

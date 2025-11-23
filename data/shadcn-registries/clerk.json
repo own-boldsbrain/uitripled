@@ -1,0 +1,8 @@
+{
+  "handle": "clerk",
+  "name": "@clerk",
+  "url": "https://clerk.com/docs/guides/development/shadcn-cli",
+  "title": "Clerk",
+  "description": "Auth and user management for React, Next.js and modern web. Integrations and guides for shadcn CLI.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

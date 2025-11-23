@@ -10,9 +10,9 @@ export function AnimatedCheckbox() {
   return (
     <div className="flex flex-col gap-4">
       {[
-        "Subscribe to newsletter",
-        "Agree to terms and conditions",
-        "Enable notifications",
+        "Inscrever-se na newsletter",
+        "Concordar com os termos e condições",
+        "Habilitar notificações",
       ].map((label, index) => (
         <label key={label} className="flex cursor-pointer items-center gap-3">
           <motion.div

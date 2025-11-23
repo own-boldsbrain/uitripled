@@ -2,15 +2,15 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "typewriter-text",
   "type": "registry:ui",
-  "title": "Typewriter Effect",
-  "description": "Text that types out character by character",
+  "title": "Efeito Máquina de Escrever",
+  "description": "Texto que digita caractere por caractere",
   "dependencies": [
     "framer-motion"
   ],
   "files": [
     {
       "path": "components/decorative/text/typewriter.tsx",
-      "content": "\"use client\";\n\nimport { motion, useReducedMotion } from \"framer-motion\";\n\nconst text = \"Welcome to UI-TripleD...\";\n\nexport function TypewriterText() {\n  const shouldReduceMotion = useReducedMotion();\n\n  if (shouldReduceMotion) {\n    return (\n      <div className=\"flex items-center justify-center p-12\">\n        <h2 className=\"text-3xl font-bold\">{text}</h2>\n      </div>\n    );\n  }\n\n  const container = {\n    hidden: { opacity: 0 },\n    visible: {\n      opacity: 1,\n      transition: {\n        staggerChildren: 0.05,\n      },\n    },\n  };\n\n  const child = {\n    hidden: { opacity: 0 },\n    visible: { opacity: 1 },\n  };\n\n  return (\n    <div className=\"flex items-center justify-center p-12\">\n      <motion.h2\n        variants={container}\n        initial=\"hidden\"\n        animate=\"visible\"\n        className=\"text-3xl font-bold\"\n        aria-label={text}\n      >\n        {text.split(\"\").map((char, index) => (\n          <motion.span key={index} variants={child} aria-hidden=\"true\">\n            {char}\n          </motion.span>\n        ))}\n        <span className=\"sr-only\">{text}</span>\n      </motion.h2>\n    </div>\n  );\n}\n",
+      "content": "\"use client\";\r\n\r\nimport { motion, useReducedMotion } from \"framer-motion\";\r\n\r\nconst text = \"Welcome to UI-TripleD...\";\r\n\r\nexport function TypewriterText() {\r\n  const shouldReduceMotion = useReducedMotion();\r\n\r\n  if (shouldReduceMotion) {\r\n    return (\r\n      <div className=\"flex items-center justify-center p-12\">\r\n        <h2 className=\"text-3xl font-bold\">{text}</h2>\r\n      </div>\r\n    );\r\n  }\r\n\r\n  const container = {\r\n    hidden: { opacity: 0 },\r\n    visible: {\r\n      opacity: 1,\r\n      transition: {\r\n        staggerChildren: 0.05,\r\n      },\r\n    },\r\n  };\r\n\r\n  const child = {\r\n    hidden: { opacity: 0 },\r\n    visible: { opacity: 1 },\r\n  };\r\n\r\n  return (\r\n    <div className=\"flex items-center justify-center p-12\">\r\n      <motion.h2\r\n        variants={container}\r\n        initial=\"hidden\"\r\n        animate=\"visible\"\r\n        className=\"text-3xl font-bold\"\r\n        aria-label={text}\r\n      >\r\n        {text.split(\"\").map((char, index) => (\r\n          <motion.span key={index} variants={child} aria-hidden=\"true\">\r\n            {char}\r\n          </motion.span>\r\n        ))}\r\n        <span className=\"sr-only\">{text}</span>\r\n      </motion.h2>\r\n    </div>\r\n  );\r\n}\r\n",
       "type": "registry:ui",
       "target": "components/decorative/text/typewriter"
     }

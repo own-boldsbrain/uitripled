@@ -7,33 +7,33 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     name: "Sarah Johnson",
-    role: "CEO at TechStart",
+    role: "CEO da TechStart",
     content:
-      "Outstanding work! The project was delivered on time and exceeded our expectations. The attention to detail and code quality is exceptional.",
+      "Trabalho excepcional! O projeto foi entregue no prazo e superou nossas expectativas. A atenção aos detalhes e a qualidade do código são excepcionais.",
     rating: 5,
     avatar: "SJ",
   },
   {
     name: "Michael Chen",
-    role: "Product Manager at Innovate",
+    role: "Gerente de Produto na Innovate",
     content:
-      "A true professional who understands both the technical and business aspects. Communication was excellent throughout the entire project.",
+      "Um verdadeiro profissional que entende tanto os aspectos técnicos quanto os de negócio. A comunicação foi excelente durante todo o projeto.",
     rating: 5,
     avatar: "MC",
   },
   {
     name: "Emily Rodriguez",
-    role: "Founder of DesignHub",
+    role: "Fundadora da DesignHub",
     content:
-      "Incredible problem-solving skills and creativity. Turned our vision into reality with a beautiful, functional application.",
+      "Habilidades incríveis de resolução de problemas e criatividade. Transformou nossa visão em realidade com uma aplicação bonita e funcional.",
     rating: 5,
     avatar: "ER",
   },
   {
     name: "David Kim",
-    role: "CTO at DataFlow",
+    role: "CTO da DataFlow",
     content:
-      "Expert-level knowledge across the full stack. The scalable architecture delivered will serve our company for years to come.",
+      "Conhecimento de nível especialista em toda a pilha. A arquitetura escalável entregue servirá nossa empresa por anos.",
     rating: 5,
     avatar: "DK",
   },

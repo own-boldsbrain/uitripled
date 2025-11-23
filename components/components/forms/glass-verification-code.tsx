@@ -51,17 +51,17 @@ export function GlassVerificationCodeCard() {
       />
       <div className="mb-8 text-center">
         <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-border/60 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.28em] text-muted-foreground">
-          Verify Email
+          Verificar E-mail
         </div>
         <h1
           id="glass-verification-title"
           className="mt-3 text-2xl font-semibold text-foreground sm:text-3xl"
         >
-          Enter verification code
+          Digite o código de verificação
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          We sent a 6-digit code to your inbox. Enter it below to confirm your
-          email.
+          Enviamos um código de 6 dígitos para sua caixa de entrada. Digite-o
+          abaixo para confirmar seu e-mail.
         </p>
       </div>
 
@@ -77,7 +77,7 @@ export function GlassVerificationCodeCard() {
               value={digit}
               onChange={(event) => handleChange(event.target.value, index)}
               className="h-14 w-full rounded-2xl border-border/60 bg-background/60 text-center text-lg font-semibold"
-              aria-label={`Verification digit ${index + 1}`}
+              aria-label={`Dígito de verificação ${index + 1}`}
             />
           ))}
         </div>
@@ -86,7 +86,7 @@ export function GlassVerificationCodeCard() {
           type="submit"
           className="w-full rounded-full bg-primary px-6 py-3 text-primary-foreground shadow-[0_18px_55px_-30px_rgba(79,70,229,0.75)] transition-transform duration-300 hover:-translate-y-1"
         >
-          Verify code
+          Verificar código
         </Button>
       </form>
 
@@ -96,7 +96,7 @@ export function GlassVerificationCodeCard() {
         animate={{ opacity: status === "verified" ? 1 : 0 }}
         className="mt-6 text-center text-xs text-primary/80"
       >
-        Verification successful! Redirecting you now.
+        Verificação bem-sucedida! Redirecionando agora.
       </motion.p>
       <motion.p
         role="status"
@@ -104,7 +104,7 @@ export function GlassVerificationCodeCard() {
         animate={{ opacity: status === "error" ? 1 : 0 }}
         className="mt-6 text-center text-xs text-rose-400/80"
       >
-        Please fill every digit before verifying.
+        Preencha todos os dígitos antes de verificar.
       </motion.p>
 
       <div className="mt-6 flex items-center justify-between text-xs text-muted-foreground">
@@ -113,9 +113,9 @@ export function GlassVerificationCodeCard() {
           className="text-primary underline-offset-4 hover:underline"
           onClick={resetCode}
         >
-          Resend code
+          Reenviar código
         </button>
-        <span aria-live="polite">Code: {combinedCode || "______"}</span>
+        <span aria-live="polite">Código: {combinedCode || "______"}</span>
       </div>
     </motion.div>
   );

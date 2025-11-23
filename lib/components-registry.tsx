@@ -145,8 +145,8 @@ import { LiquidCursor } from "@/components/liquid-cursor";
 export const componentsRegistry: Component[] = [
   {
     id: "scale-hover-button",
-    name: "Scale Hover Button",
-    description: "A button that scales up smoothly on hover",
+    name: "Botão de Escala ao Passar o Mouse",
+    description: "Um botão que aumenta suavemente ao passar o mouse",
     category: "microinteractions",
     tags: ["button", "hover", "scale"],
     component: ScaleHoverButton,
@@ -157,8 +157,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glowy-waves-hero",
-    name: "Glowy Waves Hero",
-    description: "Hero section with glowy waves effect",
+    name: "Hero com Ondas Brilhantes",
+    description: "Seção hero com efeito de ondas brilhantes",
     category: "blocks",
     tags: ["hero", "landing", "glowy", "waves"],
     component: GlowyWavesHero,
@@ -169,8 +169,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "ripple-click-button",
-    name: "Ripple Click Effect",
-    description: "Material design inspired ripple effect on click",
+    name: "Efeito de Ondulação ao Clicar",
+    description: "Efeito de ondulação inspirado no Material Design ao clicar",
     category: "microinteractions",
     tags: ["button", "click", "ripple"],
     component: RippleClickButton,
@@ -181,8 +181,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "elastic-switch",
-    name: "Elastic Toggle Switch",
-    description: "Toggle switch with elastic spring animation",
+    name: "Interruptor Elástico",
+    description: "Interruptor com animação elástica de mola",
     category: "microinteractions",
     tags: ["toggle", "switch", "spring"],
     component: ElasticSwitch,
@@ -193,8 +193,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "heart-favorite",
-    name: "Heart Favorite",
-    description: "Animated heart icon for like/favorite actions",
+    name: "Coração Favorito",
+    description: "Ícone de coração animado para ações de curtir/favoritar",
     category: "microinteractions",
     tags: ["icon", "favorite", "like"],
     component: HeartFavorite,
@@ -205,8 +205,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "fade-slide-modal",
-    name: "Fade & Slide Modal",
-    description: "Modal with fade backdrop and slide-up animation",
+    name: "Modal de Desvanecimento e Deslizamento",
+    description:
+      "Modal com fundo de desvanecimento e animação de deslizamento para cima",
     category: "components",
     tags: ["modal", "overlay", "slide"],
     component: FadeSlideModal,
@@ -217,8 +218,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "staggered-dropdown",
-    name: "Staggered Dropdown",
-    description: "Dropdown menu with staggered item animations",
+    name: "Menu Suspenso Escalado",
+    description: "Menu suspenso com animações escaladas de itens",
     category: "components",
     tags: ["dropdown", "menu", "stagger"],
     component: StaggeredDropdown,
@@ -229,8 +230,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "hover-expand-card",
-    name: "Hover Expand Card",
-    description: "Card that lifts and expands on hover",
+    name: "Cartão de Expansão ao Passar o Mouse",
+    description: "Cartão que se eleva e expande ao passar o mouse",
     category: "components",
     tags: ["card", "hover", "lift"],
     component: HoverExpandCard,
@@ -241,9 +242,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "detail-task-card",
-    name: "Detail Task Card",
+    name: "Cartão de Detalhes de Tarefa",
     description:
-      "Task management detail panel with animated assignee chips and editor controls",
+      "Painel de detalhes de gerenciamento de tarefas com chips de responsável animados e controles de editor",
     category: "components",
     tags: ["task", "management", "form", "card", "dashboard"],
     component: DetailTaskCard,
@@ -254,9 +255,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "ecommerce-highlight-card",
-    name: "Ecommerce Highlight Card",
+    name: "Cartão de Destaque de E-commerce",
     description:
-      "Product spotlight card with blurred border, bundle selector, and fulfillment details",
+      "Cartão de destaque de produto com borda borrada, seletor de pacote e detalhes de cumprimento",
     category: "components",
     tags: ["card", "product", "ecommerce", "bundle"],
     component: EcommerceHighlightCard,
@@ -267,9 +268,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "notification-center",
-    name: "Notification Center",
+    name: "Centro de Notificações",
     description:
-      "Multi-variant notification stack with accessible announcements, actions, and motion states",
+      "Pilha de notificações multi-variante com anúncios acessíveis, ações e estados de movimento",
     category: "components",
     tags: ["notification", "alerts", "toast", "stack", "accessible", "shadcn"],
     component: NotificationCenter,
@@ -280,8 +281,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "liquid-cursor",
-    name: "Liquid Cursor",
-    description: "A liquid-like cursor effect that mixes colors on movement",
+    name: "Cursor Líquido",
+    description: "Um efeito de cursor líquido que mistura cores no movimento",
     category: "decorative",
     tags: ["cursor", "liquid", "effect", "canvas"],
     component: LiquidCursor,
@@ -292,9 +293,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "weather-dashboard",
-    name: "Weather Dashboard",
+    name: "Painel de Clima",
     description:
-      "Immersive weather dashboard with hourly charting, weekly outlook, and live air-quality alerts",
+      "Painel de clima imersivo com gráficos horários, previsão semanal e alertas de qualidade do ar ao vivo",
     category: "components",
     tags: ["weather", "dashboard", "forecast", "charts", "environment", "data"],
     component: WeatherDashboard,
@@ -305,8 +306,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "browse-folder",
-    name: "Browse Folder",
-    description: "Folder browser with animated tabs and content",
+    name: "Pasta de Navegação",
+    description: "Navegador de pastas com abas animadas e conteúdo",
     category: "components",
     tags: ["folder", "browser", "tabs", "content"],
     component: BrowseFolder,
@@ -317,8 +318,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "staggered-hero",
-    name: "Staggered Text Hero",
-    description: "Hero section with staggered text reveal",
+    name: "Hero com Texto Escalado",
+    description: "Seção hero com revelação de texto escalada",
     category: "page",
     tags: ["hero", "text", "stagger"],
     component: StaggeredHero,
@@ -329,9 +330,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "about-us-page",
-    name: "About Us Page",
+    name: "Página Sobre Nós",
     description:
-      "Glassmorphism about page showcasing mission, values, and leadership with motion accents.",
+      "Página sobre nós com glassmorfismo exibindo missão, valores e liderança com acentos de movimento.",
     category: "page",
     tags: ["about", "page", "team", "values"],
     component: AboutUsPage,
@@ -342,8 +343,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "counter-up",
-    name: "Animated Counter",
-    description: "Number counter that animates up from zero",
+    name: "Contador Animado",
+    description: "Contador numérico que anima de zero para cima",
     category: "data",
     tags: ["counter", "number", "progress"],
     component: CounterUp,
@@ -354,8 +355,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "typewriter-text",
-    name: "Typewriter Effect",
-    description: "Text that types out character by character",
+    name: "Efeito Máquina de Escrever",
+    description: "Texto que digita caractere por caractere",
     category: "decorative",
     tags: ["text", "typewriter", "reveal"],
     component: TypewriterText,
@@ -366,8 +367,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "magnetic-button",
-    name: "Magnetic Button",
-    description: "Button that magnetically follows your cursor",
+    name: "Botão Magnético",
+    description: "Botão que segue magneticamente o cursor",
     category: "microinteractions",
     tags: ["button", "magnetic", "interactive", "shadcn"],
     component: MagneticButton,
@@ -378,8 +379,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "shimmer-button",
-    name: "Shimmer Button",
-    description: "Button with continuous shimmer effect",
+    name: "Botão Brilhante",
+    description: "Botão com efeito de brilho contínuo",
     category: "microinteractions",
     tags: ["button", "shimmer", "gradient", "shadcn"],
     component: ShimmerButton,
@@ -390,8 +391,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "preview-details-card",
-    name: "Preview Details Card",
-    description: "Link card that reveals a smooth detail preview box on hover",
+    name: "Cartão de Pré-visualização de Detalhes",
+    description:
+      "Cartão de link que revela uma caixa de pré-visualização suave ao passar o mouse",
     category: "microinteractions",
     tags: ["link", "hover", "preview", "card", "minimal"],
     component: PreviewDetailsCard,
@@ -402,8 +404,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "animated-badge",
-    name: "Animated Badge",
-    description: "Badge with scale and spin animation",
+    name: "Distintivo Animado",
+    description: "Distintivo com animação de escala e rotação",
     category: "microinteractions",
     tags: ["badge", "icon", "spin", "shadcn"],
     component: AnimatedBadge,
@@ -414,8 +416,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "animated-card-stack",
-    name: "Animated Card Stack",
-    description: "Stacked cards that expand on hover",
+    name: "Pilha de Cartões Animada",
+    description: "Cartões empilhados que se expandem ao passar o mouse",
     category: "components",
     tags: ["card", "stack", "hover", "shadcn"],
     component: AnimatedCardStack,
@@ -426,8 +428,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "credit-card",
-    name: "Credit Card",
-    description: "3D animated credit card with flip animation to show CVV",
+    name: "Cartão de Crédito",
+    description:
+      "Cartão de crédito animado em 3D com animação de virada para mostrar CVV",
     category: "components",
     tags: ["card", "3d", "flip", "payment", "credit"],
     component: CreditCard,
@@ -438,9 +441,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "image-slider-card",
-    name: "Accessible Image Slider Card",
+    name: "Cartão de Slider de Imagens Acessível",
     description:
-      "Image carousel card with keyboard support, reduced motion handling, and screen reader-friendly labels",
+      "Cartão de carrossel de imagens com suporte a teclado, tratamento de movimento reduzido e rótulos amigáveis para leitores de tela",
     category: "components",
     tags: ["carousel", "image", "card", "accessibility", "keyboard"],
     component: ImageSliderCard,
@@ -451,8 +454,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "floating-label-input",
-    name: "Floating Label Input",
-    description: "Input with animated floating label",
+    name: "Campo de Entrada com Rótulo Flutuante",
+    description: "Campo de entrada com rótulo flutuante animado",
     category: "components",
     tags: ["input", "form", "label", "shadcn"],
     component: FloatingLabelInput,
@@ -463,8 +466,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "animated-tabs",
-    name: "Animated Tabs",
-    description: "Tabs with sliding indicator animation",
+    name: "Abas Animadas",
+    description: "Abas com animação de indicador deslizante",
     category: "components",
     tags: ["tabs", "navigation", "slide", "shadcn"],
     component: AnimatedTabs,
@@ -475,8 +478,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "animated-list",
-    name: "Animated List",
-    description: "List with staggered item animations",
+    name: "Lista Animada",
+    description: "Lista com animações escaladas de itens",
     category: "components",
     tags: ["list", "stagger", "checkmarks", "shadcn"],
     component: AnimatedList,
@@ -487,8 +490,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "chat-app",
-    name: "Chat App",
-    description: "Fully functional chat interface with animated messages",
+    name: "Aplicativo de Chat",
+    description:
+      "Interface de chat totalmente funcional com mensagens animadas",
     category: "components",
     tags: ["chat", "messages", "messaging", "ui", "shadcn"],
     component: ChatApp,
@@ -499,9 +503,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "messenger",
-    name: "Messenger",
+    name: "Mensageiro",
     description:
-      "Glassmorphism messenger workspace with accessible motion and quick replies",
+      "Espaço de trabalho de mensageiro com glassmorfismo, movimento acessível e respostas rápidas",
     category: "components",
     tags: ["chat", "messenger", "communication", "glassmorphism", "shadcn"],
     component: Messenger,
@@ -512,9 +516,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "ai-chat-interface",
-    name: "AI Chat Interface",
+    name: "Interface de Chat com IA",
     description:
-      "Chat input with attachments, model selector, and accessible controls",
+      "Entrada de chat com anexos, seletor de modelo e controles acessíveis",
     category: "components",
     tags: ["chat", "ai", "input", "attachments", "shadcn"],
     component: AIChatInterface,
@@ -525,9 +529,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "stocks-dashboard",
-    name: "Stocks Dashboard",
+    name: "Painel de Ações",
     description:
-      "Interactive stock portfolio dashboard with status cards, data table, and detailed stock information modal",
+      "Painel interativo de portfólio de ações com cartões de status, tabela de dados e modal de informações detalhadas de ações",
     category: "blocks",
     tags: [
       "dashboard",
@@ -546,9 +550,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "dashboard",
-    name: "Dashboard",
+    name: "Painel",
     description:
-      "Interactive stock portfolio dashboard with status cards, data table, and detailed stock information modal",
+      "Painel interativo de portfólio de ações com cartões de status, tabela de dados e modal de informações detalhadas de ações",
     category: "blocks",
     tags: [
       "dashboard",
@@ -567,8 +571,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "toast-notification",
-    name: "Toast Notification",
-    description: "Animated toast notification popup",
+    name: "Notificação Toast",
+    description: "Popup de notificação toast animada",
     category: "page",
     tags: ["toast", "notification", "alert", "shadcn"],
     component: ToastNotification,
@@ -579,8 +583,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "animated-progress",
-    name: "Animated Progress Bar",
-    description: "Progress bar with smooth animation",
+    name: "Barra de Progresso Animada",
+    description: "Barra de progresso com animação suave",
     category: "data",
     tags: ["progress", "loading", "bar", "shadcn"],
     component: AnimatedProgress,
@@ -591,9 +595,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "cash-flow-chart",
-    name: "Accessible Cash Flow Chart",
+    name: "Gráfico de Fluxo de Caixa Acessível",
     description:
-      "Interactive cash flow bar chart with keyboard focus, tooltips, and screen reader support",
+      "Gráfico de barras interativo de fluxo de caixa com foco no teclado, dicas e suporte a leitores de tela",
     category: "data",
     tags: ["chart", "bar", "cashflow", "finance", "accessible"],
     component: CashFlowChart,
@@ -604,8 +608,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "gradient-animation",
-    name: "Gradient Animation",
-    description: "Smoothly transitioning gradient background",
+    name: "Animação de Gradiente",
+    description: "Fundo de gradiente com transição suave",
     category: "decorative",
     tags: ["gradient", "background", "color"],
     component: GradientAnimation,
@@ -617,8 +621,9 @@ export const componentsRegistry: Component[] = [
   // NEW: 20 Additional Components
   {
     id: "password-input",
-    name: "Password Input",
-    description: "Password input with toggle visibility and strength indicator",
+    name: "Campo de Senha",
+    description:
+      "Campo de senha com alternância de visibilidade e indicador de força",
     category: "components",
     tags: ["input", "password", "form", "security", "shadcn"],
     component: PasswordInput,
@@ -629,8 +634,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "animated-dialog",
-    name: "Animated Dialog",
-    description: "Modal dialog with backdrop fade and spring animation",
+    name: "Diálogo Animado",
+    description: "Diálogo modal com desvanecimento de fundo e animação de mola",
     category: "components",
     tags: ["modal", "dialog", "overlay", "popup", "shadcn"],
     component: AnimatedDialog,
@@ -641,9 +646,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "bottom-modal",
-    name: "Bottom Modal",
+    name: "Modal Inferior",
     description:
-      "Cute bottom-centered modal with smooth slide-up animation and glassmorphism design",
+      "Modal inferior fofo com animação suave de deslizamento para cima e design glassmorfismo",
     category: "components",
     tags: ["modal", "bottom", "slide", "overlay", "glassmorphism"],
     component: BottomModal,
@@ -654,8 +659,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "animated-tooltip",
-    name: "Animated Tooltip",
-    description: "Tooltip with delay and slide animation",
+    name: "Dica Animada",
+    description: "Dica com atraso e animação de deslizamento",
     category: "components",
     tags: ["tooltip", "hint", "info", "popup"],
     component: AnimatedTooltip,
@@ -666,8 +671,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "animated-navbar",
-    name: "Animated Navbar",
-    description: "Navigation bar with animated underline indicator",
+    name: "Barra de Navegação Animada",
+    description: "Barra de navegação com indicador de sublinhado animado",
     category: "components",
     tags: ["navigation", "navbar", "menu", "tabs"],
     component: AnimatedNavbar,
@@ -678,9 +683,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "animated-profile-menu",
-    name: "Animated Profile Menu",
+    name: "Menu de Perfil Animado",
     description:
-      "Floating profile avatar that reveals quick action cards with smooth motion",
+      "Avatar de perfil flutuante que revela cartões de ação rápida com movimento suave",
     category: "components",
     tags: ["profile", "menu", "navigation", "avatar", "shadcn"],
     component: AnimatedProfileMenu,
@@ -691,8 +696,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "animated-sidebar",
-    name: "Animated Sidebar",
-    description: "Sidebar with slide-in animation and overlay",
+    name: "Barra Lateral Animada",
+    description: "Barra lateral com animação de deslizamento e sobreposição",
     category: "components",
     tags: ["sidebar", "navigation", "drawer", "menu"],
     component: AnimatedSidebar,
@@ -703,8 +708,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "animated-accordion",
-    name: "Animated Accordion",
-    description: "Accordion with smooth expand/collapse and rotate arrow",
+    name: "Sanfona Animada",
+    description: "Sanfona com expansão/colapso suave e seta rotativa",
     category: "components",
     tags: ["accordion", "collapse", "expand", "faq", "shadcn"],
     component: AnimatedAccordion,
@@ -715,8 +720,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "draggable-list",
-    name: "Draggable List",
-    description: "Reorderable list with drag and drop spring physics",
+    name: "Lista Arrastável",
+    description: "Lista reordenável com física de mola de arrastar e soltar",
     category: "components",
     tags: ["list", "drag", "reorder", "sortable"],
     component: DraggableList,
@@ -727,8 +732,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "hero-section",
-    name: "Hero Section",
-    description: "Hero section with staggered text and button reveal",
+    name: "Seção Hero",
+    description: "Seção hero com texto escalado e revelação de botão",
     category: "page",
     tags: ["hero", "landing", "stagger", "reveal"],
     component: HeroSection,
@@ -739,9 +744,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "scroll-reveal",
-    name: "Scroll Reveal",
+    name: "Revelação ao Rolar",
     description:
-      "Section that animates into view on scroll with intersection observer",
+      "Seção que anima na visualização ao rolar com observador de interseção",
     category: "page",
     tags: ["scroll", "reveal", "intersection", "fade"],
     component: ScrollReveal,
@@ -752,8 +757,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "floating-gradient",
-    name: "Floating Gradient",
-    description: "Animated floating gradient background effect",
+    name: "Gradiente Flutuante",
+    description: "Efeito de fundo de gradiente flutuante animado",
     category: "decorative",
     tags: ["gradient", "background", "floating", "animation"],
     component: FloatingGradient,
@@ -764,8 +769,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "avatar-group",
-    name: "Avatar Group",
-    description: "Stacked avatar group with hover reveal and tooltips",
+    name: "Grupo de Avatares",
+    description:
+      "Grupo de avatares empilhados com revelação ao passar o mouse e dicas",
     category: "components",
     tags: ["avatar", "user", "stack", "group", "shadcn"],
     component: AvatarGroup,
@@ -776,8 +782,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "animated-checkbox",
-    name: "Animated Checkbox",
-    description: "Checkbox with checkmark animation",
+    name: "Caixa de Seleção Animada",
+    description: "Caixa de seleção com animação de marca de seleção",
     category: "components",
     tags: ["checkbox", "form", "input", "select"],
     component: AnimatedCheckbox,
@@ -788,8 +794,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "animated-radio",
-    name: "Animated Radio",
-    description: "Radio button group with selection ripple",
+    name: "Botão de Opção Animado",
+    description: "Grupo de botões de opção com ondulação de seleção",
     category: "components",
     tags: ["radio", "form", "input", "select"],
     component: AnimatedRadio,
@@ -800,8 +806,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "animated-pagination",
-    name: "Animated Pagination",
-    description: "Pagination with smooth page transition indicator",
+    name: "Paginação Animada",
+    description: "Paginação com indicador de transição de página suave",
     category: "components",
     tags: ["pagination", "pages", "navigation"],
     component: AnimatedPagination,
@@ -812,8 +818,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "animated-select",
-    name: "Animated Select",
-    description: "Select dropdown with smooth open/close animation",
+    name: "Seleção Animada",
+    description: "Menu suspenso de seleção com animação suave de abrir/fechar",
     category: "components",
     tags: ["select", "dropdown", "form", "input", "shadcn"],
     component: AnimatedSelect,
@@ -824,9 +830,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glass-sign-in-card",
-    name: "Glass Sign-In Card",
+    name: "Cartão de Entrada com Vidro",
     description:
-      "Glassmorphic sign-in panel with social auth buttons and email form",
+      "Painel de entrada com glassmorfismo, botões de autenticação social e formulário de e-mail",
     category: "components",
     tags: ["auth", "form", "sign-in", "glassmorphism", "shadcn"],
     component: GlassSignInCard,
@@ -837,9 +843,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glass-sign-up-card",
-    name: "Glass Sign-Up Card",
+    name: "Cartão de Cadastro com Vidro",
     description:
-      "Glassmorphic sign-up flow with social providers, email fields, and terms checkbox",
+      "Fluxo de cadastro com glassmorfismo, provedores sociais, campos de e-mail e caixa de termos",
     category: "components",
     tags: ["auth", "form", "sign-up", "glassmorphism", "shadcn"],
     component: GlassSignUpCard,
@@ -850,9 +856,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glass-forgot-password-card",
-    name: "Glass Forgot Password Card",
+    name: "Cartão de Esqueci a Senha com Vidro",
     description:
-      "Reset-password screen with glassmorphic styling and status messaging",
+      "Tela de redefinição de senha com estilo glassmorfismo e mensagens de status",
     category: "components",
     tags: ["auth", "form", "reset", "password", "glassmorphism"],
     component: GlassForgotPasswordCard,
@@ -863,9 +869,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glass-verification-code-card",
-    name: "Glass Verification Code Card",
+    name: "Cartão de Código de Verificação com Vidro",
     description:
-      "Verification code entry with glassmorphic inputs, status messaging, and reduced-motion support",
+      "Entrada de código de verificação com entradas glassmorfismo, mensagens de status e suporte a movimento reduzido",
     category: "components",
     tags: ["auth", "verification", "input", "glassmorphism"],
     component: GlassVerificationCodeCard,
@@ -876,9 +882,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glass-profile-settings-card",
-    name: "Glass Profile Settings Card",
+    name: "Cartão de Configurações de Perfil com Vidro",
     description:
-      "Glassmorphic profile settings form with avatar upload, bio, and notification preferences",
+      "Formulário de configurações de perfil com glassmorfismo, upload de avatar, bio e preferências de notificação",
     category: "components",
     tags: ["profile", "settings", "form", "glassmorphism"],
     component: GlassProfileSettingsCard,
@@ -889,9 +895,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glass-account-settings-card",
-    name: "Glass Account Settings Card",
+    name: "Cartão de Configurações de Conta com Vidro",
     description:
-      "Account management card with subscription overview and billing actions in glassmorphic style",
+      "Cartão de gerenciamento de conta com visão geral de assinatura e ações de cobrança em estilo glassmorfismo",
     category: "components",
     tags: ["account", "subscription", "billing", "form", "glassmorphism"],
     component: GlassAccountSettingsCard,
@@ -902,8 +908,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "command-palette",
-    name: "Command Palette",
-    description: "Command palette with search and keyboard navigation",
+    name: "Paleta de Comandos",
+    description: "Paleta de comandos com pesquisa e navegação por teclado",
     category: "components",
     tags: ["command", "search", "keyboard", "shortcuts", "shadcn"],
     component: CommandPalette,
@@ -914,9 +920,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "multiple-accounts",
-    name: "Multiple Accounts Switcher",
+    name: "Alternador de Contas Múltiplas",
     description:
-      "Glassmorphic account switcher with animated dropdown and accessible listbox controls",
+      "Alternador de contas com glassmorfismo, menu suspenso animado e controles de caixa de lista acessíveis",
     category: "components",
     tags: ["accounts", "dropdown", "switcher", "glassmorphism"],
     component: MultipleAccounts,
@@ -927,9 +933,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "mac-searchbar",
-    name: "Mac Searchbar",
+    name: "Barra de Pesquisa Mac",
     description:
-      "Mac-style searchbar with animated dropdown, glassmorphism effects, and smooth transitions",
+      "Barra de pesquisa estilo Mac com menu suspenso animado, efeitos glassmorfismo e transições suaves",
     category: "components",
     tags: [
       "search",
@@ -947,8 +953,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "context-menu",
-    name: "Context Menu",
-    description: "Right-click context menu with nested items animation",
+    name: "Menu de Contexto",
+    description:
+      "Menu de contexto com clique direito e animação de itens aninhados",
     category: "components",
     tags: ["menu", "context", "right-click", "dropdown"],
     component: ContextMenu,
@@ -959,8 +966,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "simple-calendar",
-    name: "Simple Calendar",
-    description: "Calendar picker with date selection animation",
+    name: "Calendário Simples",
+    description: "Seletor de calendário com animação de seleção de data",
     category: "components",
     tags: ["calendar", "date", "picker", "form", "shadcn"],
     component: SimpleCalendar,
@@ -972,8 +979,8 @@ export const componentsRegistry: Component[] = [
   // NEW: 3 Additional Animated Sections
   {
     id: "stats-section",
-    name: "Stats Section",
-    description: "Animated statistics section with cards and counters",
+    name: "Seção de Estatísticas",
+    description: "Seção de estatísticas animada com cartões e contadores",
     category: "page",
     tags: ["stats", "numbers", "metrics", "cards", "shadcn"],
     component: StatsSection,
@@ -984,8 +991,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "testimonial-section",
-    name: "Testimonial Section",
-    description: "Carousel-style testimonial section with smooth transitions",
+    name: "Seção de Depoimentos",
+    description: "Seção de depoimentos estilo carrossel com transições suaves",
     category: "page",
     tags: ["testimonial", "carousel", "reviews", "cards", "shadcn"],
     component: TestimonialSection,
@@ -996,8 +1003,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "pricing-section",
-    name: "Pricing Section",
-    description: "Animated pricing cards with hover effects and feature lists",
+    name: "Seção de Preços",
+    description:
+      "Cartões de preços animados com efeitos de hover e listas de recursos",
     category: "page",
     tags: ["pricing", "plans", "cards", "hover", "shadcn"],
     component: PricingSection,
@@ -1009,9 +1017,9 @@ export const componentsRegistry: Component[] = [
   // NEW: 3 Additional Sections
   {
     id: "feature-grid-section",
-    name: "Feature Grid Section",
+    name: "Seção de Grade de Recursos",
     description:
-      "Animated feature grid with staggered card animations and icon reveals",
+      "Grade de recursos animada com animações escaladas de cartões e revelações de ícones",
     category: "page",
     tags: ["features", "grid", "cards", "stagger", "shadcn"],
     component: FeatureGridSection,
@@ -1022,9 +1030,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "faq-section",
-    name: "FAQ Section",
+    name: "Seção de FAQ",
     description:
-      "Animated FAQ section with expandable questions and smooth transitions",
+      "Seção de FAQ animada com perguntas expansíveis e transições suaves",
     category: "page",
     tags: ["faq", "accordion", "questions", "expand", "shadcn"],
     component: FAQSection,
@@ -1035,9 +1043,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "cta-banner-section",
-    name: "CTA Banner Section",
+    name: "Seção de Banner CTA",
     description:
-      "Animated call-to-action banner with gradient background and button animations",
+      "Banner de chamada para ação animado com fundo gradiente e animações de botão",
     category: "page",
     tags: ["cta", "banner", "call-to-action", "buttons", "gradient", "shadcn"],
     component: CTABannerSection,
@@ -1048,9 +1056,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "projects-block",
-    name: "Projects Block",
+    name: "Bloco de Projetos",
     description:
-      "Animated project card with hover effects, image zoom, and link buttons",
+      "Cartão de projeto animado com efeitos de hover, zoom de imagem e botões de link",
     category: "components",
     tags: ["projects", "portfolio", "cards", "hover", "gallery", "shadcn"],
     component: ProjectsBlock,
@@ -1061,9 +1069,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "hero-block",
-    name: "Hero Block",
+    name: "Bloco Hero",
     description:
-      "Personal portfolio hero section with animated avatar, staggered text, social links, and scroll indicator",
+      "Seção hero de portfólio pessoal com avatar animado, texto escalado, links sociais e indicador de rolagem",
     category: "blocks",
     tags: ["hero", "portfolio", "landing", "stagger", "social", "shadcn"],
     component: HeroBlock,
@@ -1074,9 +1082,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "testimonials-block",
-    name: "Testimonials Block",
+    name: "Bloco de Depoimentos",
     description:
-      "Animated testimonials grid with staggered cards, star ratings, and hover effects",
+      "Grade de depoimentos animada com cartões escalados, classificações por estrelas e efeitos de hover",
     category: "blocks",
     tags: ["testimonials", "reviews", "cards", "stagger", "ratings", "shadcn"],
     component: TestimonialsBlock,
@@ -1087,9 +1095,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "cta-block",
-    name: "CTA Block",
+    name: "Bloco CTA",
     description:
-      "Call-to-action section with gradient overlay, animated buttons, and status indicator",
+      "Seção de chamada para ação com sobreposição gradiente, botões animados e indicador de status",
     category: "blocks",
     tags: ["cta", "call-to-action", "banner", "buttons", "gradient", "shadcn"],
     component: CTABlock,
@@ -1100,9 +1108,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "blog-block",
-    name: "Blog Block",
+    name: "Bloco de Blog",
     description:
-      "Animated blog posts grid with staggered cards, date/time indicators, and hover effects",
+      "Grade de posts de blog animada com cartões escalados, indicadores de data/hora e efeitos de hover",
     category: "blocks",
     tags: ["blog", "posts", "cards", "stagger", "articles", "shadcn"],
     component: BlogBlock,
@@ -1113,9 +1121,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "contact-block",
-    name: "Contact Block",
+    name: "Bloco de Contato",
     description:
-      "Contact form with animated contact info cards, working hours, and interactive icons",
+      "Formulário de contato com cartões de informações de contato animados, horário de funcionamento e ícones interativos",
     category: "blocks",
     tags: ["contact", "form", "email", "phone", "location", "shadcn"],
     component: ContactBlock,
@@ -1126,9 +1134,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "new-hero-section",
-    name: "New Hero Section",
+    name: "Nova Seção Hero",
     description:
-      "Modern hero section with gradient background, animated stats, and call-to-action buttons",
+      "Seção hero moderna com fundo gradiente, estatísticas animadas e botões de chamada para ação",
     category: "blocks",
     tags: ["hero", "landing", "cta", "stats", "gradient", "shadcn"],
     component: NewHeroSection,
@@ -1139,9 +1147,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "about-us-section",
-    name: "About Us",
+    name: "Sobre Nós",
     description:
-      "About us section with value cards, icons, and animated reveal effects",
+      "Seção sobre nós com cartões de valores, ícones e efeitos de revelação animada",
     category: "blocks",
     tags: ["about", "values", "team", "mission", "cards", "shadcn"],
     component: AboutUsSection,
@@ -1152,9 +1160,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "contact-form-section",
-    name: "Contact Form",
+    name: "Formulário de Contato",
     description:
-      "Contact form section with animated inputs, validation, and form handling",
+      "Seção de formulário de contato com entradas animadas, validação e manipulação de formulário",
     category: "blocks",
     tags: ["contact", "form", "inputs", "validation", "shadcn"],
     component: ContactFormSection,
@@ -1165,9 +1173,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "our-services-section",
-    name: "Our Services",
+    name: "Nossos Serviços",
     description:
-      "Services section with service cards, badges, icons, and hover animations",
+      "Seção de serviços com cartões de serviço, distintivos, ícones e animações de hover",
     category: "blocks",
     tags: ["services", "cards", "badges", "icons", "hover", "shadcn"],
     component: OurServicesSection,
@@ -1179,9 +1187,9 @@ export const componentsRegistry: Component[] = [
   // UI-TripleD Components
   {
     id: "morphing-action-button",
-    name: "Morphing Action Button",
+    name: "Botão de Ação Morfing",
     description:
-      "A circular FAB that morphs into a rectangular action panel using layoutId",
+      "Um FAB circular que se transforma em um painel de ação retangular usando layoutId",
     category: "microinteractions",
     tags: ["fab", "morph", "layout", "button", "action"],
     component: MorphingActionButton,
@@ -1192,9 +1200,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "smart-hover-card",
-    name: "Smart Hover Card",
+    name: "Cartão de Hover Inteligente",
     description:
-      "Card that detects cursor direction and reveals content from that side",
+      "Cartão que detecta a direção do cursor e revela conteúdo desse lado",
     category: "components",
     tags: ["card", "hover", "directional", "reveal", "smart"],
     component: SmartHoverCard,
@@ -1205,9 +1213,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "magnetic-cursor-link",
-    name: "Magnetic Cursor Link",
+    name: "Link Magnético de Cursor",
     description:
-      "Link that slightly follows mouse cursor within boundary and snaps back",
+      "Link que segue ligeiramente o cursor do mouse dentro do limite e volta ao lugar",
     category: "microinteractions",
     tags: ["magnetic", "cursor", "link", "interactive"],
     component: MagneticCursorLink,
@@ -1218,9 +1226,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "scroll-progress-tracker",
-    name: "Scroll Progress Tracker",
+    name: "Rastreador de Progresso de Rolagem",
     description:
-      "Fixed progress bar that follows scroll and glows on section changes",
+      "Barra de progresso fixa que segue a rolagem e brilha nas mudanças de seção",
     category: "page",
     tags: ["scroll", "progress", "tracker", "navigation"],
     component: ScrollProgressTracker,
@@ -1231,8 +1239,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "stacked-card-carousel",
-    name: "Stacked Card Carousel",
-    description: "Three stacked cards that shift and tilt dynamically on hover",
+    name: "Carrossel de Cartões Empilhados",
+    description:
+      "Três cartões empilhados que se deslocam e inclinam dinamicamente ao passar o mouse",
     category: "components",
     tags: ["cards", "carousel", "stack", "3d", "hover"],
     component: StackedCardCarousel,
@@ -1243,9 +1252,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "spotlight-section",
-    name: "Spotlight Section",
+    name: "Seção Spotlight",
     description:
-      "Container where mouse creates soft radial spotlight following cursor",
+      "Contêiner onde o mouse cria um spotlight radial suave seguindo o cursor",
     category: "decorative",
     tags: ["spotlight", "cursor", "gradient", "interactive"],
     component: SpotlightSection,
@@ -1256,9 +1265,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "auto-revealing-heading",
-    name: "Auto-Revealing Heading",
+    name: "Cabeçalho Auto-Revelador",
     description:
-      "Heading that reveals each letter/word with staggered motion on scroll",
+      "Cabeçalho que revela cada letra/palavra com movimento escalado ao rolar",
     category: "page",
     tags: ["heading", "reveal", "stagger", "scroll"],
     component: AutoRevealingHeading,
@@ -1269,9 +1278,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "interactive-timeline",
-    name: "Interactive Timeline",
+    name: "Linha do Tempo Interativa",
     description:
-      "Vertical timeline where elements animate and connect with lines on scroll",
+      "Linha do tempo vertical onde elementos animam e se conectam com linhas ao rolar",
     category: "components",
     tags: ["timeline", "scroll", "connect", "animate"],
     component: InteractiveTimeline,
@@ -1282,9 +1291,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "dynamic-tag-cloud",
-    name: "Dynamic Tag Cloud",
+    name: "Nuvem de Tags Dinâmica",
     description:
-      "Floating cluster of tags that drift and rearrange when hovered",
+      "Agrupamento flutuante de tags que flutuam e se rearranjam ao passar o mouse",
     category: "decorative",
     tags: ["tags", "cloud", "float", "drift", "interactive"],
     component: DynamicTagCloud,
@@ -1295,9 +1304,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "ai-loading-skeleton",
-    name: "AI Loading Skeleton",
+    name: "Esqueleto de Carregamento IA",
     description:
-      "Loading state with diagonal shimmer gradient and opacity wave",
+      "Estado de carregamento com gradiente de brilho diagonal e onda de opacidade",
     category: "components",
     tags: ["loading", "skeleton", "shimmer", "gradient"],
     component: AILoadingSkeleton,
@@ -1308,8 +1317,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "animated-quote-block",
-    name: "Animated Quote Block",
-    description: "Quote that types itself in, pauses, then subtly breathes",
+    name: "Bloco de Citação Animada",
+    description: "Citação que se digita, pausa e respira sutilmente",
     category: "decorative",
     tags: ["quote", "typewriter", "breathing", "pulse"],
     component: AnimatedQuoteBlock,
@@ -1320,9 +1329,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "context-menu-bubble",
-    name: "Context Menu Bubble",
+    name: "Bolha de Menu de Contexto",
     description:
-      "Right-click reveals circular expanding radial menu with icons",
+      "Clique direito revela menu radial circular expansível com ícones",
     category: "components",
     tags: ["context", "menu", "radial", "bubble", "expand"],
     component: ContextMenuBubble,
@@ -1333,8 +1342,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "magnetic-avatar-group",
-    name: "Magnetic Avatar Group",
-    description: "Stacked avatars that spread apart on hover showing tooltips",
+    name: "Grupo de Avatares Magnéticos",
+    description:
+      "Avatares empilhados que se separam ao passar o mouse mostrando dicas",
     category: "components",
     tags: ["avatars", "group", "magnetic", "tooltip", "hover"],
     component: MagneticAvatarGroup,
@@ -1345,8 +1355,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "notification-bell",
-    name: "Notification Bell",
-    description: "Bell icon that gently swings when new notification appears",
+    name: "Sino de Notificação",
+    description:
+      "Ícone de sino que balança suavemente quando uma nova notificação aparece",
     category: "microinteractions",
     tags: ["notification", "bell", "swing", "oscillation"],
     component: NotificationBell,
@@ -1357,8 +1368,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "drag-to-confirm-slider",
-    name: "Drag-to-Confirm Slider",
-    description: "Slider that activates action only when fully dragged to end",
+    name: "Slider de Arrastar para Confirmar",
+    description:
+      "Slider que ativa ação apenas quando totalmente arrastado até o fim",
     category: "components",
     tags: ["slider", "drag", "confirm", "interactive"],
     component: DragToConfirmSlider,
@@ -1369,8 +1381,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "expanding-search-dock",
-    name: "Expanding Search Dock",
-    description: "Minimal search icon that expands into full input with blur",
+    name: "Doca de Pesquisa Expansível",
+    description:
+      "Ícone de pesquisa mínimo que se expande em entrada completa com desfoque",
     category: "components",
     tags: ["search", "expand", "dock", "input", "blur"],
     component: ExpandingSearchDock,
@@ -1381,9 +1394,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "mood-gradient-button",
-    name: "Mood Gradient Button",
+    name: "Botão de Gradiente de Humor",
     description:
-      "Button with background gradient that shifts based on hover angle",
+      "Botão com gradiente de fundo que muda com base no ângulo de hover",
     category: "microinteractions",
     tags: ["button", "gradient", "mood", "interactive"],
     component: MoodGradientButton,
@@ -1394,9 +1407,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "floating-info-panel",
-    name: "Floating Info Panel",
+    name: "Painel de Informações Flutuante",
     description:
-      "Info tooltip that drifts up/down while fading in/out intermittently",
+      "Dica de informação que flutua para cima/baixo enquanto desaparece intermitentemente",
     category: "decorative",
     tags: ["info", "tooltip", "float", "drift", "fade"],
     component: FloatingInfoPanel,
@@ -1407,9 +1420,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "reactive-background-grid",
-    name: "Reactive Background Grid",
+    name: "Grade de Fundo Reativa",
     description:
-      "Background pattern that reacts to mouse movement and click ripples",
+      "Padrão de fundo que reage ao movimento do mouse e ondulações de clique",
     category: "decorative",
     tags: ["grid", "background", "reactive", "ripple", "interactive"],
     component: ReactiveBackgroundGrid,
@@ -1420,9 +1433,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "fluid-modal-transition",
-    name: "Fluid Modal Transition",
+    name: "Transição de Modal Fluida",
     description:
-      "Modal that expands smoothly from clicked trigger element using layoutId",
+      "Modal que se expande suavemente do elemento gatilho clicado usando layoutId",
     category: "components",
     tags: ["modal", "transition", "layout", "expand", "fluid"],
     component: FluidModalTransition,
@@ -1433,9 +1446,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "holographic-wall",
-    name: "Holographic Wall",
+    name: "Parede Holográfica",
     description:
-      "Black wall with Pharaonic hieroglyphs and golden cursor light reflection",
+      "Parede preta com hieróglifos faraônicos e reflexão de luz dourada do cursor",
     category: "decorative",
     tags: [
       "holographic",
@@ -1454,9 +1467,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "dynamic-spotlight-cta",
-    name: "Dynamic Spotlight CTA",
+    name: "CTA Spotlight Dinâmico",
     description:
-      "Floating spotlight follows cursor to reveal gradient CTA text with premium effects",
+      "Spotlight flutuante segue o cursor para revelar texto CTA gradiente com efeitos premium",
     category: "page",
     tags: [
       "cta",
@@ -1475,9 +1488,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "ai-glow-input",
-    name: "AI Glow Input",
+    name: "Campo de Entrada com Brilho IA",
     description:
-      "Input field with dynamic glow that pulses based on typing speed - smart motion feedback",
+      "Campo de entrada com brilho dinâmico que pulsa com base na velocidade de digitação - feedback de movimento inteligente",
     category: "components",
     tags: ["input", "ai", "glow", "typing", "search", "smart", "feedback"],
     component: AIGlowInput,
@@ -1488,9 +1501,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "ai-response-typing",
-    name: "AI Response Typing Stream",
+    name: "Fluxo de Digitação de Resposta IA",
     description:
-      "Character-by-character typing animation with natural pauses and thinking states",
+      "Animação de digitação caractere por caractere com pausas naturais e estados de pensamento",
     category: "components",
     tags: [
       "ai",
@@ -1509,9 +1522,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "ai-unlock-animation",
-    name: "AI Unlock Animation",
+    name: "Animação de Desbloqueio IA",
     description:
-      "Premium unlock animation with particles, ripples, and loading states",
+      "Animação de desbloqueio premium com partículas, ondulações e estados de carregamento",
     category: "microinteractions",
     tags: ["ai", "unlock", "premium", "activation", "particles", "ripple"],
     component: AIUnlockAnimation,
@@ -1523,9 +1536,9 @@ export const componentsRegistry: Component[] = [
   // NEW: 5 Additional Blocks
   {
     id: "team-section-block",
-    name: "Team Section Block",
+    name: "Bloco de Seção de Equipe",
     description:
-      "Animated team member cards with avatars, roles, and social links",
+      "Cartões animados de membros da equipe com avatares, funções e links sociais",
     category: "blocks",
     tags: ["team", "members", "cards", "avatars", "social", "about", "shadcn"],
     component: TeamSectionBlock,
@@ -1536,9 +1549,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "newsletter-signup-block",
-    name: "Newsletter Signup Block",
+    name: "Bloco de Inscrição na Newsletter",
     description:
-      "Animated newsletter subscription form with success state and gradient background",
+      "Formulário animado de inscrição na newsletter com estado de sucesso e fundo gradiente",
     category: "blocks",
     tags: ["newsletter", "signup", "form", "email", "subscription", "shadcn"],
     component: NewsletterSignupBlock,
@@ -1549,9 +1562,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "feature-comparison-block",
-    name: "Feature Comparison Table",
+    name: "Tabela de Comparação de Recursos",
     description:
-      "Interactive pricing comparison table with animated checkmarks and plan highlights",
+      "Tabela interativa de comparação de preços com marcas de seleção animadas e destaques de planos",
     category: "blocks",
     tags: ["comparison", "pricing", "table", "features", "plans", "shadcn"],
     component: FeatureComparisonBlock,
@@ -1562,9 +1575,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "gallery-grid-block",
-    name: "Gallery Grid with Lightbox",
+    name: "Grade de Galeria com Lightbox",
     description:
-      "Filterable image gallery with animated lightbox and navigation",
+      "Galeria de imagens filtrável com lightbox animado e navegação",
     category: "blocks",
     tags: ["gallery", "images", "lightbox", "filter", "portfolio", "shadcn"],
     component: GalleryGridBlock,
@@ -1575,9 +1588,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "footer-block",
-    name: "Footer Block",
+    name: "Bloco de Rodapé",
     description:
-      "Comprehensive footer with links, newsletter signup, social icons, and scroll-to-top",
+      "Rodapé abrangente com links, inscrição na newsletter, ícones sociais e rolar para cima",
     category: "blocks",
     tags: ["footer", "links", "social", "newsletter", "navigation", "shadcn"],
     component: FooterBlock,
@@ -1589,9 +1602,9 @@ export const componentsRegistry: Component[] = [
   // NEW: 5 Additional Responsive Blocks
   {
     id: "cta-hero-block",
-    name: "CTA Hero Block",
+    name: "Bloco Hero CTA",
     description:
-      "Engaging hero section with email signup, video preview, and social proof",
+      "Seção hero envolvente com inscrição por e-mail, pré-visualização de vídeo e prova social",
     category: "blocks",
     tags: ["hero", "cta", "email", "video", "landing", "responsive", "shadcn"],
     component: CTAHeroBlock,
@@ -1602,9 +1615,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "bento-grid-block",
-    name: "Bento Grid Block",
+    name: "Bloco de Grade Bento",
     description:
-      "Layered bento grid with imagery, metrics, and smooth motion reveals",
+      "Grade bento em camadas com imagens, métricas e revelações de movimento suaves",
     category: "blocks",
     tags: ["bento", "grid", "layout", "motion", "shadcn"],
     component: BentoGridBlock,
@@ -1615,9 +1628,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "services-grid-block",
-    name: "Services Grid",
+    name: "Grade de Serviços",
     description:
-      "8-column responsive services grid with icons, features, and hover effects",
+      "Grade responsiva de serviços de 8 colunas com ícones, recursos e efeitos de hover",
     category: "blocks",
     tags: ["services", "grid", "features", "icons", "responsive", "shadcn"],
     component: ServicesGridBlock,
@@ -1628,9 +1641,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "stats-counter-block",
-    name: "Stats Counter Block",
+    name: "Bloco de Contador de Estatísticas",
     description:
-      "Animated statistics counters with icons and gradient backgrounds",
+      "Contadores de estatísticas animados com ícones e fundos gradientes",
     category: "blocks",
     tags: [
       "stats",
@@ -1649,9 +1662,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "notion-blog-page",
-    name: "Notion Blog Page",
+    name: "Página de Blog Notion",
     description:
-      "Notion-style publishing playbook with rich text, toggles, and supporting visuals",
+      "Guia de publicação estilo Notion com texto rico, alternâncias e visuais de suporte",
     category: "blocks",
     tags: ["notion", "blog", "page", "writing", "workflow"],
     component: NotionBlogPage,
@@ -1662,9 +1675,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "timeline-block",
-    name: "Timeline Block",
+    name: "Bloco de Linha do Tempo",
     description:
-      "Vertical timeline with alternating cards and animated progress line",
+      "Linha do tempo vertical com cartões alternados e linha de progresso animada",
     category: "blocks",
     tags: ["timeline", "history", "journey", "events", "responsive", "shadcn"],
     component: TimelineBlock,
@@ -1675,8 +1688,8 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "faq-accordion-block",
-    name: "FAQ Accordion",
-    description: "Expandable FAQ section with smooth accordion animations",
+    name: "Sanfona FAQ",
+    description: "Seção FAQ expansível com animações suaves de sanfona",
     category: "blocks",
     tags: ["faq", "accordion", "questions", "help", "responsive", "shadcn"],
     component: FAQAccordionBlock,
@@ -1687,9 +1700,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glassmorphism-hero-block",
-    name: "Glassmorphism Hero",
+    name: "Hero Glassmorfismo",
     description:
-      "Modern hero section with glassmorphism effects, animated background orbs, and CTA buttons",
+      "Seção hero moderna com efeitos glassmorfismo, orbes de fundo animados e botões CTA",
     category: "blocks",
     tags: ["hero", "glassmorphism", "landing", "cta", "gradient", "shadcn"],
     component: GlassmorphismHeroBlock,
@@ -1700,9 +1713,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "feature-cards-block",
-    name: "Feature Cards Grid",
+    name: "Grade de Cartões de Recursos",
     description:
-      "Three feature cards with icons, hover effects, and glassmorphism styling",
+      "Três cartões de recursos com ícones, efeitos de hover e estilo glassmorfismo",
     category: "blocks",
     tags: [
       "features",
@@ -1721,9 +1734,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glassmorphism-cta-block",
-    name: "Glassmorphism CTA",
+    name: "CTA Glassmorfismo",
     description:
-      "Call-to-action section with glassy card, gradient background, and animated buttons",
+      "Seção de chamada para ação com cartão vítreo, fundo gradiente e botões animados",
     category: "blocks",
     tags: ["cta", "glassmorphism", "gradient", "buttons", "banner", "shadcn"],
     component: GlassmorphismCTABlock,
@@ -1734,9 +1747,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glassmorphism-listen-app-block",
-    name: "Glassmorphism Listen App",
+    name: "Aplicativo de Escuta Glassmorfismo",
     description:
-      "Music streaming block with glassmorphism player, curated highlights, and animated controls",
+      "Bloco de streaming de música com player glassmorfismo, destaques curados e controles animados",
     category: "blocks",
     tags: ["music", "app", "glassmorphism", "player", "audio", "shadcn"],
     component: GlassmorphismListenAppBlock,
@@ -1747,9 +1760,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glassmorphism-pricing-block",
-    name: "Glassmorphism Pricing",
+    name: "Preços Glassmorfismo",
     description:
-      "Pricing cards with glassmorphism effects, hover animations, and feature lists",
+      "Cartões de preços com efeitos glassmorfismo, animações de hover e listas de recursos",
     category: "blocks",
     tags: ["pricing", "cards", "glassmorphism", "plans", "hover", "shadcn"],
     component: GlassmorphismPricingBlock,
@@ -1760,9 +1773,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glassmorphism-testimonials-block",
-    name: "Glassmorphism Testimonials",
+    name: "Depoimentos Glassmorfismo",
     description:
-      "Customer testimonials with glassmorphism cards, star ratings, and hover effects",
+      "Depoimentos de clientes com cartões glassmorfismo, classificações por estrelas e efeitos de hover",
     category: "blocks",
     tags: [
       "testimonials",
@@ -1780,9 +1793,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glassmorphism-launch-timeline-block",
-    name: "Glassmorphism Launch Timeline",
+    name: "Linha do Tempo de Lançamento Glassmorfismo",
     description:
-      "Frictionless launch roadmap with staggered motion, glassmorphism milestones, and paired CTA actions",
+      "Roteiro de lançamento sem atrito com movimento escalado, marcos glassmorfismo e ações CTA pareadas",
     category: "blocks",
     tags: ["timeline", "launch", "roadmap", "glassmorphism", "shadcn"],
     component: GlassmorphismLaunchTimelineBlock,
@@ -1793,9 +1806,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glassmorphism-minimal-metrics-block",
-    name: "Glassmorphism Minimal Metrics",
+    name: "Métricas Mínimas Glassmorfismo",
     description:
-      "Focused metric cards with glass surfaces, subtle motion, and concierge insight CTA banner",
+      "Cartões de métricas focados com superfícies de vidro, movimento sutil e banner CTA de insight concierge",
     category: "blocks",
     tags: ["metrics", "stats", "dashboard", "glassmorphism", "shadcn"],
     component: GlassmorphismMinimalMetricsBlock,
@@ -1806,9 +1819,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glassmorphism-logo-showcase-block",
-    name: "Glassmorphism Logo Showcase",
+    name: "Vitrine de Logos Glassmorfismo",
     description:
-      "Glassmorphism partner grid with floating motion, brand hints, and collaborative call-to-action",
+      "Grade de parceiros glassmorfismo com movimento flutuante, dicas de marca e chamada para ação colaborativa",
     category: "blocks",
     tags: ["logos", "partners", "brand", "glassmorphism", "shadcn"],
     component: GlassmorphismLogoShowcaseBlock,
@@ -1819,9 +1832,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glassmorphism-portfolio-block",
-    name: "Glassmorphism Portfolio",
+    name: "Portfólio Glassmorfismo",
     description:
-      "Personal portfolio spotlight with profile portrait, narrative highlights, and animated social links",
+      "Spotlight de portfólio pessoal com retrato de perfil, destaques narrativos e links sociais animados",
     category: "blocks",
     tags: [
       "portfolio",
@@ -1839,9 +1852,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glassmorphism-product-update-block",
-    name: "Glassmorphism Product Updates",
+    name: "Atualizações de Produto Glassmorfismo",
     description:
-      "Multi-state changelog cards with glass overlays, status badges, and GitHub integration banner",
+      "Cartões de changelog multi-estado com sobreposições de vidro, distintivos de status e banner de integração GitHub",
     category: "blocks",
     tags: ["updates", "changelog", "glassmorphism", "news", "shadcn"],
     component: GlassmorphismProductUpdateBlock,
@@ -1852,9 +1865,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "n8n-workflow-block",
-    name: "N8N Workflow Block",
+    name: "Bloco de Fluxo de Trabalho N8N",
     description:
-      "Visual workflow automation builder with animated nodes, connections, and real-time execution monitoring",
+      "Construtor visual de automação de fluxo de trabalho com nós animados, conexões e monitoramento de execução em tempo real",
     category: "blocks",
     tags: [
       "workflow",
@@ -1873,9 +1886,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "currency-converter-card",
-    name: "Currency Converter Card",
+    name: "Cartão Conversor de Moeda",
     description:
-      "Finance conversion widget with animated inputs, simulated exchange updates, and contextual feedback",
+      "Widget de conversão financeira com entradas animadas, atualizações de câmbio simuladas e feedback contextual",
     category: "blocks",
     tags: ["finance", "currency", "converter", "card", "dashboard", "shadcn"],
     component: CurrencyConverterCard,
@@ -1886,9 +1899,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "interactive-logs-table",
-    name: "Interactive Logs Table",
+    name: "Tabela de Logs Interativa",
     description:
-      "Observability logs panel with animated filters, search, and expandable rows",
+      "Painel de logs de observabilidade com filtros animados, pesquisa e linhas expansíveis",
     category: "blocks",
     tags: ["logs", "observability", "filters", "table", "dashboard", "shadcn"],
     component: InteractiveLogsTable,
@@ -1899,9 +1912,9 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "glassmorphism-statistics-card",
-    name: "Glassmorphism Statistics Card",
+    name: "Cartão de Estatísticas Glassmorfismo",
     description:
-      "Interactive statistics card with hover reveal and smooth transitions",
+      "Cartão de estatísticas interativo com revelação ao hover e transições suaves",
     category: "components",
     tags: ["card", "statistics", "stats", "hover", "shadcn", "glassmorphism"],
     component: GlassmorphismStatisticsCard,
@@ -1912,11 +1925,18 @@ export const componentsRegistry: Component[] = [
   },
   {
     id: "kanban-board",
-    name: "Kanban Board",
+    name: "Quadro Kanban",
     description:
-      "Interactive Kanban board with drag-and-drop, glassmorphism styling, and task management features",
+      "Quadro Kanban interativo com arrastar e soltar, estilo glassmorfismo e recursos de gerenciamento de tarefas",
     category: "blocks",
-    tags: ["kanban", "board", "drag-drop", "task", "management", "glassmorphism"],
+    tags: [
+      "kanban",
+      "board",
+      "drag-drop",
+      "task",
+      "management",
+      "glassmorphism",
+    ],
     component: KanbanBoard,
     codePath: "@/components/components/kanban/kanban-board.tsx",
     duration: "N/A",

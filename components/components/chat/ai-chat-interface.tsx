@@ -26,27 +26,27 @@ type ActionOption = {
 };
 
 const shareOptions: ActionOption[] = [
-  { icon: Link2, label: "Copy link", action: "copy-link" },
-  { icon: Mail, label: "Email", action: "email" },
+  { icon: Link2, label: "Copiar link", action: "copy-link" },
+  { icon: Mail, label: "E-mail", action: "email" },
   { icon: MessageSquare, label: "Slack", action: "slack" },
 ];
 
 const quickOptions: ActionOption[] = [
-  { icon: Sparkles, label: "Summarize", action: "summarize" },
-  { icon: Sparkles, label: "Improve", action: "improve" },
-  { icon: Sparkles, label: "Translate", action: "translate" },
+  { icon: Sparkles, label: "Resumir", action: "summarize" },
+  { icon: Sparkles, label: "Melhorar", action: "improve" },
+  { icon: Sparkles, label: "Traduzir", action: "translate" },
 ];
 
 const historyOptions: ActionOption[] = [
-  { icon: Clock, label: "Last hour", action: "history-1h" },
-  { icon: Clock, label: "Today", action: "history-today" },
-  { icon: Clock, label: "This week", action: "history-week" },
+  { icon: Clock, label: "Última hora", action: "history-1h" },
+  { icon: Clock, label: "Hoje", action: "history-today" },
+  { icon: Clock, label: "Esta semana", action: "history-week" },
 ];
 
 const magicOptions: ActionOption[] = [
-  { icon: Sparkles, label: "Auto-complete", action: "magic-complete" },
+  { icon: Sparkles, label: "Autocompletar", action: "magic-complete" },
   { icon: Sparkles, label: "Storyboard", action: "magic-storyboard" },
-  { icon: Sparkles, label: "Rephrase", action: "magic-rephrase" },
+  { icon: Sparkles, label: "Reformular", action: "magic-rephrase" },
 ];
 
 const models = ["GPT 5.0", "GPT 4.5 Turbo", "GPT 4.0", "Claude 3.5 Sonnet"];
@@ -144,18 +144,18 @@ export function AIChatInterface() {
                 Prompt
               </span>
               <p className="text-sm text-foreground/60">
-                Share goals, context, tone, and desired output.
+                Compartilhe objetivos, contexto, tom e saída desejada.
               </p>
             </div>
             <label htmlFor="chat-input" className="sr-only">
-              Ask AI anything
+              Pergunte qualquer coisa à IA
             </label>
             <Textarea
               id="chat-input"
               ref={textareaRef}
               value={inputValue}
               onChange={handleTextareaChange}
-              placeholder="Ask AI anything..."
+              placeholder="Pergunte qualquer coisa à IA..."
               className="w-full resize-none bg-transparent text-base text-foreground/90 placeholder:text-foreground/40 focus:outline-none"
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
@@ -319,7 +319,7 @@ export function AIChatInterface() {
                 className="inline-flex items-center gap-2 rounded-full px-5 text-xs uppercase tracking-[0.28em]"
                 onClick={() => console.log("Action: send-message")}
               >
-                Send
+                Enviar
                 <ArrowUpRight className="h-4 w-4" />
               </Button>
             </div>

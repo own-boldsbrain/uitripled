@@ -1,0 +1,8 @@
+{
+  "handle": "smoothui",
+  "name": "@smoothui",
+  "url": "https://smoothui.dev",
+  "title": "Smooth UI",
+  "description": "Components emphasizing smooth animations and micro-interactions, built with React and Framer Motion.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

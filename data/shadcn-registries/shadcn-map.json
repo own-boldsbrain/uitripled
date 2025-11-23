@@ -1,0 +1,8 @@
+{
+  "handle": "shadcn-map",
+  "name": "@shadcn-map",
+  "url": "https://shadcn-map.vercel.app",
+  "title": "Shadcn Map",
+  "description": "A map component for shadcn/ui built with Leaflet and React-Leaflet.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

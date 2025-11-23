@@ -1,0 +1,8 @@
+{
+  "handle": "solaceui",
+  "name": "@solaceui",
+  "url": "https://www.solaceui.com",
+  "title": "Solace UI",
+  "description": "Production-ready sections, animated components, and full-page templates for Next.js with Tailwind and Motion.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

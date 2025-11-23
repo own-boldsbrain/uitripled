@@ -32,27 +32,27 @@ export function GlassForgotPasswordCard() {
       />
       <div className="mb-8 text-center">
         <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-border/60 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.28em] text-muted-foreground">
-          Reset Password
+          Redefinir Senha
         </div>
         <h1
           id="glass-forgot-password-title"
           className="mt-3 text-2xl font-semibold text-foreground sm:text-3xl"
         >
-          Trouble signing in?
+          Problemas para entrar?
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Enter the email associated with your account. We’ll send a magic link
-          to reset your password.
+          Digite o e-mail associado à sua conta. Enviaremos um link mágico para
+          redefinir sua senha.
         </p>
       </div>
 
       <form className="space-y-6" onSubmit={handleSubmit}>
         <div className="space-y-2">
-          <Label htmlFor="forgot-email">Email address</Label>
+          <Label htmlFor="forgot-email">Endereço de e-mail</Label>
           <Input
             id="forgot-email"
             type="email"
-            placeholder="you@example.com"
+            placeholder="voce@exemplo.com"
             autoComplete="email"
             required
             className="h-11 rounded-2xl border-border/60 bg-background/60 px-4"
@@ -62,7 +62,7 @@ export function GlassForgotPasswordCard() {
           type="submit"
           className="w-full rounded-full bg-primary px-6 py-3 text-primary-foreground shadow-[0_18px_55px_-30px_rgba(79,70,229,0.75)] transition-transform duration-300 hover:-translate-y-1"
         >
-          Send reset link
+          Enviar link de redefinição
         </Button>
       </form>
 
@@ -73,17 +73,17 @@ export function GlassForgotPasswordCard() {
         className="mt-6 text-center text-xs text-primary/80"
       >
         {submitted
-          ? "Check your inbox for the reset link. It may take a few minutes to arrive."
+          ? "Verifique sua caixa de entrada para o link de redefinição. Pode levar alguns minutos para chegar."
           : "\u00A0"}
       </motion.p>
 
       <p className="mt-4 text-center text-xs text-muted-foreground">
-        Remembered your password?{" "}
+        Lembrou sua senha?{" "}
         <button
           type="button"
           className="text-primary underline-offset-4 hover:underline"
         >
-          Back to sign in
+          Voltar ao login
         </button>
       </p>
     </motion.div>

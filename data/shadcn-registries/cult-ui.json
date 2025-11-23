@@ -1,0 +1,8 @@
+{
+  "handle": "cult-ui",
+  "name": "@cult-ui",
+  "url": "https://www.cult-ui.com",
+  "title": "Cult UI",
+  "description": "A curated set of shadcn-compatible, headless and composable components, animated with Framer Motion.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

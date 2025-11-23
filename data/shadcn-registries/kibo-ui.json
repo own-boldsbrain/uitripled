@@ -1,0 +1,8 @@
+{
+  "handle": "kibo-ui",
+  "name": "@kibo-ui",
+  "url": "https://www.kibo-ui.com",
+  "title": "Kibo UI",
+  "description": "Composable, accessible and open-source components designed for use with shadcn/ui.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

@@ -1,0 +1,8 @@
+{
+  "handle": "systaliko-ui",
+  "name": "@systaliko-ui",
+  "url": "https://systaliko-ui.vercel.app",
+  "title": "Systaliko UI",
+  "description": "UI component library designed for flexibility and customization at scale.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

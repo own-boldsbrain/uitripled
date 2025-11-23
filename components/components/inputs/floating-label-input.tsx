@@ -29,7 +29,7 @@ export function FloatingLabelInput() {
           transition={{ duration: 0.2, ease: "easeInOut" }}
           className="pointer-events-none absolute left-3 origin-left text-sm text-gray-500"
         >
-          Email address
+          Endereço de e-mail
         </motion.label>
       </div>
     </div>

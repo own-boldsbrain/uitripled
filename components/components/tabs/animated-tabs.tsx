@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function AnimatedTabs() {
-  const tabs = ["Account", "Password", "Settings"];
+  const tabs = ["Conta", "Senha", "Configurações"];
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
@@ -40,7 +40,7 @@ export function AnimatedTabs() {
               transition={{ duration: 0.3 }}
               className="rounded-lg border  p-4"
             >
-              <p className="text-sm">{tab} settings content goes here</p>
+              <p className="text-sm">Conteúdo da aba {tab} vai aqui</p>
             </motion.div>
           </TabsContent>
         ))}

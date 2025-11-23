@@ -1,0 +1,8 @@
+{
+  "handle": "square-ui",
+  "name": "@square-ui",
+  "url": "https://square.lndev.me",
+  "title": "Square UI",
+  "description": "Collection of beautifully crafted open-source layouts built with shadcn/ui.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

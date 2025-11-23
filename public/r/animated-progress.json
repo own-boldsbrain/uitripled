@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "animated-progress",
   "type": "registry:ui",
-  "title": "Animated Progress Bar",
-  "description": "Progress bar with smooth animation",
+  "title": "Barra de Progresso Animada",
+  "description": "Barra de progresso com animação suave",
   "registryDependencies": [
     "card"
   ],
@@ -14,7 +14,7 @@
   "files": [
     {
       "path": "components/data/progress/animated-progress.tsx",
-      "content": "\"use client\";\n\nimport { motion, useMotionValue, useTransform, animate } from \"framer-motion\";\nimport { useEffect } from \"react\";\nimport { Card, CardContent, CardHeader, CardTitle } from \"@/components/ui/card\";\n\nexport function AnimatedProgress() {\n  const progress = useMotionValue(0);\n  const width = useTransform(progress, [0, 100], [\"0%\", \"100%\"]);\n  const displayProgress = useTransform(progress, (v) => `${Math.round(v)}%`);\n\n  useEffect(() => {\n    const animation = animate(progress, 75, {\n      duration: 2,\n      ease: \"easeOut\",\n    });\n\n    return animation.stop;\n  }, [progress]);\n\n  return (\n    <div className=\"flex items-center justify-center p-12\">\n      <Card className=\"w-80\">\n        <CardHeader>\n          <CardTitle className=\"text-lg\">Upload Progress</CardTitle>\n        </CardHeader>\n        <CardContent>\n          <div className=\"h-2 w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-800\">\n            <motion.div\n              style={{ width }}\n              className=\"h-full bg-gradient-to-r from-accent to-slate-500\"\n            />\n          </div>\n          <motion.p className=\"mt-2 text-right text-sm text-[var(--foreground)]/70\">\n            {displayProgress}\n          </motion.p>\n        </CardContent>\n      </Card>\n    </div>\n  );\n}\n",
+      "content": "\"use client\";\r\n\r\nimport { motion, useMotionValue, useTransform, animate } from \"framer-motion\";\r\nimport { useEffect } from \"react\";\r\nimport { Card, CardContent, CardHeader, CardTitle } from \"@/components/ui/card\";\r\n\r\nexport function AnimatedProgress() {\r\n  const progress = useMotionValue(0);\r\n  const width = useTransform(progress, [0, 100], [\"0%\", \"100%\"]);\r\n  const displayProgress = useTransform(progress, (v) => `${Math.round(v)}%`);\r\n\r\n  useEffect(() => {\r\n    const animation = animate(progress, 75, {\r\n      duration: 2,\r\n      ease: \"easeOut\",\r\n    });\r\n\r\n    return animation.stop;\r\n  }, [progress]);\r\n\r\n  return (\r\n    <div className=\"flex items-center justify-center p-12\">\r\n      <Card className=\"w-80\">\r\n        <CardHeader>\r\n          <CardTitle className=\"text-lg\">Upload Progress</CardTitle>\r\n        </CardHeader>\r\n        <CardContent>\r\n          <div className=\"h-2 w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-800\">\r\n            <motion.div\r\n              style={{ width }}\r\n              className=\"h-full bg-gradient-to-r from-accent to-slate-500\"\r\n            />\r\n          </div>\r\n          <motion.p className=\"mt-2 text-right text-sm text-[var(--foreground)]/70\">\r\n            {displayProgress}\r\n          </motion.p>\r\n        </CardContent>\r\n      </Card>\r\n    </div>\r\n  );\r\n}\r\n",
       "type": "registry:ui",
       "target": "components/data/progress/animated-progress"
     }

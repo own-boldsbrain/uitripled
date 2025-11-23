@@ -1,0 +1,8 @@
+{
+  "handle": "hooks",
+  "name": "@hooks",
+  "url": "https://shadcn-hooks.vercel.app",
+  "title": "Shadcn Hooks",
+  "description": "A comprehensive React Hooks collection built to complement shadcn components.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

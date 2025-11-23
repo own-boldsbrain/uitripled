@@ -1,0 +1,8 @@
+{
+  "handle": "reui",
+  "name": "@reui",
+  "url": "https://reui.io",
+  "title": "ReUI",
+  "description": "Open-source collection of UI components and animated effects built with React, Typescript, Tailwind CSS, and Motion.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

@@ -37,49 +37,52 @@ type ActiveNotification = {
 const NOTIFICATION_CONFIGS: Record<NotificationType, NotificationConfig> = {
   success: {
     title: "Success",
-    message: "Operation completed successfully",
+    message: "Operação concluída com sucesso",
     description:
-      "Your changes have been saved to the database. All updates are now live.",
+      "Suas alterações foram salvas no banco de dados. Todas as atualizações estão agora ativas.",
     action: {
-      label: "View Details",
-      onClick: () => console.log("View details"),
+      label: "Ver Detalhes",
+      onClick: () => console.log("Ver detalhes"),
     },
     icon: CheckCircle,
     toneClassName: "text-green-500",
   },
   error: {
-    title: "Error Occurred",
-    message: "Something went wrong",
+    title: "Erro Ocorreu",
+    message: "Algo deu errado",
     description:
-      "Failed to process your request. Please try again or contact support if the issue persists.",
-    action: { label: "Retry", onClick: () => console.log("Retry") },
+      "Falha ao processar sua solicitação. Tente novamente ou entre em contato com o suporte se o problema persistir.",
+    action: {
+      label: "Tentar Novamente",
+      onClick: () => console.log("Tentar novamente"),
+    },
     icon: AlertCircle,
     toneClassName: "text-red-500",
   },
   warning: {
-    title: "Warning",
-    message: "Please review this action",
+    title: "Aviso",
+    message: "Por favor, revise esta ação",
     description:
-      "This action may have unintended consequences. Review the details before proceeding.",
-    action: { label: "Learn More", onClick: () => console.log("Learn more") },
+      "Esta ação pode ter consequências não intencionais. Revise os detalhes antes de prosseguir.",
+    action: { label: "Saiba Mais", onClick: () => console.log("Saiba mais") },
     icon: AlertTriangle,
     toneClassName: "text-yellow-500",
   },
   info: {
-    title: "Information",
-    message: "New feature available",
+    title: "Informação",
+    message: "Novo recurso disponível",
     description:
-      "Check out our new notification system with expandable details. Click to see more information.",
-    action: { label: "Explore", onClick: () => console.log("Explore") },
+      "Confira nosso novo sistema de notificações com detalhes expansíveis. Clique para ver mais informações.",
+    action: { label: "Explorar", onClick: () => console.log("Explorar") },
     icon: Info,
     toneClassName: "text-blue-500",
   },
 };
 
 const BUTTON_CONFIGS: Array<{ type: NotificationType; label: string }> = [
-  { type: "success", label: "Success" },
-  { type: "error", label: "Error" },
-  { type: "warning", label: "Warning" },
+  { type: "success", label: "Sucesso" },
+  { type: "error", label: "Erro" },
+  { type: "warning", label: "Aviso" },
   { type: "info", label: "Info" },
 ];
 

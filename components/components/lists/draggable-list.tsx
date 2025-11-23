@@ -5,10 +5,10 @@ import { Reorder } from "framer-motion";
 import { GripVertical } from "lucide-react";
 
 const initialItems = [
-  { id: 1, text: "First item" },
-  { id: 2, text: "Second item" },
-  { id: 3, text: "Third item" },
-  { id: 4, text: "Fourth item" },
+  { id: 1, text: "Primeiro item" },
+  { id: 2, text: "Segundo item" },
+  { id: 3, text: "Terceiro item" },
+  { id: 4, text: "Quarto item" },
 ];
 
 export function DraggableList() {

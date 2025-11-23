@@ -1,0 +1,8 @@
+{
+  "handle": "diceui",
+  "name": "@diceui",
+  "url": "https://www.diceui.com",
+  "title": "Dice UI",
+  "description": "Accessible shadcn/ui components built with React, TypeScript, and Tailwind CSS. Copy-paste ready and customizable.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

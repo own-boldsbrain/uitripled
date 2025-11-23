@@ -1,0 +1,8 @@
+{
+  "handle": "shadcn-editor",
+  "name": "@shadcn-editor",
+  "url": "https://shadcn-editor.vercel.app",
+  "title": "Shadcn Editor",
+  "description": "Accessible, customizable rich text editor built with Lexical and shadcn/ui. Open source.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

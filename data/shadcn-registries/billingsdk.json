@@ -1,0 +1,8 @@
+{
+  "handle": "billingsdk",
+  "name": "@billingsdk",
+  "url": "https://billingsdk.com",
+  "title": "BillingSDK",
+  "description": "Open-source React/Next.js components for SaaS billing and payments (subscriptions, invoices, usage-based pricing).",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

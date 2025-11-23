@@ -340,7 +340,7 @@ function DashboardNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: "Overview", icon: BarChart3 },
+    { label: "Visão Geral", icon: BarChart3 },
     { label: "Activity", icon: Activity },
     { label: "Users", icon: Users },
     { label: "Analytics", icon: TrendingUp },
@@ -457,11 +457,12 @@ function DashboardHeader() {
           </Badge>
 
           <h1 className="text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-            Performance Overview
+            Visão Geral de Performance
           </h1>
           <p className="max-w-2xl text-foreground/70">
-            Monitor your application metrics, user activity, and system health
-            in real-time with detailed insights and historical data trends.
+            Monitore as métricas da sua aplicação, atividade do usuário e saúde
+            do sistema em tempo real com insights detalhados e tendências de
+            dados históricos.
           </p>
         </div>
 
@@ -482,7 +483,7 @@ function DashboardHeader() {
             variant="outline"
             size="icon"
             className="rounded-full border-border/40 bg-background/60 backdrop-blur hover:border-border/60 hover:bg-background/70"
-            aria-label="Dashboard settings"
+            aria-label="Configurações do painel"
           >
             <Settings className="h-4 w-4" />
           </Button>
@@ -548,15 +549,15 @@ function DashboardGrid() {
         role="presentation"
       >
         <ChartCard
-          title="User Growth"
-          description="Last 13 weeks activity"
+          title="Crescimento de Usuários"
+          description="Atividade das últimas 13 semanas"
           data={USER_GROWTH_DATA}
           dataKey="value"
           height={300}
         />
         <ChartCard
-          title="Revenue Trend"
-          description="Weekly revenue breakdown"
+          title="Tendência de Receita"
+          description="Divisão semanal de receita"
           data={REVENUE_TREND_DATA}
           dataKey="value"
           height={300}
@@ -574,7 +575,7 @@ function DashboardGrid() {
           items={[
             { label: "Home", value: "12,543", subtitle: "visits" },
             { label: "Dashboard", value: "8,324", subtitle: "visits" },
-            { label: "Settings", value: "4,128", subtitle: "visits" },
+            { label: "Configurações", value: "4,128", subtitle: "visits" },
           ]}
         />
         <DetailedCard
@@ -588,9 +589,13 @@ function DashboardGrid() {
         <DetailedCard
           title="Recent Activity"
           items={[
-            { label: "Login Spike", value: "Now", subtitle: "2.5k users" },
-            { label: "Feature Update", value: "2h ago", subtitle: "deployed" },
-            { label: "Bug Fix", value: "5h ago", subtitle: "resolved" },
+            { label: "Pico de Login", value: "Now", subtitle: "2.5k users" },
+            {
+              label: "Atualização de Recurso",
+              value: "2h ago",
+              subtitle: "deployed",
+            },
+            { label: "Correção de Bug", value: "5h ago", subtitle: "resolved" },
           ]}
         />
       </motion.div>

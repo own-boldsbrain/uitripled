@@ -263,36 +263,38 @@ const STATIC_WEATHER_DATA: WeatherData = {
     {
       label: "US AQI",
       value: "42",
-      status: "Good",
+      status: "Bom",
       description:
-        "Clear coastal air with minimal particulate matter detected.",
+        "Ar costeiro limpo com matéria particulada mínima detectada.",
     },
     {
       label: "PM2.5",
       value: "8.6 µg/m³",
-      status: "Low particulate levels",
-      description: "Fine particulates remain well below daily thresholds.",
+      status: "Níveis baixos de particulados",
+      description:
+        "Particulados finos permanecem bem abaixo dos limites diários.",
     },
     {
-      label: "Dust Index",
+      label: "Índice de Poeira",
       value: "18.4 µg/m³",
-      status: "Minimal dust",
-      description: "Marine influence keeps airborne dust concentrations low.",
+      status: "Poeira mínima",
+      description:
+        "Influência marinha mantém concentrações de poeira aérea baixas.",
     },
   ],
   alerts: [
     {
-      title: "Mild onshore breeze continues",
+      title: "Brisa onshore suave continua",
       description:
-        "Expect a gentle westerly wind through the afternoon with choppy bay waters.",
-      severity: "Advisory",
+        "Espere um vento oeste suave durante a tarde com águas da baía agitadas.",
+      severity: "Aviso",
       icon: Wind,
     },
     {
-      title: "Low rain chance through weekend",
+      title: "Baixa chance de chuva durante o fim de semana",
       description:
-        "Stray mist possible near the coast late nights, but dry for most plans.",
-      severity: "Watch",
+        "Possível névoa esporádica perto da costa no final da noite, mas seco para a maioria dos planos.",
+      severity: "Observação",
       icon: Umbrella,
     },
   ],
@@ -465,7 +467,7 @@ export function WeatherDashboard(): React.ReactElement {
 
             <div>
               <h1 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-                Coastal Weather Overview
+                Visão Geral do Clima Costeiro
               </h1>
               <p className="mt-2 flex flex-wrap items-center gap-2 text-sm text-foreground/70">
                 <MapPin className="h-4 w-4" aria-hidden="true" />
@@ -486,8 +488,8 @@ export function WeatherDashboard(): React.ReactElement {
                 aria-pressed={view === activeView}
                 className="rounded-lg px-4 py-2 text-sm uppercase tracking-[0.1em]"
               >
-                {view === "today" && "Today"}
-                {view === "week" && "Week"}
+                {view === "today" && "Hoje"}
+                {view === "week" && "Semana"}
                 {view === "radar" && "Radar"}
               </Button>
             ))}
@@ -516,7 +518,7 @@ export function WeatherDashboard(): React.ReactElement {
             variants={itemVariants}
             className="group relative overflow-hidden rounded-2xl border border-border/40 bg-background/60 p-6 backdrop-blur transition-all hover:border-border/60 hover:shadow-lg"
             role="article"
-            aria-label="Current weather conditions"
+            aria-label="Condições climáticas atuais"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-foreground/[0.04] via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 -z-10" />
 
@@ -542,15 +544,15 @@ export function WeatherDashboard(): React.ReactElement {
                       {weatherData.current.temperature}°
                     </span>
                     <span className="text-sm text-foreground/60">
-                      Feels like {weatherData.current.feelsLike}°
+                      Sensação térmica {weatherData.current.feelsLike}°
                     </span>
                   </div>
                   <p className="text-sm text-foreground/70">
-                    {"Chance of rain " +
+                    {"Chance de chuva " +
                       weatherData.current.precipitationChance +
-                      "% · Sunrise " +
+                      "% · Nascer do sol " +
                       formatTime(weatherData.current.sunrise) +
-                      " · Sunset " +
+                      " · Pôr do sol " +
                       formatTime(weatherData.current.sunset)}
                   </p>
                 </div>
@@ -594,7 +596,7 @@ export function WeatherDashboard(): React.ReactElement {
                 <div className="flex items-center justify-between text-sm text-foreground/70">
                   <div className="flex items-center gap-2">
                     <Sunrise className="h-4 w-4" aria-hidden="true" />
-                    Sunrise
+                    Nascer do sol
                   </div>
                   <span className="text-foreground">
                     {formatTime(weatherData.current.sunrise)}
@@ -603,7 +605,7 @@ export function WeatherDashboard(): React.ReactElement {
                 <div className="flex items-center justify-between text-sm text-foreground/70">
                   <div className="flex items-center gap-2">
                     <Sunset className="h-4 w-4" aria-hidden="true" />
-                    Sunset
+                    Pôr do sol
                   </div>
                   <span className="text-foreground">
                     {formatTime(weatherData.current.sunset)}

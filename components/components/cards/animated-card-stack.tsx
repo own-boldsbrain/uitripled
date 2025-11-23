@@ -10,9 +10,9 @@ import {
 } from "@/components/ui/card";
 
 const cards = [
-  { title: "Card 1", description: "First card" },
-  { title: "Card 2", description: "Second card" },
-  { title: "Card 3", description: "Third card" },
+  { title: "Cartão 1", description: "Primeiro cartão" },
+  { title: "Cartão 2", description: "Segundo cartão" },
+  { title: "Cartão 3", description: "Terceiro cartão" },
 ];
 
 export function AnimatedCardStack() {

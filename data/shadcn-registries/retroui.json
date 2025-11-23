@@ -1,0 +1,8 @@
+{
+  "handle": "retroui",
+  "name": "@retroui",
+  "url": "https://retroui.dev",
+  "title": "RetroUI",
+  "description": "A Neobrutalism styled React + Tailwind CSS UI library with shadcn compatibility.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

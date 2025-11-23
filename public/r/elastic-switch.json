@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "elastic-switch",
   "type": "registry:ui",
-  "title": "Elastic Toggle Switch",
-  "description": "Toggle switch with elastic spring animation",
+  "title": "Interruptor Elástico",
+  "description": "Interruptor com animação elástica de mola",
   "dependencies": [
     "framer-motion",
     "react"
@@ -11,7 +11,7 @@
   "files": [
     {
       "path": "components/micro/toggles/elastic-switch.tsx",
-      "content": "\"use client\";\n\nimport { motion } from \"framer-motion\";\nimport { useState } from \"react\";\n\nexport function ElasticSwitch() {\n  const [isOn, setIsOn] = useState(false);\n\n  return (\n    <div className=\"flex items-center justify-center p-12\">\n      <button\n        onClick={() => setIsOn(!isOn)}\n        className={`relative h-12 w-24 rounded-full p-1 transition-colors ${\n          isOn ? \"bg-accent\" : \"bg-gray-300 dark:bg-gray-600\"\n        }`}\n      >\n        <motion.div\n          layout\n          transition={{\n            type: \"spring\",\n            stiffness: 700,\n            damping: 30,\n          }}\n          className={`h-10 w-10 rounded-full bg-white shadow-md ${\n            isOn ? \"ml-auto\" : \"\"\n          }`}\n        />\n      </button>\n    </div>\n  );\n}\n",
+      "content": "\"use client\";\r\n\r\nimport { motion } from \"framer-motion\";\r\nimport { useState } from \"react\";\r\n\r\nexport function ElasticSwitch() {\r\n  const [isOn, setIsOn] = useState(false);\r\n\r\n  return (\r\n    <div className=\"flex items-center justify-center p-12\">\r\n      <button\r\n        onClick={() => setIsOn(!isOn)}\r\n        className={`relative h-12 w-24 rounded-full p-1 transition-colors ${\r\n          isOn ? \"bg-accent\" : \"bg-gray-300 dark:bg-gray-600\"\r\n        }`}\r\n      >\r\n        <motion.div\r\n          layout\r\n          transition={{\r\n            type: \"spring\",\r\n            stiffness: 700,\r\n            damping: 30,\r\n          }}\r\n          className={`h-10 w-10 rounded-full bg-white shadow-md ${\r\n            isOn ? \"ml-auto\" : \"\"\r\n          }`}\r\n        />\r\n      </button>\r\n    </div>\r\n  );\r\n}\r\n",
       "type": "registry:ui",
       "target": "components/micro/toggles/elastic-switch"
     }

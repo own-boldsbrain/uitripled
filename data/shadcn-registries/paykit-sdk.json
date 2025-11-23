@@ -1,0 +1,8 @@
+{
+  "handle": "paykit-sdk",
+  "name": "@paykit-sdk",
+  "url": "https://www.usepaykit.dev",
+  "title": "Paykit SDK",
+  "description": "Unified payments SDK for builders — handle checkout, billing, and webhooks across Stripe, PayPal, Adyen, and regional gateways.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

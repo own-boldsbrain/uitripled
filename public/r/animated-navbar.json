@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "animated-navbar",
   "type": "registry:component",
-  "title": "Animated Navbar",
-  "description": "Navigation bar with animated underline indicator",
+  "title": "Barra de Navegação Animada",
+  "description": "Barra de navegação com indicador de sublinhado animado",
   "registryDependencies": [
     "button"
   ],
@@ -14,7 +14,7 @@
   "files": [
     {
       "path": "components/navigation/animated-navbar.tsx",
-      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { motion } from \"framer-motion\";\n\nconst navItems = [\"Home\", \"About\", \"Services\", \"Contact\"];\n\nexport function AnimatedNavbar() {\n  const [activeIndex, setActiveIndex] = useState(0);\n\n  return (\n    <nav className=\"rounded-2xl border  bg-[var(--card-bg)] p-2\">\n      <ul className=\"flex gap-1\">\n        {navItems.map((item, index) => (\n          <li key={item} className=\"relative\">\n            <motion.button\n              onClick={() => setActiveIndex(index)}\n              className=\"relative z-10 px-4 py-2 text-sm font-medium transition-colors\"\n              style={{\n                color: activeIndex === index ? \"white\" : \"var(--foreground)\",\n              }}\n              whileHover={{ scale: 1.05 }}\n              whileTap={{ scale: 0.95 }}\n            >\n              {item}\n            </motion.button>\n            {activeIndex === index && (\n              <motion.div\n                layoutId=\"navbar-indicator\"\n                className=\"absolute inset-0 rounded-lg bg-accent\"\n                transition={{\n                  type: \"spring\",\n                  stiffness: 380,\n                  damping: 30,\n                }}\n              />\n            )}\n          </li>\n        ))}\n      </ul>\n    </nav>\n  );\n}\n",
+      "content": "\"use client\";\r\n\r\nimport { useState } from \"react\";\r\nimport { motion } from \"framer-motion\";\r\n\r\nconst navItems = [\"Home\", \"About\", \"Services\", \"Contact\"];\r\n\r\nexport function AnimatedNavbar() {\r\n  const [activeIndex, setActiveIndex] = useState(0);\r\n\r\n  return (\r\n    <nav className=\"rounded-2xl border  bg-[var(--card-bg)] p-2\">\r\n      <ul className=\"flex gap-1\">\r\n        {navItems.map((item, index) => (\r\n          <li key={item} className=\"relative\">\r\n            <motion.button\r\n              onClick={() => setActiveIndex(index)}\r\n              className=\"relative z-10 px-4 py-2 text-sm font-medium transition-colors\"\r\n              style={{\r\n                color: activeIndex === index ? \"white\" : \"var(--foreground)\",\r\n              }}\r\n              whileHover={{ scale: 1.05 }}\r\n              whileTap={{ scale: 0.95 }}\r\n            >\r\n              {item}\r\n            </motion.button>\r\n            {activeIndex === index && (\r\n              <motion.div\r\n                layoutId=\"navbar-indicator\"\r\n                className=\"absolute inset-0 rounded-lg bg-accent\"\r\n                transition={{\r\n                  type: \"spring\",\r\n                  stiffness: 380,\r\n                  damping: 30,\r\n                }}\r\n              />\r\n            )}\r\n          </li>\r\n        ))}\r\n      </ul>\r\n    </nav>\r\n  );\r\n}\r\n",
       "type": "registry:component",
       "target": "components/navigation/animated-navbar"
     }

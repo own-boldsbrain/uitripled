@@ -1,0 +1,8 @@
+{
+  "handle": "spectrumui",
+  "name": "@spectrumui",
+  "url": "https://ui.spectrumhq.in",
+  "title": "Spectrum UI",
+  "description": "Modern component library built with shadcn/ui and Tailwind CSS, with elegant responsive components and smooth animations.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

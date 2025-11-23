@@ -1,0 +1,8 @@
+{
+  "handle": "aevr",
+  "name": "@aevr",
+  "url": "https://ui.aevr.space",
+  "title": "Aevr UI",
+  "description": "A small collection of focused, production-ready components and primitives for React/Next.js projects—built on shadcn/ui and complementary libraries.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

@@ -13,16 +13,16 @@ type Currency = {
 type CurrencyCode = (typeof CURRENCIES)[number]["code"];
 
 const CURRENCIES: Currency[] = [
-  { code: "USD", name: "US Dollar", symbol: "$" },
+  { code: "USD", name: "Dólar Americano", symbol: "$" },
   { code: "EUR", name: "Euro", symbol: "€" },
-  { code: "GBP", name: "British Pound", symbol: "£" },
-  { code: "JPY", name: "Japanese Yen", symbol: "¥" },
-  { code: "AUD", name: "Australian Dollar", symbol: "A$" },
-  { code: "CAD", name: "Canadian Dollar", symbol: "C$" },
-  { code: "CHF", name: "Swiss Franc", symbol: "CHF" },
-  { code: "CNY", name: "Chinese Yuan", symbol: "¥" },
-  { code: "INR", name: "Indian Rupee", symbol: "₹" },
-  { code: "MXN", name: "Mexican Peso", symbol: "$" },
+  { code: "GBP", name: "Libra Esterlina", symbol: "£" },
+  { code: "JPY", name: "Iene Japonês", symbol: "¥" },
+  { code: "AUD", name: "Dólar Australiano", symbol: "A$" },
+  { code: "CAD", name: "Dólar Canadense", symbol: "C$" },
+  { code: "CHF", name: "Franco Suíço", symbol: "CHF" },
+  { code: "CNY", name: "Yuan Chinês", symbol: "¥" },
+  { code: "INR", name: "Rúpia Indiana", symbol: "₹" },
+  { code: "MXN", name: "Peso Mexicano", symbol: "$" },
 ];
 
 const BASE_INDEX: Record<CurrencyCode, number> = {
@@ -138,17 +138,17 @@ export function CurrencyConverterCard() {
         <div className="space-y-1 px-6 pt-6 pb-4">
           <h2 className="flex items-center gap-2 text-2xl font-semibold text-foreground">
             <TrendingUp className="h-6 w-6 text-primary" />
-            Currency Converter
+            Conversor de Moedas
           </h2>
           <p className="text-sm text-muted-foreground">
-            Simulated real-time exchange experience
+            Experiência simulada de câmbio em tempo real
           </p>
         </div>
 
         <div className="space-y-6 px-6 pb-6">
           <div className="space-y-2">
             <label className="text-sm font-medium text-muted-foreground">
-              From
+              De
             </label>
             <div className="flex gap-3">
               <div className="relative flex-1">
@@ -160,7 +160,7 @@ export function CurrencyConverterCard() {
                   inputMode="decimal"
                   value={amount}
                   onChange={(event) => setAmount(event.target.value)}
-                  placeholder="Amount"
+                  placeholder="Valor"
                   className="w-full rounded-lg border border-border bg-background/70 px-8 py-3 text-lg font-semibold text-foreground shadow-sm outline-none transition focus-visible:ring-2 focus-visible:ring-primary/40"
                 />
               </div>
@@ -195,7 +195,7 @@ export function CurrencyConverterCard() {
 
           <div className="space-y-2">
             <label className="text-sm font-medium text-muted-foreground">
-              To
+              Para
             </label>
             <div className="flex gap-3">
               <motion.div
@@ -242,7 +242,7 @@ export function CurrencyConverterCard() {
                 animate={{ rotate: 360 }}
                 transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
               />
-              Calculating latest rates...
+              Calculando taxas mais recentes...
             </motion.div>
           )}
 
@@ -268,8 +268,8 @@ export function CurrencyConverterCard() {
 
           {!loading && !error && (
             <p className="text-center text-xs text-muted-foreground">
-              Rates are approximated for demo purposes and refresh with each
-              change.
+              As taxas são aproximadas para fins de demonstração e são
+              atualizadas a cada mudança.
             </p>
           )}
         </div>

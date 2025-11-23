@@ -1,0 +1,8 @@
+{
+  "handle": "shadcn-studio",
+  "name": "@shadcn-studio",
+  "url": "https://shadcnstudio.com",
+  "title": "Shadcn Studio",
+  "description": "Open-source set of shadcn/ui components, blocks and templates with a theme generator.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

@@ -1,0 +1,8 @@
+{
+  "handle": "glass-ui",
+  "name": "@glass-ui",
+  "url": "https://glass-ui.crenspire.com",
+  "title": "Glass UI",
+  "description": "A shadcn-compatible registry distributing 40+ glassmorphic React/TypeScript components with Apple-inspired design.",
+  "source": "https://ui.shadcn.com/docs/directory"
+}

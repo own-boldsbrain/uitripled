@@ -39,16 +39,16 @@ export function GlassSignInCard() {
       />
       <div className="mb-8 space-y-2 text-center">
         <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-border/60 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.28em] text-muted-foreground">
-          Sign In
+          Entrar
         </div>
         <h1
           id="glass-sign-in-title"
           className="text-2xl font-semibold text-foreground sm:text-3xl"
         >
-          Access your workspace
+          Acesse seu espaço de trabalho
         </h1>
         <p className="text-sm text-muted-foreground">
-          Choose a social account or continue with email and password.
+          Escolha uma conta social ou continue com e-mail e senha.
         </p>
       </div>
 
@@ -58,7 +58,7 @@ export function GlassSignInCard() {
             key={provider.name}
             variant="outline"
             className="flex items-center justify-center gap-2 rounded-full border-border/60 bg-card/70 text-sm text-foreground transition-transform duration-300 hover:-translate-y-1 hover:text-primary"
-            aria-label={`Continue with ${provider.name}`}
+            aria-label={`Continuar com ${provider.name}`}
           >
             <provider.icon className="h-4 w-4" aria-hidden />
             <span className="hidden sm:inline">{provider.name}</span>
@@ -76,11 +76,11 @@ export function GlassSignInCard() {
 
       <form className="space-y-6" onSubmit={handleSubmit}>
         <div className="space-y-2">
-          <Label htmlFor="email">Email address</Label>
+          <Label htmlFor="email">Endereço de e-mail</Label>
           <Input
             id="email"
             type="email"
-            placeholder="you@example.com"
+            placeholder="voce@exemplo.com"
             autoComplete="email"
             required
             className="h-11 rounded-2xl border-border/60 bg-background/60 px-4"
@@ -88,11 +88,11 @@ export function GlassSignInCard() {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="password">Password</Label>
+          <Label htmlFor="password">Senha</Label>
           <Input
             id="password"
             type="password"
-            placeholder="Enter your password"
+            placeholder="Digite sua senha"
             autoComplete="current-password"
             required
             className="h-11 rounded-2xl border-border/60 bg-background/60 px-4"
@@ -102,13 +102,13 @@ export function GlassSignInCard() {
         <div className="flex items-center justify-between text-sm text-muted-foreground">
           <label className="flex items-center gap-2">
             <Checkbox id="remember-me" />
-            <span>Remember me</span>
+            <span>Lembrar-me</span>
           </label>
           <button
             type="button"
             className="text-xs font-medium text-primary underline-offset-4 hover:underline"
           >
-            Forgot password?
+            Esqueceu a senha?
           </button>
         </div>
 
@@ -116,12 +116,13 @@ export function GlassSignInCard() {
           type="submit"
           className="w-full rounded-full bg-primary px-6 py-3 text-primary-foreground shadow-[0_20px_60px_-30px_rgba(79,70,229,0.75)] transition-transform duration-300 hover:-translate-y-1"
         >
-          Continue with Email
+          Continuar com E-mail
         </Button>
       </form>
 
       <p className="mt-6 text-center text-xs text-muted-foreground">
-        By continuing you agree to our terms of service and privacy policy.
+        Ao continuar, você concorda com nossos termos de serviço e política de
+        privacidade.
       </p>
     </motion.div>
   );

@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
-const items = ["Profile", "Settings", "Billing", "Team", "Logout"];
+const items = ["Perfil", "Configurações", "Cobrança", "Equipe", "Sair"];
 
 export function StaggeredDropdown() {
   const [isOpen, setIsOpen] = useState(false);
