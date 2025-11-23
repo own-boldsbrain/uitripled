@@ -40,12 +40,13 @@ export interface E2EItem {
 
 export interface SolarCategoryConfig {
   category: CategoryType;
-  consumptionRange: { min: number; max: number; avg: number };
+  consumptionKwh: number;
   panelPowerWp: number;
   averageBillByRegion: Record<Region, number>;
-  baseServices: ServiceAndFee[];
+  servicesAndFees: ServiceAndFee[];
   inverterKwByRegionAndTier: Record<Region, Record<TierType, number>>;
-  regionalExtraCosts: Record<Region, number>;
+  tiers: GenerationTier[];
+  losses: LossFactors;
 }
 
 export interface ProjectFinancials {
